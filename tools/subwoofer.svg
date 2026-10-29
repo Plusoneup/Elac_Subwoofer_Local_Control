@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" width="420" height="420">
+  <!-- Original drawing of a generic cube subwoofer (no brand marks), made for this project. -->
+  <defs>
+    <linearGradient id="front" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a2c30"/><stop offset="1" stop-color="#141517"/></linearGradient>
+    <linearGradient id="side" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#121315"/><stop offset="1" stop-color="#0a0b0c"/></linearGradient>
+    <linearGradient id="top" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#34373c"/><stop offset="1" stop-color="#25272b"/></linearGradient>
+    <radialGradient id="surround" cx=".5" cy=".42" r=".6"><stop offset=".72" stop-color="#2b2d31"/><stop offset=".86" stop-color="#3b3e44"/><stop offset="1" stop-color="#121315"/></radialGradient>
+    <radialGradient id="cone" cx=".42" cy=".36" r=".75"><stop offset="0" stop-color="#3a3d42"/><stop offset=".55" stop-color="#1e2023"/><stop offset="1" stop-color="#0c0d0e"/></radialGradient>
+    <radialGradient id="cap" cx=".38" cy=".32" r=".8"><stop offset="0" stop-color="#5a5e65"/><stop offset=".6" stop-color="#26282c"/><stop offset="1" stop-color="#101113"/></radialGradient>
+    <pattern id="weave" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="none"/><rect width="3" height="6" fill="#ffffff" opacity=".035"/></pattern>
+  </defs>
+  <ellipse cx="200" cy="398" rx="170" ry="10" fill="#000" opacity=".35"/>
+  <!-- cabinet: top, right side, front -->
+  <path d="M60 78 L300 78 L352 46 L112 46 Z" fill="url(#top)"/>
+  <path d="M300 78 L352 46 L352 340 L300 380 Z" fill="url(#side)"/>
+  <rect x="60" y="78" width="240" height="302" rx="6" fill="url(#front)"/>
+  <path d="M66 80 H294" stroke="#4a4e55" stroke-width="1.5" opacity=".7"/>
+  <!-- driver -->
+  <circle cx="180" cy="222" r="104" fill="#0b0c0d"/>
+  <circle cx="180" cy="222" r="98" fill="#1b1c1f" stroke="#3a3d42" stroke-width="2"/>
+  <circle cx="180" cy="222" r="90" fill="url(#surround)"/>
+  <circle cx="180" cy="222" r="74" fill="url(#cone)"/>
+  <circle cx="180" cy="222" r="74" fill="url(#weave)"/>
+  <circle cx="180" cy="222" r="30" fill="url(#cap)"/>
+  <circle cx="180" cy="222" r="30" fill="none" stroke="#000" stroke-opacity=".5"/>
+  <!-- small status light -->
+  <circle cx="180" cy="356" r="3" fill="#8d99a6" opacity=".8"/>
+  <!-- feet -->
+  <rect x="78" y="380" width="34" height="8" rx="2" fill="#0a0a0b"/><rect x="250" y="380" width="34" height="8" rx="2" fill="#0a0a0b"/>
+</svg>

@@ -1,0 +1,27 @@
+[Unit]
+Description=ELAC SUB3030 web controller
+Documentation=https://github.com/Plusoneup/Elac_Subwoofer_Local_Control
+After=network-online.target bluetooth.service
+Wants=network-online.target bluetooth.service
+
+[Service]
+Type=simple
+User=elac
+Group=elac
+SupplementaryGroups=bluetooth
+EnvironmentFile=/etc/elac-sub3030/elac.env
+WorkingDirectory=/opt/elac-sub3030
+ExecStart=/opt/elac-sub3030/.venv/bin/python run.py
+Restart=on-failure
+RestartSec=5
+
+# The program only needs D-Bus (BlueZ), the network and its data folder.
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ReadWritePaths=/var/lib/elac-sub3030
+Environment=PYTHONDONTWRITEBYTECODE=1
+
+[Install]
+WantedBy=multi-user.target

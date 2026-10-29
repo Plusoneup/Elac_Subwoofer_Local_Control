@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+elac_app.log
+config.json
+config.tmp

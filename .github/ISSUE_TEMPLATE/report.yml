@@ -1,0 +1,38 @@
+name: Problem or feedback
+description: Something does not work, or works on another subwoofer
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Subwoofer model
+      placeholder: SUB3030
+    validations:
+      required: true
+  - type: input
+    id: firmware
+    attributes:
+      label: Firmware version
+      description: Shown in the panel under Device after Connect & read
+  - type: dropdown
+    id: setup
+    attributes:
+      label: How do you run it
+      options:
+        - Windows
+        - Proxmox VM
+        - Other Linux
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, what you got
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Log
+      description: Relevant lines from elac_app.log. Remove anything personal first (Bluetooth addresses, IPs).
+      render: text

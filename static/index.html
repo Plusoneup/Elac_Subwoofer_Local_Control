@@ -1,0 +1,1480 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ELAC SUB3030</title>
+<link rel="icon" type="image/png" href="/static/sub3030-mini.png">
+<style>
+:root{--accent-ink:#000000;--bg:#0d1014;--panel:#151a20;--panel2:#1b222a;--line:#29313a;--text:#f2f4f6;--muted:#8d99a6;--accent:#FF4D06;--accent-alpha:25%;--blue:#8caeff}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 70% -15%,#26313d 0,transparent 45%),var(--bg);color:var(--text);font:14px/1.4 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}button,select,input{font:inherit}button{cursor:pointer}.app{max-width:1280px;margin:auto;padding:28px 28px 40px}.top{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:26px}.brand{display:flex;align-items:center;gap:13px}.logo{width:42px;height:42px;border:1px solid #414b55;border-radius:13px;display:grid;place-items:center;flex:0 0 auto;overflow:hidden}.logo img{width:34px;height:34px;object-fit:contain;display:block}.eyebrow{font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}.brand h1{font-size:19px;letter-spacing:.5px;margin:2px 0 0}.status{display:flex;align-items:center;gap:8px;border:1px solid var(--line);background:#12171c;border-radius:30px;padding:9px 13px;color:#b6c0ca;font-size:12px}.dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px color-mix(in srgb,var(--accent) 50%,transparent)}.nav{display:flex;gap:7px;margin-bottom:20px;border-bottom:1px solid var(--line);padding-bottom:16px}.nav button{border:0;background:transparent;color:var(--muted);padding:9px 14px;border-radius:9px}.nav button.active{color:var(--text);background:var(--panel2)}.layout{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.85fr);gap:16px;align-items:start}.stack{display:grid;grid-template-rows:none;gap:16px;align-content:start;min-width:0}.stack .card{height:auto;min-width:0}.stack:first-child,.stack:last-child{grid-template-rows:none}.card{background:linear-gradient(145deg,#191f26,#13181e);border:1px solid var(--line);border-radius:17px;padding:22px;min-width:0}.cardhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}.card h2{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;margin:0;font-weight:650}.subtle{color:var(--muted);font-size:12px}.volume{display:flex;align-items:center;gap:24px}.bigvalue{font-size:58px;line-height:1;font-weight:650;letter-spacing:-3px;font-variant-numeric:tabular-nums;min-width:100px}.bigvalue small{font-size:14px;color:var(--muted);letter-spacing:0;font-weight:500}.range{width:100%;accent-color:var(--accent);cursor:pointer}.range::-webkit-slider-runnable-track{height:4px;background:#37414b;border-radius:99px}.range::-webkit-slider-thumb{margin-top:-6px}.range-meta{display:flex;justify-content:space-between;color:var(--muted);font-size:11px;margin-top:9px}.presets{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.preset{border:1px solid var(--line);background:#12171c;color:#b6c0ca;border-radius:11px;padding:14px 6px;text-align:center}.preset .glyph{display:block;font-size:19px;margin-bottom:6px;color:#aab5bf}.preset.selected{border-color:var(--accent);color:var(--text);background:color-mix(in srgb,var(--accent) var(--accent-alpha),transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 25%,transparent)}.preset.selected .glyph{color:var(--accent)}.knobs{display:grid;grid-template-columns:1fr 1fr;gap:12px}.knob{background:#11161b;border:1px solid var(--line);border-radius:12px;padding:15px}.knobtop{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.knob label{color:#aab5bf;font-size:12px}.value{font-size:17px;font-weight:650;font-variant-numeric:tabular-nums}.value span{font-size:11px;color:var(--muted);font-weight:400}.select{width:100%;color:var(--text);background:#11161b;border:1px solid var(--line);padding:11px;border-radius:9px}.eqbox{height:210px;position:relative;overflow:hidden;border-radius:12px;background:#10151a;border:1px solid var(--line)}.eqbox svg{width:100%;height:100%;display:block;overflow:hidden} .eqhead{display:flex;justify-content:space-between;align-items:center;gap:10px}.eqlegend{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:11px}.legendline{width:18px;height:2px;background:var(--accent)}.filterlist{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-top:12px}.filter{width:100%;font-family:inherit;line-height:1.4;appearance:none;border:1px solid var(--line);border-radius:9px;padding:9px 5px;text-align:center;background:#11161b;color:var(--muted);font-size:11px}.filter b{display:block;color:var(--text);font-size:12px;margin-bottom:2px}.filter.active{border-color:var(--accent);background:color-mix(in srgb,var(--accent) var(--accent-alpha),transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--accent) 25%,transparent)}.filter.active b{color:var(--accent)}.sidehero{height:clamp(110px,15vw,170px);border:1px solid var(--line);border-radius:12px;background:#11161b;display:flex;align-items:center;justify-content:center;margin-bottom:16px;position:relative;overflow:hidden}.product-photo{width:100%;height:100%;object-fit:contain;display:block;padding:5px;mix-blend-mode:normal;opacity:1;filter:none}.badge{font-size:10px;color:var(--accent);letter-spacing:1.3px;text-transform:uppercase}.metric{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid #252c33}.metric:last-child{border:0;padding-bottom:0}.metric span{color:var(--muted)}.metric strong{font-weight:600;font-variant-numeric:tabular-nums}.actions{display:flex;gap:9px;margin-top:18px}.btn{border-radius:10px;padding:11px 14px;border:1px solid var(--line);background:#1a2027;color:var(--text);flex:1}.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:750}.btn:active{transform:translateY(1px)}.foot{display:flex;justify-content:space-between;gap:12px;margin-top:17px;color:#6f7b87;font-size:11px}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--accent);color:var(--accent-ink);box-shadow:0 6px 24px rgba(0,0,0,.35);padding:10px 16px;border-radius:10px;font-weight:650;transition:opacity .2s,transform .2s}.toast.show{opacity:1;transform:translate(-50%,0)}.hidden{display:none!important}
+@media(max-width:900px){.app{padding:18px 14px 30px}.layout{grid-template-columns:1fr}.stack,.stack:first-child,.stack:last-child{grid-template-rows:none}.stack .card{height:auto}.top{align-items:flex-start}.bigvalue{font-size:48px}.card{padding:18px}.nav{overflow:auto}.nav button{white-space:nowrap}}@media(max-width:440px){.status .statuslabel{display:none}.presets{grid-template-columns:repeat(2,1fr)}.knobs{grid-template-columns:1fr}.volume{gap:12px}.bigvalue{min-width:88px}.filterlist{grid-template-columns:repeat(4,1fr)}}
+
+/* Compact dashboard: content-sized cards and vertical controls */
+.layout{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;align-items:start}
+.stack{gap:12px;align-content:start}
+.card{padding:16px}
+.cardhead{margin-bottom:12px}
+.presets{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.preset{padding:10px 5px}
+.preset .glyph{font-size:16px;margin-bottom:3px}
+.volume{align-items:center;gap:18px}
+.volume .range{writing-mode:vertical-lr;direction:rtl;appearance:slider-vertical;width:24px;height:118px;min-height:118px;accent-color:var(--accent);touch-action:pan-y}
+.volume>div:last-child{flex:0 0 auto!important;display:flex;flex-direction:column;align-items:center;gap:8px}
+.volume .range-meta{display:flex;flex-direction:column;margin:0;gap:10px}
+.knobs{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.knob .range{writing-mode:vertical-lr;direction:rtl;appearance:slider-vertical;width:24px;height:100px;min-height:100px;display:block;margin:10px auto;accent-color:var(--accent);touch-action:pan-y}
+.knob .range-meta{justify-content:space-between;margin-top:6px}
+.product-photo{display:block;width:min(100%,210px);max-height:180px;object-fit:contain;margin:0 auto;background:transparent;mix-blend-mode:normal;filter:none;opacity:1;border-radius:10px}
+.sidehero{background:transparent!important;padding:0!important;min-height:0!important}
+@media(max-width:900px){.layout{grid-template-columns:minmax(0,1fr)}.sidehero .product-photo{width:min(100%,170px);max-height:140px}}
+@media(max-height:850px) and (min-width:901px){.card{padding:12px}.stack{gap:9px}.cardhead{margin-bottom:9px}.volume .range{height:92px;min-height:92px}.knob .range{height:78px;min-height:78px}.product-photo{max-height:130px;width:min(100%,160px)}.metric{padding:6px 0}}
+@media(max-width:520px){.presets{grid-template-columns:repeat(4,minmax(0,1fr))}.preset{font-size:11px}.volume .range{height:90px;min-height:90px}.knobs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+
+/* Horizontal control strip and user layout editor */
+.control-tools{display:flex;align-items:center;gap:7px;flex-wrap:wrap;margin:-6px 0 14px}
+.layout-tools{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:10px;border:1px dashed var(--accent);border-radius:10px;margin-bottom:12px;background:#211812}
+.layout-tools.visible{display:flex}.layout-tools select,.layout-tools button{background:#151a20;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:7px 10px}.layout-tools button.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:700}
+#page-control.layout-edit .card{resize:both;overflow:auto;min-width:180px;min-height:110px;max-width:100%;max-height:75vh;border-color:var(--accent)}
+#page-control.layout-edit .cardhead{cursor:grab;user-select:none;border-bottom:1px dashed #FF4D0680;padding-bottom:8px}
+#page-control .stack{display:contents;min-width:0}#page-control .card{min-width:0}
+.control-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.control-strip .knob{min-width:0}.control-strip .range{display:block;width:100%;height:22px;writing-mode:horizontal-tb;appearance:auto;accent-color:var(--accent)}
+.control-strip .range-meta{display:flex;flex-direction:row;justify-content:space-between;gap:4px}.control-strip .knobtop{margin-bottom:9px}
+#preset-card{grid-column:1/-1}.preset{padding:10px 6px}.layout-card{grid-column:auto}
+@media(max-width:900px){.control-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.control-strip{grid-template-columns:minmax(0,1fr)}}
+
+/* Manual values, orientation switch and font scaling */
+.range-entry{display:flex;align-items:center;gap:7px;margin-top:7px}.range-entry input[type=number]{width:88px;min-width:0;background:#11161b;color:var(--text);border:1px solid var(--line);border-radius:7px;padding:6px 8px;font:inherit;font-size:13px}
+#page-control.font-small{--user-font-scale:.88}#page-control.font-normal{--user-font-scale:1}#page-control.font-large{--user-font-scale:1.15}#page-control.font-small .card,#page-control.font-normal .card,#page-control.font-large .card{font-size:calc(1em * var(--user-font-scale,1))}#page-control.font-small h2,#page-control.font-normal h2,#page-control.font-large h2{font-size:calc(13px * var(--user-font-scale,1))}#page-control.font-small .subtle,#page-control.font-normal .subtle,#page-control.font-large .subtle{font-size:calc(12px * var(--user-font-scale,1))}
+#page-control.layout-edit{display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;align-items:start}#page-control.layout-edit>.card{grid-column:span 6;position:relative;min-width:180px;max-width:100%;resize:both;overflow:auto}#page-control.layout-edit>.card#preset-card,#page-control.layout-edit>.card#control-card{grid-column:1/-1}#page-control.layout-edit .cardhead{cursor:grab;touch-action:none}#page-control.layout-edit .cardhead:active{cursor:grabbing}.layout-tools .font-picker{background:#151a20;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:7px 10px}
+.card .knob .range{writing-mode:horizontal-tb!important;appearance:auto;width:100%;height:auto;min-height:0;accent-color:var(--accent);touch-action:pan-x}.card .volume .range{writing-mode:horizontal-tb!important;appearance:auto;width:100%;height:auto;min-height:0;accent-color:var(--accent)}
+
+
+/* Layout editor v2: stable grid placement, snap-to-grid and full brightness product photo */
+#page-control.gui-grid-layout{display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:minmax(80px,auto);gap:8px;align-items:start;justify-items:stretch}
+#page-control.gui-grid-layout>.card{min-width:0;max-width:100%;grid-column:span 6;position:relative}
+#page-control.gui-grid-layout>.card#preset-card{grid-column:1/-1}
+#page-control.gui-grid-layout.layout-edit{grid-template-columns:repeat(var(--edit-cols,12),minmax(0,1fr));grid-auto-rows:24px;gap:8px;align-items:start;justify-items:stretch;overflow:visible;background-image:linear-gradient(to right, color-mix(in srgb,var(--accent) 20%,transparent) 1px,transparent 1px),linear-gradient(to bottom,color-mix(in srgb,var(--accent) 20%,transparent) 1px,transparent 1px);background-size:calc((100% - (var(--edit-cols,12) - 1)*8px)/var(--edit-cols,12) + 8px) 32px;background-position:0 0;padding:8px;border-radius:10px}
+#page-control.gui-grid-layout.layout-edit>.card{resize:both;overflow:auto;min-width:120px;min-height:80px;max-width:none;max-height:75vh;grid-column:span 6;grid-row:span 8;align-self:start;justify-self:start;width:100%;border-color:var(--accent)}
+#page-control.gui-grid-layout.layout-edit>.card#preset-card{grid-column:1/-1}
+#page-control.gui-grid-layout.layout-edit .cardhead{cursor:grab;touch-action:none;user-select:none;border-bottom:1px dashed #FF4D0680;padding-bottom:8px}
+#page-control.gui-grid-layout.layout-edit .cardhead:active{cursor:grabbing}
+#page-control .product-photo{mix-blend-mode:normal!important;filter:none!important;opacity:1!important;background:transparent}
+#page-control .knob .range{writing-mode:horizontal-tb!important;direction:ltr!important;appearance:auto!important;width:100%!important;height:22px!important;min-height:0!important;display:block;touch-action:pan-x}
+@media(max-width:900px){#page-control.gui-grid-layout{grid-template-columns:repeat(6,minmax(0,1fr))}#page-control.gui-grid-layout>.card{grid-column:span 6}#page-control.gui-grid-layout.layout-edit>.card{grid-column:span 3}#page-control.gui-grid-layout.layout-edit>.card#preset-card{grid-column:1/-1}}
+
+
+/* Stable layout editor: never create unbounded implicit grid rows. */
+#page-control.layout-edit{grid-auto-rows:minmax(80px,auto);grid-auto-flow:row;overflow:visible;gap:8px;}
+#page-control.layout-edit>.card{grid-row:auto!important;align-self:start;position:relative;}
+#page-control.layout-edit .card{resize:both;max-width:100%;max-height:70vh;}
+#page-control.layout-edit .card::after{content:"";position:absolute;right:2px;bottom:2px;width:12px;height:12px;border-right:2px solid var(--accent);border-bottom:2px solid var(--accent);pointer-events:none;opacity:.8}
+body.theme-light{--bg:#f2f4f6;--panel:#ffffff;--panel2:#e8edf2;--line:#cbd2da;--text:#17202a;--muted:#566474;background:var(--bg);color:var(--text)}
+body.theme-light .card,body.theme-light .knob,body.theme-light .preset,body.theme-light .filter,body.theme-light .status,body.theme-light input,body.theme-light select{background:#fff;color:var(--text)}
+body.theme-light .card{background:linear-gradient(145deg,#fff,#f2f4f6)}
+
+/* Complete light theme coverage for controls, menus, buttons and editor toolbar. */
+body.theme-light{background:var(--bg)!important;color:var(--text)!important}
+body.theme-light .status,body.theme-light .card,body.theme-light .knob,body.theme-light .preset,body.theme-light .filter,body.theme-light .btn,body.theme-light .select,body.theme-light .range-entry input[type=number],body.theme-light .layout-tools,body.theme-light .layout-tools select,body.theme-light .layout-tools button,body.theme-light .font-picker,body.theme-light #peqFreq,body.theme-light #peqQ,body.theme-light #peqGain{background:#fff!important;color:var(--text)!important;border-color:var(--line)!important}
+body.theme-light .layout-tools{background:#fff4ee!important}
+body.theme-light .btn.primary,body.theme-light .layout-tools button.primary{background:var(--accent)!important;color:var(--accent-ink)!important;border-color:var(--accent)!important}
+body.theme-light .preset.selected,body.theme-light .filter.active{background:color-mix(in srgb,var(--accent) 12%,white)!important;border-color:var(--accent)!important}
+body.theme-light .preset .glyph,body.theme-light .filter.active b{color:var(--accent)!important}
+body.theme-light .range-entry input[type=number],body.theme-light input,body.theme-light select{color:var(--text)!important;background-color:#fff!important}
+body.theme-light select option{background:#fff;color:#17202a}
+body.theme-light .sidehero,body.theme-light .eqbox{background:#eef1f4!important}
+body.theme-light .metric{border-bottom-color:#dce1e6}
+body.theme-light .cardhead{border-bottom-color:color-mix(in srgb,var(--accent) 45%,transparent)}
+#page-control.layout-edit>.card{resize:both;overflow:auto;min-width:120px;min-height:80px;max-width:100%;max-height:75vh;}
+#page-control.layout-edit .cardhead{cursor:grab;touch-action:none;user-select:none}
+#page-control.layout-edit .cardhead:active{cursor:grabbing}
+
+
+/* Simplified stable layout canvas: 8px snap, no CSS grid auto-placement. */
+#page-control.gui-grid-layout{display:block!important;position:relative!important;min-height:500px;overflow:visible!important;gap:0!important;align-items:initial!important;background:none!important}
+#page-control.gui-grid-layout>.card{position:absolute!important;margin:0!important;max-width:none!important;min-width:200px;min-height:120px;box-sizing:border-box}
+#page-control.gui-grid-layout.layout-edit{background-image:linear-gradient(to right,color-mix(in srgb,var(--accent) 18%,transparent) 1px,transparent 1px),linear-gradient(to bottom,color-mix(in srgb,var(--accent) 18%,transparent) 1px,transparent 1px)!important;background-size:8px 8px!important;background-position:0 0!important;padding:0!important;outline:1px dashed color-mix(in srgb,var(--accent) 45%,transparent)}
+#page-control.gui-grid-layout.layout-edit>.card{resize:both!important;overflow:auto!important;max-height:none!important;min-width:200px!important;min-height:120px!important}
+#page-control.gui-grid-layout.layout-edit .cardhead{cursor:grab!important;touch-action:none!important;user-select:none!important}
+#page-control.gui-grid-layout.layout-edit .cardhead:active{cursor:grabbing!important}
+
+/* Unified one-screen dashboard and local Auto-On controls */
+#page-eq{margin-top:12px}
+#page-eq .filterlist{grid-template-columns:repeat(8,minmax(0,1fr))!important}
+.autoon-panel{margin-top:12px;padding:12px;border:1px solid var(--line);border-radius:12px;background:#11161b}
+.autoon-panel .cardhead{margin-bottom:8px}
+.autoon-threshold{max-width:560px}
+.toggle-wrap{display:flex;align-items:center;gap:9px;cursor:pointer;color:var(--muted);font-size:11px}
+.toggle-wrap input{position:absolute;opacity:0;width:1px;height:1px}
+.toggle-ui{width:38px;height:21px;border-radius:99px;background:#37414b;border:1px solid var(--line);position:relative;display:inline-block;transition:background .15s}
+.toggle-ui:after{content:"";position:absolute;width:15px;height:15px;top:2px;left:2px;border-radius:50%;background:#d8dee5;transition:transform .15s}
+.toggle-wrap input:checked+.toggle-ui{background:var(--accent)}
+.toggle-wrap input:checked+.toggle-ui:after{transform:translateX(17px);background:#fff}
+.autoon-panel .range-entry input{width:84px;background:#0d1014;color:var(--text);border:1px solid var(--line);border-radius:7px;padding:7px}
+@media(min-width:901px){#page-control{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}#page-eq .knobs{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+@media(max-width:900px){#page-eq .filterlist{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
+
+
+#page-control.gui-grid-layout{display:block!important;position:relative;min-height:520px;overflow:visible}
+#page-control.gui-grid-layout>.card{position:absolute;min-width:0;min-height:0;max-width:none;resize:both;overflow:auto}
+#page-control.layout-edit>.card{outline:1px solid color-mix(in srgb,var(--accent) 35%,transparent)}
+#page-control .preset.selected{background:color-mix(in srgb,var(--accent) var(--accent-alpha),transparent)}
+@media(max-width:700px){.layout-tools{gap:5px}.layout-tools .subtle{font-size:10px}.card{padding:12px}.control-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+
+/* Fixed, predictable GUI presets: no drag, resize or slider transposition. */
+.gui-presets{align-items:center;gap:8px;flex-wrap:wrap}
+#layoutTools{display:none!important;position:relative;margin:0 0 14px}
+#layoutTools.open{display:flex!important}
+#page-control{display:grid!important;position:relative!important;left:auto!important;top:auto!important;width:auto!important;min-width:0!important;height:auto!important;min-height:0!important;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;align-items:start;overflow:visible!important}
+#page-control>.card{position:relative!important;left:auto!important;top:auto!important;width:auto!important;height:auto!important;min-width:0!important;min-height:0!important;margin:0!important;transform:none!important;z-index:auto!important;overflow:visible}
+#page-control>#page-eq{grid-column:1/-1}
+.gui-layout-1 #preset-card{grid-column:1/-1}.gui-layout-1 #control-card{grid-column:1/-1}.gui-layout-1 #connection-card{grid-column:1/-1}
+
+
+#page-control>.stack{display:contents!important}
+#page-control.layout-edit .cardhead{cursor:default!important;user-select:auto!important}
+@media(max-width:760px){#page-control{grid-template-columns:minmax(0,1fr)!important}#page-control .card{grid-column:1/-1!important}.control-strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.control-strip{grid-template-columns:minmax(0,1fr)}#page-eq .filterlist{grid-template-columns:repeat(2,minmax(0,1fr))!important}#page-eq .knobs{grid-template-columns:minmax(0,1fr)}}
+/* Keep rows from spilling into neighbours */
+.actions,.range-entry{flex-wrap:wrap}.metric{gap:10px}.metric strong{text-align:right;overflow-wrap:anywhere}
+
+/* ---- v3: appearance popover, read-only banner, stale values, EQ chart, connection extras ---- */
+.nav .appearance-btn{margin-left:auto;border:1px solid var(--line);color:var(--text);display:inline-flex;align-items:center;gap:6px}
+.nav .appearance-btn[aria-expanded="true"]{border-color:var(--accent);color:var(--accent)}
+.layout-tools{border-style:solid;border-color:var(--line)}
+.ro-banner{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:0 0 14px;padding:9px 13px;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:10px;background:#12171c;color:#b6c0ca;font-size:12px}
+.ro-banner b{color:var(--text);letter-spacing:.5px;text-transform:uppercase;font-size:11px}
+body.theme-light .ro-banner{background:#fff!important;color:var(--muted)!important}
+.hidden{display:none!important}
+body.is-stale [data-dev]{opacity:.5;font-style:italic}
+#quickBadge.stale{color:#e0a96b}
+body{min-height:100vh;min-height:100dvh}
+#control-card .control-strip{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:900px){#control-card .control-strip{grid-template-columns:repeat(2,minmax(0,1fr))}#control-card #autoonKnob{grid-column:1/-1}}
+@media(max-width:520px){#control-card .control-strip{grid-template-columns:minmax(0,1fr)}}
+#control-card .actions .btn{flex:1 1 100%}
+/* status in the sticky header (option C): icon badges, device sheet behind the logo */
+header.top{position:sticky;top:0;z-index:40;margin:-28px -28px 16px;padding:12px 28px;background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);align-items:center;flex-wrap:nowrap}
+header.top .eyebrow{display:none}
+header.top .brand h1{font-size:17px;margin:0;white-space:nowrap}
+button.logo{background:transparent;padding:0;cursor:pointer;color:inherit;font:inherit}
+button.logo:hover,button.logo[aria-expanded="true"]{border-color:var(--accent)}
+button.logo:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#sthead{display:flex;gap:2px;align-items:center;flex:1 1 auto;justify-content:center;flex-wrap:wrap;min-width:0}
+.badge2{display:inline-flex;align-items:baseline;gap:4px;padding:5px 7px;border-radius:8px;font-size:14px;color:var(--text);font-variant-numeric:tabular-nums;white-space:nowrap}
+.badge2 b{font-weight:650}
+.badge2 svg{color:var(--accent);align-self:center;flex:0 0 auto}
+.badge2 .u{color:var(--muted);font-size:11px}
+.badge2.off svg{color:var(--muted)}
+#sthead .sep{width:1px;height:18px;background:var(--line);margin:0 5px}
+.top .status{padding:7px 11px;gap:7px;white-space:nowrap}
+.top .status svg{color:var(--muted);flex:0 0 auto}
+#deviceSheet{position:absolute;left:28px;top:calc(100% + 8px);width:min(380px,calc(100% - 56px));background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px;box-shadow:0 18px 48px rgba(0,0,0,.45);display:grid;grid-template-columns:76px minmax(0,1fr);gap:14px;align-items:start;z-index:41}
+#deviceSheet.hidden{display:none!important}
+#deviceSheet img{width:76px;height:auto;display:block}
+#deviceSheet .rows{font-size:13px;min-width:0}
+#deviceSheet .r{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid var(--line)}
+#deviceSheet .r:last-child{border-bottom:0}
+#deviceSheet .r span{color:var(--muted)}
+#deviceSheet .r strong{text-align:right;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+body.theme-light #deviceSheet{background:#fff;box-shadow:0 18px 48px rgba(0,0,0,.15)}
+@media(max-width:1100px){.top .status .statuslabel{display:none}}
+@media(max-width:900px){header.top{margin:-18px -14px 12px;padding:8px 14px;flex-wrap:wrap;row-gap:6px;gap:10px}header.top .brand{flex:1 1 auto;min-width:0}#sthead{order:3;flex-basis:100%;justify-content:space-between;gap:0}.badge2{padding:3px 2px;font-size:13px;gap:3px}#sthead .sep{display:none}#deviceSheet{left:14px;width:calc(100% - 28px)}}
+@media(max-width:520px){header.top .brand h1 span{display:none}.badge2 .u{display:none}.top .write-pill{padding:7px 10px}}
+@media(max-width:380px){header.top .brand h1{display:none}}
+.peq-in{width:90px;background:#0d1014;color:var(--text);border:1px solid var(--line);border-radius:7px;padding:7px}
+.addr-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:12px}
+.addr-row strong{font-size:12px;font-variant-numeric:tabular-nums;word-break:break-all}
+.btn.mini{flex:0 0 auto;padding:6px 11px;font-size:12px}
+.btn[disabled]{opacity:.5;cursor:default}
+.scan-results{display:grid;gap:6px;margin-top:10px}
+.scan-item{display:flex;justify-content:space-between;align-items:center;gap:8px;text-align:left;border:1px solid var(--line);background:#11161b;color:var(--text);border-radius:9px;padding:8px 10px;cursor:pointer}
+.scan-item small{display:block;color:var(--muted)}
+.scan-item.likely{border-color:var(--accent)}
+body.theme-light .scan-item{background:#fff!important;color:var(--text)!important}
+.eqbox{--eqbg:#10151a;height:200px;margin-bottom:10px}
+body.theme-light .eqbox{--eqbg:#eef1f4}
+.eqlegend{margin-bottom:12px;font-size:12px}
+#eqMainChart text{fill:var(--muted);font-size:10px;paint-order:stroke;stroke:var(--eqbg);stroke-width:3px;stroke-linejoin:round}
+.eq-grid{stroke:var(--line);stroke-width:1}
+.eq-zero{stroke:var(--muted);stroke-width:1;opacity:.55;stroke-dasharray:3 3}
+.eq-curve{fill:none;stroke:var(--accent);stroke-width:2.5;stroke-linejoin:round}
+.eq-area{fill:var(--accent);opacity:.14}
+.eq-dot{fill:var(--accent);opacity:.7}
+.eq-dot.sel{opacity:1;stroke:var(--text);stroke-width:2}
+.eq-hit{fill:transparent;cursor:pointer}
+@media(max-width:520px){.nav .appearance-label{display:none}}
+
+.write-enable{display:flex;align-items:center;gap:9px;margin:12px 0 6px;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);font-weight:650}
+.write-enable input{width:17px;height:17px;accent-color:var(--accent)}
+.write-warning{margin:6px 0 12px;line-height:1.45}
+.write-action{width:100%;flex:none}
+.write-action:disabled{opacity:.45;cursor:not-allowed}
+body.write-mode #modeLabel{color:var(--accent);font-weight:750}
+
+/* ---- v4: write switch lives in the banner; write buttons share a row ---- */
+.write-action{width:auto;flex:1 1 170px}
+.ro-banner .write-enable{margin:0 0 0 auto;padding:6px 10px;border-radius:8px;font-size:12px;white-space:nowrap}
+.write-enable input:disabled+span{opacity:.5}
+.write-warning{display:none;flex:1 1 100%;margin:2px 0 0;line-height:1.45;color:#e0a96b}
+body.write-mode .write-warning{display:block}
+body.write-mode .ro-banner{border-left-color:#e0a96b;background:#1d1812}
+body.write-mode .ro-banner b{color:#e0a96b}
+body.theme-light.write-mode .ro-banner{background:#fff4e5!important}
+
+/* ---- AutoEQ card ---- */
+#page-autoeq{margin-top:12px}
+.aeq-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:18px;align-items:start}
+.aeq-side .metric{gap:10px}
+.aeq-mic select{max-width:62%;min-width:0;text-overflow:ellipsis;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:7px 10px}
+.aeq-level{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px;margin:10px 0 4px}
+.aeq-meter{height:8px;border-radius:4px;background:var(--panel2);overflow:hidden;border:1px solid var(--line)}
+.aeq-meter i{display:block;height:100%;width:0;background:var(--accent);transition:width .1s}
+.aeq-meter.clip i{background:#e05252}
+.aeq-meter.hot i{background:#e0a96b}
+.aeq-note{margin:10px 0 0;line-height:1.45}
+.aeq-exp{display:flex;align-items:flex-start;gap:9px;margin:12px 0 0;padding:9px 10px;border:1px dashed var(--line);border-radius:9px;font-size:13px;cursor:pointer}
+.aeq-exp input{width:16px;height:16px;margin:1px 0 0;accent-color:#e0a96b;flex:0 0 auto}
+.aeq-exp.on{border-color:#e0a96b;border-style:solid}
+.aeq-exp.locked{cursor:default;opacity:.8}
+.aeq-warn{margin:8px 0 0;padding:8px 10px;border-radius:8px;border:1px solid #e0a96b;color:#e0a96b;font-size:12px;line-height:1.45}
+.aeq-steps{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px}
+.aeq-steps li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel2)}
+.aeq-steps li div{display:flex;flex-direction:column;gap:3px;min-width:0}
+.aeq-steps li .subtle{font-size:12px;line-height:1.4}
+.aeq-steps li.done{border-color:var(--accent)}
+.aeq-steps li .btn{flex:0 0 auto}
+.aeq-con{margin:10px 0;border:1px solid var(--line);border-radius:12px;background:#05080a;overflow:hidden}
+.aeq-now{display:flex;align-items:center;gap:10px;padding:9px 12px;background:color-mix(in srgb,var(--accent) 10%,#05080a);color:#e8eef3}
+.aeq-now b{flex:0 0 18px;text-align:center;font-size:16px;color:#5f7383}
+.aeq-now b[data-state=ok]{color:#5ec27a}.aeq-now b[data-state=warn]{color:#e0a96b}.aeq-now b[data-state=err]{color:#e05252}
+.aeq-now b[data-state=busy]{color:var(--accent);display:inline-flex;justify-content:center}
+@keyframes aeqspin{to{transform:rotate(360deg)}}
+.aeq-status{flex:1;min-width:0;font-size:13px;line-height:1.4}
+.aeq-now em{font-style:normal;color:#5f7383;font-size:12px}
+.aeq-prog{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;padding:8px 12px 6px;border-bottom:1px solid #1f2a33}
+.aeq-prog i{display:block;height:4px;border-radius:2px;background:#2a3640}
+.aeq-prog small{display:block;margin-top:3px;color:#5f7383;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.aeq-prog [data-state=ok] i{background:#5ec27a}.aeq-prog [data-state=warn] i{background:#e0a96b}.aeq-prog [data-state=fail] i{background:#e05252}
+.aeq-prog [data-state=busy] i{background:var(--accent);animation:aeqpulse 1s ease-in-out infinite}
+.aeq-prog [data-state=skip] i{background:repeating-linear-gradient(90deg,#2a3640 0 4px,transparent 4px 7px)}
+@keyframes aeqpulse{50%{opacity:.35}}
+.aeq-log{height:170px;overflow:auto;padding:6px 12px;font:12px/1.5 "DejaVu Sans Mono",ui-monospace,Menlo,Consolas,monospace;color:#8fa4b3}
+.aeq-log .l{display:grid;grid-template-columns:auto 14px minmax(0,1fr);gap:0 6px}
+.aeq-log .l.empty{display:block;color:#5f7383}
+.aeq-log .t{color:#3f5262}.aeq-log .x{text-align:center}.aeq-log .m{white-space:pre-wrap;overflow-wrap:anywhere}
+.aeq-log .ok .x{color:#5ec27a}.aeq-log .warn .x{color:#e0a96b}.aeq-log .err .x,.aeq-log .err .m{color:#e05252}
+.aeq-log .cmd{color:#e8eef3;margin-top:4px}.aeq-log .cmd .x{color:var(--accent)}
+.aeq-foot{display:flex;align-items:center;gap:8px;padding:6px 12px;border-top:1px solid #1f2a33;font-size:12px;color:#5f7383}
+.aeq-foot button{background:none;border:0;padding:0;color:var(--accent);font:inherit;cursor:pointer}
+.aeq-foot #aeqLogCount{margin-left:auto}
+body.theme-light .aeq-con{background:#fbfcfd}body.theme-light .aeq-now{background:color-mix(in srgb,var(--accent) 8%,#fff);color:var(--text)}
+body.theme-light .aeq-log{color:#3a4654}body.theme-light .aeq-log .t{color:#9aa6b2}body.theme-light .aeq-log .cmd{color:#17202a}
+body.theme-light .aeq-prog,body.theme-light .aeq-foot{border-color:var(--line)}body.theme-light .aeq-prog i{background:#dce1e6}
+body.theme-amp .aeq-con{border-radius:0;background:#000}body.theme-amp .aeq-log{color:#21e43a}body.theme-amp .aeq-log .t{color:#1a7a2b}body.theme-amp .aeq-now{background:#0b140c}
+body.theme-pixel .aeq-con{border-radius:0;border:0;box-shadow:0 0 0 3px #000;background:#1a1c2c}body.theme-pixel .aeq-log{font-family:VT323,monospace;font-size:18px;line-height:1.15}body.theme-pixel .aeq-now{background:#262b44}body.theme-pixel .aeq-prog i{border-radius:0}
+.aeqbox{height:250px}
+.aeq-legend{display:flex;flex-wrap:wrap;gap:6px 14px;margin:8px 0 0;font-size:12px;color:var(--muted)}
+.aeq-legend span{display:inline-flex;align-items:center;gap:6px}
+.aeq-legend i{display:inline-block;width:14px;height:3px;border-radius:2px}
+.aeq-corr{margin-top:12px}
+.aeq-corr-grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:4px;margin-top:6px}
+.aeq-corr-grid div{display:flex;flex-direction:column;align-items:center;padding:5px 2px;border:1px solid var(--line);border-radius:7px;font-size:12px}
+.aeq-corr-grid small{color:var(--muted);font-size:10px}
+.aeq-corr-grid .cut b{color:#33b5e5}.aeq-corr-grid .boost b{color:#e0a96b}
+#aeqChart{width:100%;height:100%;display:block}
+#aeqChart text{fill:var(--muted);font-size:10px}
+.aeq-line{fill:none;stroke-width:2.2;stroke-linejoin:round}
+.aeq-run{fill:none;stroke-width:1.2;stroke-dasharray:3 3;opacity:.45}
+.aeq-empty{fill:var(--muted);font-size:12px}
+@media(max-width:820px){.aeq-grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:520px){.aeq-corr-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.aeq-steps li{flex-direction:column;align-items:stretch}}
+
+.logout-form{margin-top:10px;display:flex;justify-content:flex-end}
+
+/* ---- collapsible sections ---- */
+.collapse-toggle{all:unset;display:inline-flex;align-items:center;gap:8px;cursor:pointer;border-radius:6px}
+.collapse-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.collapse-toggle .chev{display:inline-block;width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid var(--muted);transition:transform .15s}
+.card.collapsed .collapse-toggle .chev{transform:rotate(-90deg)}
+.cardhead.clickable{cursor:pointer}
+.card.collapsed .cardhead{margin-bottom:0!important;border-bottom:0!important;padding-bottom:0!important}
+.card.collapsed .cardhead ~ *{display:none!important}
+.nav .collapse-all-btn{margin-left:auto}
+.nav .collapse-all-btn + .appearance-btn{margin-left:0}
+@media(max-width:760px){#page-control>.stack>#connection-card{order:-1}}
+
+/* ---- write mode button in the header (replaces the banner) ---- */
+.top{flex-wrap:wrap}
+.write-pill{display:inline-flex;align-items:center;gap:7px;padding:9px 13px;border-radius:30px;border:1px solid var(--line);background:#12171c;color:var(--muted);font:inherit;font-size:12px;font-weight:700;letter-spacing:.6px;cursor:pointer;white-space:nowrap}
+.write-pill:hover:not(:disabled){border-color:#e0a96b;color:#e0a96b}
+.write-pill.on{background:#e0a96b;border-color:#e0a96b;color:#111}
+.write-pill.on:hover{filter:brightness(1.07);color:#111}
+.write-pill:disabled{opacity:.5;cursor:not-allowed}
+.write-pill:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+body.theme-light .write-pill{background:#fff;color:var(--muted)}
+body.theme-light .write-pill.on{background:#e0a96b;color:#111}
+@media(max-width:600px){.top .status{margin-left:0}.top{row-gap:10px}}
+/* ---------- theme "Amp": classic 90s desktop player — charcoal bevelled metal, green LCD readouts, striped title bars ---------- */
+body.theme-amp{--bg:#1b1b25;--panel:#2b2b3a;--panel2:#20202c;--line:#0e0e14;--text:#d9d9e3;--muted:#8c8ca3;--lcd:#21e43a;--lcd-bg:#000;--accent:#21e43a;--accent-ink:#000;
+ background:#1b1b25!important;font-family:Tahoma,Verdana,"DejaVu Sans",sans-serif!important;font-size:13px}
+body.theme-amp header.top{background:linear-gradient(#3a3a4f,#26263a)!important;border-bottom:2px solid #0e0e14;box-shadow:inset 0 1px #5b5b78}
+body.theme-amp .card{background:linear-gradient(#34344a,#2a2a3b)!important;border-radius:0!important;border:1px solid #0e0e14!important;box-shadow:inset 1px 1px #5b5b78,inset -1px -1px #16161f;padding:10px 12px!important}
+body.theme-amp .cardhead{margin:-10px -12px 10px!important;padding:4px 10px!important;background:repeating-linear-gradient(0deg,#24243a 0 2px,#3d3d5c 2px 3px)!important;border-bottom:1px solid #0e0e14}
+body.theme-amp .card h2{font-size:11px!important;letter-spacing:3px!important;color:#e8d36a!important;background:#24243a;padding:0 6px;font-weight:700}
+body.theme-amp .cardhead .subtle{color:#bdb38a;background:#24243a;padding:0 6px;font-size:10px}
+body.theme-amp .knob,body.theme-amp .preset,body.theme-amp .filter{background:#20202c!important;border-radius:0!important;border:1px solid #0e0e14!important;box-shadow:inset 1px 1px #0b0b10,inset -1px -1px #3d3d52}
+body.theme-amp .value,body.theme-amp .badge2 b,body.theme-amp #presetName{font-family:"DejaVu Sans Mono",Consolas,monospace!important;color:var(--lcd)!important;text-shadow:0 0 6px color-mix(in srgb,var(--lcd) 60%,transparent)}
+body.theme-amp .knob .value{background:#000;padding:1px 6px;border:1px solid #0e0e14;box-shadow:inset 1px 1px #000}
+body.theme-amp .value span{color:#1a9a2b!important}
+body.theme-amp #sthead{background:#000;border:1px solid #0e0e14;box-shadow:inset 1px 1px #000,1px 1px #5b5b78;padding:2px 6px;flex:0 1 auto;margin:0 auto}
+body.theme-amp .badge2 svg{color:#1a9a2b}
+body.theme-amp .badge2 .u{color:#1a9a2b}
+body.theme-amp .btn,body.theme-amp .write-pill,body.theme-amp .status,body.theme-amp .appearance-btn,body.theme-amp button.logo{border-radius:0!important;background:linear-gradient(#4d4d66,#33334a)!important;border:1px solid #0e0e14!important;box-shadow:inset 1px 1px #77779a,inset -1px -1px #22222f;color:#d9d9e3!important;font-family:inherit}
+body.theme-amp .btn:disabled{color:#6e6e86!important}
+body.theme-amp .preset.selected{color:var(--lcd)!important;box-shadow:inset 1px 1px #000,0 0 0 1px var(--lcd)!important;background:#0b140c!important}
+body.theme-amp .range::-webkit-slider-runnable-track{height:6px;background:#0b0b10;border-radius:0;box-shadow:inset 1px 1px #000,0 1px #4b4b62}
+body.theme-amp .range{accent-color:#c9c9d6}
+body.theme-amp input[type=number],body.theme-amp select{background:#000!important;color:var(--lcd)!important;border:1px solid #0e0e14!important;border-radius:0!important;font-family:"DejaVu Sans Mono",monospace}
+body.theme-amp .eqbox{background:#000!important;border-radius:0!important}
+body.theme-amp .toast{background:#000!important;color:var(--lcd)!important;border:1px solid var(--lcd);border-radius:0!important}
+@media(max-width:900px){body.theme-amp #sthead{margin:0;flex:1 1 100%}}
+body.theme-amp #deviceSheet{border-radius:0;background:#2a2a3b;border-color:#0e0e14;box-shadow:inset 1px 1px #5b5b78,0 18px 48px rgba(0,0,0,.6)}
+/* ---------- theme "Retro pixel": 8-bit console look, chunky black outlines, pixel fonts (bundled, SIL OFL) ---------- */
+@font-face{font-family:"Press Start 2P";src:url("/static/fonts/PressStart2P-Regular.ttf") format("truetype");font-display:swap}
+@font-face{font-family:"VT323";src:url("/static/fonts/VT323-Regular.ttf") format("truetype");font-display:swap}
+body.theme-pixel{--bg:#1a1c2c;--panel:#333c57;--panel2:#262b44;--line:#000;--text:#f4f4f4;--muted:#94b0c2;--accent:#ffcd75;--accent-ink:#1a1c2c;--accent-alpha:100%;--px:"Press Start 2P",monospace;
+ background:#1a1c2c!important;font-family:VT323,"DejaVu Sans Mono",monospace!important;font-size:20px;line-height:1.15;-webkit-font-smoothing:none}
+body.theme-pixel header.top{background:#262b44!important;border-bottom:4px solid #000;backdrop-filter:none!important}
+body.theme-pixel .brand h1{font-family:var(--px);font-size:14px!important;letter-spacing:0}
+body.theme-pixel .brand h1 span{color:#94b0c2!important}
+body.theme-pixel img{image-rendering:pixelated}
+body.theme-pixel .card{background:#333c57!important;border:0!important;border-radius:0!important;box-shadow:0 -4px #000,0 4px #000,-4px 0 #000,4px 0 #000,inset 4px 4px #566c86,inset -4px -4px #29366f;margin:4px!important;padding:16px!important}
+body.theme-pixel .cardhead{border-bottom:4px dotted #1a1c2c!important;padding-bottom:10px!important;margin-bottom:14px!important}
+body.theme-pixel .card h2{font-family:var(--px);font-size:11px!important;letter-spacing:0!important;color:#ffcd75;text-shadow:2px 2px #000}
+body.theme-pixel .subtle,body.theme-pixel .range-meta{font-size:17px!important;color:#94b0c2!important}
+body.theme-pixel .knob,body.theme-pixel .preset,body.theme-pixel .filter,body.theme-pixel .metric{border-radius:0!important}
+body.theme-pixel .knob,body.theme-pixel .preset,body.theme-pixel .filter{background:#262b44!important;border:0!important;box-shadow:0 0 0 3px #000,inset 3px 3px #1a1c2c!important;margin:3px}
+body.theme-pixel .knob label{color:#f4f4f4!important;font-size:20px!important}
+body.theme-pixel .value,body.theme-pixel #presetName{font-family:var(--px)!important;font-size:11px!important;color:#a7f070!important}
+body.theme-pixel .value span{font-family:VT323,monospace;font-size:16px!important;color:#94b0c2!important}
+body.theme-pixel .preset{color:#f4f4f4!important;font-size:20px}
+body.theme-pixel .preset.selected{background:#ffcd75!important;color:#1a1c2c!important;box-shadow:0 0 0 3px #000,inset -4px -4px #ef7d57!important}
+body.theme-pixel .preset.selected .glyph{color:#1a1c2c!important}
+body.theme-pixel .btn,body.theme-pixel .write-pill,body.theme-pixel .status,body.theme-pixel .appearance-btn,body.theme-pixel button.logo{border-radius:0!important;border:0!important;background:#3b5dc9!important;color:#f4f4f4!important;box-shadow:0 0 0 3px #000,inset -4px -4px #29366f,inset 4px 4px #41a6f6!important;font-family:VT323,monospace!important;font-size:20px!important;letter-spacing:0!important;margin-top:3px;margin-bottom:3px}
+body.theme-pixel .write-pill{font-size:18px!important}
+body.theme-pixel .write-pill.on{background:#ef7d57!important;color:#1a1c2c!important;box-shadow:0 0 0 3px #000,inset -4px -4px #b13e53,inset 4px 4px #ffcd75!important}
+body.theme-pixel .btn:active:not(:disabled){box-shadow:0 0 0 3px #000,inset 4px 4px #29366f!important;transform:translate(2px,2px)}
+body.theme-pixel .btn:disabled{background:#566c86!important;color:#94b0c2!important;box-shadow:0 0 0 3px #000,inset -4px -4px #333c57!important}
+body.theme-pixel .btn.primary{background:#a7f070!important;color:#1a1c2c!important;box-shadow:0 0 0 3px #000,inset -4px -4px #38b764,inset 4px 4px #e8ffcf!important}
+body.theme-pixel #sthead .badge2{font-size:19px}
+body.theme-pixel #sthead .badge2 b{font-weight:400;color:#ffcd75}
+body.theme-pixel #sthead .badge2 svg{color:#73eff7}
+body.theme-pixel input[type=range]{-webkit-appearance:none!important;appearance:none!important;background:transparent!important;height:22px!important}
+body.theme-pixel input[type=range]::-webkit-slider-runnable-track{height:8px;background:#1a1c2c;border-radius:0;box-shadow:0 0 0 3px #000}
+body.theme-pixel input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:16px;height:20px;margin-top:-6px;border-radius:0;background:#ffcd75;box-shadow:0 0 0 3px #000,inset -4px -4px #ef7d57}
+body.theme-pixel input[type=range]::-moz-range-track{height:8px;background:#1a1c2c;border:3px solid #000;border-radius:0}
+body.theme-pixel input[type=range]::-moz-range-thumb{width:16px;height:20px;border-radius:0;background:#ffcd75;border:3px solid #000}
+body.theme-pixel input[type=number],body.theme-pixel select{background:#1a1c2c!important;color:#a7f070!important;border:0!important;box-shadow:0 0 0 3px #000;border-radius:0!important;font-family:VT323,monospace!important;font-size:20px!important}
+body.theme-pixel .eqbox{background:#1a1c2c!important;border-radius:0!important;border:0!important;box-shadow:0 0 0 3px #000}
+body.theme-pixel .metric{border-bottom:2px dashed #566c86}
+body.theme-pixel .toast{border-radius:0!important;background:#ffcd75!important;color:#1a1c2c!important;box-shadow:0 0 0 4px #000,6px 6px 0 4px rgba(0,0,0,.5);font-family:VT323,monospace;font-size:22px}
+body.theme-pixel #deviceSheet{border-radius:0;border:0;box-shadow:0 0 0 4px #000,8px 8px 0 4px rgba(0,0,0,.45)}
+/* Amp and Retro pixel bring their own colours: the accent picker does not apply there */
+body.theme-amp .accent-swatches,body.theme-amp label[for=accentPicker],body.theme-pixel .accent-swatches,body.theme-pixel label[for=accentPicker]{display:none!important}
+/* preset icons: smooth line icons, pixel-art versions in the Retro pixel theme */
+.preset .glyph{display:flex;justify-content:center;align-items:center;height:24px;margin-bottom:6px;color:var(--muted)}
+.preset .glyph svg{display:block}
+.preset .glyph .gl-px{display:none}
+.preset.selected .glyph{color:var(--accent)}
+body.theme-pixel .preset .glyph .gl-sm{display:none}
+body.theme-pixel .preset .glyph .gl-px{display:block}
+body.theme-pixel .preset .glyph{color:#73eff7}
+body.theme-amp .preset .glyph{color:#8c8ca3}
+body.theme-amp .preset.selected .glyph{color:var(--lcd);filter:drop-shadow(0 0 3px color-mix(in srgb,var(--lcd) 70%,transparent))}
+body.theme-amp .preset .glyph svg{stroke-width:1.6}
+body.theme-light .preset .glyph{color:var(--muted)!important}
+body.theme-light .preset.selected .glyph{color:var(--accent)!important}
+/* compact controls: number with − / + in the title row, no min/max row, one sticky write bar */
+#control-card .knob{background:none!important;border:0!important;border-bottom:1px solid var(--line)!important;border-radius:0!important;padding:8px 2px 10px!important}
+#control-card .control-strip{gap:0 18px}
+#control-card .knobtop{margin-bottom:6px!important;gap:6px;flex-wrap:nowrap}
+#control-card .knobtop label{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#control-card .range-entry{margin:0!important;gap:4px;flex:0 0 auto}
+#control-card .range-entry input[type=number]{width:52px!important;padding:5px 2px!important;text-align:center;font-variant-numeric:tabular-nums;-moz-appearance:textfield}
+#control-card .range-entry input::-webkit-inner-spin-button,#control-card .range-entry input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+#control-card .range-entry .subtle{min-width:0}
+.stp{width:30px;height:30px;flex:0 0 auto;border-radius:8px;border:1px solid var(--line);background:var(--panel2);color:var(--text);font:inherit;font-size:17px;line-height:1;padding:0;cursor:pointer;touch-action:manipulation;user-select:none}
+.stp:active{background:color-mix(in srgb,var(--accent) 30%,var(--panel2))}
+@media(min-width:901px){#control-card .knob{border-bottom:0!important}}
+@media(min-width:901px) and (max-width:1250px){#control-card .range-entry .subtle{display:none}}
+#preset-card .preset{display:flex!important;align-items:center;justify-content:center;gap:7px;padding:9px 4px!important}
+#preset-card .preset .glyph{margin:0!important;height:auto}
+@media(max-width:900px){#preset-card .preset{flex-direction:column;gap:2px;font-size:12px}#control-card .knob:last-child{border-bottom:0!important}}
+.card{padding:16px}.cardhead{margin-bottom:12px}
+@media(max-width:900px){.card{padding:12px}.cardhead{margin-bottom:10px}}
+.hdr-tools{display:flex;gap:6px;flex:0 0 auto}
+.hdr-tools .appearance-btn{margin:0!important;border:1px solid var(--line);background:#12171c;color:var(--text);border-radius:30px;padding:7px 11px;font:inherit;font-size:13px;display:inline-flex;align-items:center;cursor:pointer}
+.hdr-tools .appearance-btn[aria-expanded="true"]{border-color:var(--accent);color:var(--accent)}
+.hdr-tools .appearance-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+body.theme-light .hdr-tools .appearance-btn{background:#fff}
+@media(max-width:1100px){header.top .brand h1{display:none}}
+#writeBar{position:sticky;bottom:10px;z-index:30;margin:12px auto 0;display:flex;align-items:center;gap:8px;padding:8px 8px 8px 14px;border-radius:14px;background:color-mix(in srgb,var(--panel) 94%,transparent);border:1px solid var(--accent);box-shadow:0 10px 30px rgba(0,0,0,.45);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);max-width:640px}
+#writeBar.hidden{display:none!important}
+#writeBar .wb-text{flex:1;min-width:0;font-size:13px;color:var(--muted);overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+#writeBar .wb-text b{color:var(--text)}
+#writeBar .btn{flex:0 0 auto;padding:9px 14px}
+#writeBar.locked{border-color:var(--line)}
+body.has-writebar .toast{bottom:84px}
+body.theme-amp #writeBar,body.theme-pixel #writeBar{border-radius:0}
+body.theme-pixel .stp,body.theme-amp .stp{border-radius:0}
+body.theme-pixel #control-card .knob{border-bottom:2px dashed #566c86!important;box-shadow:none!important;background:none!important;margin:0!important;padding:8px 4px 12px!important}
+body.theme-pixel .stp{font-family:VT323,monospace;font-size:22px;background:#3b5dc9;color:#f4f4f4;border:0;box-shadow:0 0 0 3px #000,inset -3px -3px #29366f;margin:0 3px}
+body.theme-amp .stp{background:linear-gradient(#4d4d66,#33334a);border:1px solid #0e0e14;box-shadow:inset 1px 1px #77779a;color:#d9d9e3}
+body.theme-amp #control-card .knob{box-shadow:none!important;background:none!important}
+/* compact equalizer: small filter tiles, one editor with − / + rows, writes go through the write bar */
+#page-eq .filterlist{gap:6px;margin-top:10px}
+#page-eq .filter{padding:6px 4px!important;position:relative}
+#page-eq .filter b{font-size:12px;margin-bottom:1px}
+#page-eq .filter span{display:block;white-space:pre-line;font-size:11px;line-height:1.25}
+#page-eq .filter.edited::after{content:"";position:absolute;top:5px;right:5px;width:7px;height:7px;border-radius:50%;background:#e0a96b}
+.peq-edit{margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
+.peq-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:4px}
+.peq-head b{font-size:15px}
+.peq-status{font-size:12px;color:var(--muted)}
+.peq-status.local{color:#e0a96b}
+.peq-rows{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 18px}
+.peq-row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 0}
+.peq-row label{color:var(--muted);font-size:13px;white-space:nowrap}
+.peq-row .range-entry{margin:0;gap:4px;display:flex;align-items:center}
+.peq-row .range-entry .subtle{min-width:20px}
+#page-eq .peq-in{width:58px;padding:5px 2px;text-align:center;font-variant-numeric:tabular-nums;-moz-appearance:textfield}
+#page-eq .peq-in::-webkit-inner-spin-button,#page-eq .peq-in::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+@media(max-width:900px){#page-eq .filterlist{grid-template-columns:repeat(4,minmax(0,1fr))!important}.peq-rows{grid-template-columns:minmax(0,1fr)}.peq-row{border-bottom:1px solid var(--line)}.peq-row:last-child{border-bottom:0}#page-eq .eqbox{height:170px}}
+body.theme-light #page-eq .peq-in{background:#fff}
+body.theme-pixel .peq-head b{font-family:var(--px);font-size:11px;color:#ffcd75}
+body.theme-pixel #page-eq .filter span{font-size:16px}
+body.theme-pixel #page-eq .filter.edited::after,body.theme-amp #page-eq .filter.edited::after{border-radius:0}
+#connStatus{cursor:pointer;user-select:none}
+#connStatus:hover{border-color:var(--accent)}
+#connStatus:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+#connStatus .conn-spin{display:none;color:var(--accent)}
+#connStatus.busy .conn-spin{display:inline-flex}
+#connStatus.busy .dot{display:none}
+.busyspin{display:block;flex:0 0 auto;overflow:visible}
+.busyspin circle{fill:none;stroke:currentColor;stroke-width:1.2;vector-effect:non-scaling-stroke}
+.busyspin .cone{fill:currentColor;stroke:none;transform-origin:12px 12px;animation:busycone .55s ease-in-out infinite alternate}
+.busyspin .ripple{transform-origin:12px 12px;animation:busyripple 1.1s ease-out infinite}
+.busyspin .ripple.r2{animation-delay:.55s}
+@keyframes busycone{from{transform:scale(.72)}to{transform:scale(1)}}
+@keyframes busyripple{from{transform:scale(.55);opacity:.9}to{transform:scale(1.25);opacity:0}}
+@media (prefers-reduced-motion:reduce){.busyspin .cone{animation-duration:1.1s}.busyspin .ripple{animation-duration:2.2s}}
+#wbWrite{display:inline-flex;align-items:center;gap:7px}
+#sthead [data-goto]{cursor:pointer;border-radius:8px}
+#sthead [data-goto]:hover{background:color-mix(in srgb,var(--accent) 14%,transparent)}
+#sthead [data-goto]:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.goto-flash{outline:2px solid transparent;outline-offset:3px;border-radius:10px;animation:gotoflash .5s ease-in-out .35s 2}
+@keyframes gotoflash{0%,100%{outline-color:transparent;box-shadow:none}45%{outline-color:var(--accent);box-shadow:0 0 18px color-mix(in srgb,var(--accent) 45%,transparent),inset 0 0 0 999px color-mix(in srgb,var(--accent) 16%,transparent)}}
+@media (prefers-reduced-motion:reduce){.goto-flash{animation-duration:.8s}}
+/* Retro pixel: square toggle, panel, meter and boxes; Amp: bevelled toggle and panel */
+body.theme-pixel .toggle-ui{width:44px;height:22px;border-radius:0;background:#1a1c2c;border:0;box-shadow:0 0 0 3px #000}
+body.theme-pixel .toggle-ui:after{width:16px;height:16px;top:3px;left:3px;border-radius:0;background:#94b0c2;box-shadow:inset -3px -3px #566c86}
+body.theme-pixel .toggle-wrap input:checked+.toggle-ui{background:#38b764}
+body.theme-pixel .toggle-wrap input:checked+.toggle-ui:after{transform:translateX(22px);background:#ffcd75;box-shadow:inset -3px -3px #ef7d57}
+body.theme-pixel .toggle-wrap strong{font-family:var(--px);font-size:10px;color:#a7f070}
+body.theme-pixel .layout-tools{border-radius:0;border:0;background:#262b44;box-shadow:0 0 0 3px #000,inset 3px 3px #333c57;margin:3px 3px 14px}
+body.theme-pixel .aeq-meter{border-radius:0;border:0;height:10px;background:#1a1c2c;box-shadow:0 0 0 3px #000}
+body.theme-pixel .aeq-meter i{background:#a7f070}
+body.theme-pixel .aeq-exp{border-radius:0;border:2px dashed #566c86}
+body.theme-pixel .aeq-exp input,body.theme-pixel input[type=checkbox]{accent-color:#ffcd75}
+body.theme-pixel #connStatus{gap:9px}
+body.theme-pixel #connStatus .dot{width:8px;height:8px;border-radius:0;box-shadow:none!important}
+body.theme-pixel #connStatus svg{color:#f4f4f4}
+body.theme-amp .toggle-ui{border-radius:0;background:#000;border:1px solid #0e0e14;box-shadow:inset 1px 1px #000,1px 1px #5b5b78}
+body.theme-amp .toggle-ui:after{border-radius:0;background:linear-gradient(#77779a,#4d4d66);box-shadow:inset 1px 1px #9a9ab8}
+body.theme-amp .toggle-wrap input:checked+.toggle-ui{background:#0b140c;box-shadow:inset 0 0 6px var(--lcd),1px 1px #5b5b78}
+body.theme-amp .layout-tools{border-radius:0;border:1px solid #0e0e14;background:linear-gradient(#34344a,#2a2a3b);box-shadow:inset 1px 1px #5b5b78}
+body.theme-amp .aeq-meter{border-radius:0;background:#000}
+body.theme-amp #connStatus .dot{border-radius:0}
+/* write switch: a floppy (writes on) or a crossed-out floppy (writes off), no text */
+.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.write-pill{--pillbg:#12171c;padding:7px 12px}
+.write-pill .write-pill-icon{display:inline-flex}
+.write-pill .write-pill-icon .gl-sm{display:block}
+.write-pill .write-pill-icon .gl-px{display:none}
+.write-pill.on .fl-slash{display:none}
+body.theme-light .write-pill{--pillbg:#fff}
+body.theme-amp .write-pill{--pillbg:#3d3d55}
+body.theme-amp .write-pill.on{background:#0b140c!important;color:#21e43a!important;box-shadow:inset 0 0 8px rgba(33,228,58,.45),inset 1px 1px #000!important}
+body.theme-pixel .write-pill .write-pill-icon .gl-sm{display:none}
+body.theme-pixel .write-pill .write-pill-icon .gl-px{display:block}
+body.theme-pixel .write-pill{padding:5px 10px!important}
+/* header controls: one height for all four (Expand, Appearance, Bluetooth, write switch) */
+header.top .hdr-tools .appearance-btn,header.top #connStatus,header.top #writeModeBtn{box-sizing:border-box;height:36px!important;min-width:36px;padding-top:0!important;padding-bottom:0!important;display:inline-flex;align-items:center;justify-content:center;margin-top:0!important;margin-bottom:0!important}
+header.top .hdr-tools{align-items:center}
+/* ---------- themes inspired by the ELAC Debut 2.0 look: black ash cabinets, woven aramid cones, silver detail ---------- */
+:is(body.theme-ash,body.theme-aramid,body.theme-debut,body.theme-gunmetal){--accent:#d9dde2;--accent-ink:#0b0b0c;--text:#e9eaec;--muted:#8a8f96;--line:#26282b;--panel:#121314;--panel2:#18191b;--bg:#08090a;--lcd:#d9dde2}
+:is(body.theme-ash,body.theme-aramid,body.theme-debut,body.theme-gunmetal) .card h2{letter-spacing:3px!important;font-weight:500!important;color:#f2f3f5}
+:is(body.theme-ash,body.theme-aramid,body.theme-debut,body.theme-gunmetal) .cardhead .subtle{letter-spacing:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+@media(max-width:520px){:is(body.theme-ash,body.theme-aramid,body.theme-debut,body.theme-gunmetal) .card h2{letter-spacing:2px!important}:is(body.theme-ash,body.theme-aramid,body.theme-debut,body.theme-gunmetal) .cardhead .subtle{letter-spacing:.5px;font-size:11px}}
+:is(body.theme-ash,body.theme-aramid,body.theme-debut,body.theme-gunmetal) .preset.selected{background:#1d1f22!important;border-color:#d9dde2!important;box-shadow:inset 0 0 0 1px #d9dde2!important;color:#fff!important}
+:is(body.theme-ash,body.theme-aramid,body.theme-debut,body.theme-gunmetal) .preset .glyph{color:#7d838b}:is(body.theme-ash,body.theme-aramid,body.theme-debut,body.theme-gunmetal) .preset.selected .glyph{color:#fff}
+:is(body.theme-ash,body.theme-aramid,body.theme-debut,body.theme-gunmetal) .badge2 svg{color:#9aa0a8}
+:is(body.theme-ash,body.theme-aramid,body.theme-debut,body.theme-gunmetal) .stp{background:#1b1c1e;border-color:#2c2e31}
+:is(body.theme-ash,body.theme-aramid,body.theme-debut,body.theme-gunmetal) .write-pill{--pillbg:#151515}
+:is(body.theme-ash,body.theme-aramid,body.theme-debut,body.theme-gunmetal) .write-pill.on{background:#e9eaec!important;color:#0b0b0c!important}
+:is(body.theme-ash,body.theme-aramid,body.theme-debut,body.theme-gunmetal) .accent-swatches,:is(body.theme-ash,body.theme-aramid,body.theme-debut,body.theme-gunmetal) label[for=accentPicker]{display:none!important}
+:is(body.theme-ash,body.theme-aramid,body.theme-debut,body.theme-gunmetal) .aeq-con{background:#070708}:is(body.theme-ash,body.theme-aramid,body.theme-debut,body.theme-gunmetal) .aeq-now{background:#151618}
+:is(body.theme-ash,body.theme-aramid,body.theme-debut,body.theme-gunmetal) #page-eq .filter.edited::after{background:#d9dde2}
+body.theme-ash{background:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)),url("/static/textures/black-ash-2.jpg") 0 0/442px auto repeat,#0a0a0b!important}body.theme-debut,body.theme-gunmetal{background:url("/static/textures/black-ash.jpg") 0 0/333px auto repeat,#0a0a0b!important}
+body.theme-ash header.top{background:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),url("/static/textures/black-ash-2.jpg") 0 0/442px auto repeat!important;border-bottom:1px solid #222;box-shadow:0 2px 10px rgba(0,0,0,.55)}body.theme-debut header.top,body.theme-gunmetal header.top{background:linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.18)),url("/static/textures/black-ash.jpg") 0 0/333px auto repeat!important;border-bottom:1px solid #222;box-shadow:0 2px 10px rgba(0,0,0,.55)}
+body.theme-ash .card{background:linear-gradient(180deg,rgba(24,24,26,.66),rgba(12,12,13,.8)),url("/static/textures/black-ash-2.jpg") 0 0/442px auto repeat!important;border:1px solid #232323!important;border-radius:6px!important;box-shadow:inset 0 1px rgba(255,255,255,.05),0 6px 20px rgba(0,0,0,.5)}
+body.theme-ash .knob,body.theme-ash .preset,body.theme-ash .filter{background:#0d0d0e!important;border-radius:4px!important;border-color:#222!important}
+body.theme-ash .btn,body.theme-ash .write-pill,body.theme-ash .status,body.theme-ash .appearance-btn,body.theme-ash button.logo,body.theme-ash .stp{border-radius:4px!important;background:#151515!important;border-color:#2a2a2a!important}
+body.theme-aramid{background:#0b0c0d!important}
+body.theme-aramid header.top{background:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px),repeating-linear-gradient(-45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px),#141516!important;border-bottom:1px solid #2a2c2f}
+body.theme-aramid .card{background:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px),repeating-linear-gradient(-45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px),radial-gradient(circle at 50% -40%,#24262a 0,#141517 60%)!important;border:1px solid #2a2c2f!important;border-radius:14px!important}
+body.theme-aramid .knob,body.theme-aramid .preset,body.theme-aramid .filter{background:radial-gradient(circle at 50% 120%,#1c1e21,#101113 70%)!important;border-color:#2a2c2f!important;border-radius:12px!important}
+body.theme-aramid .btn,body.theme-aramid .write-pill,body.theme-aramid .status,body.theme-aramid .appearance-btn{border-radius:99px!important;background:#16171a!important;border-color:#33363a!important}body.theme-aramid button.logo,body.theme-debut button.logo,body.theme-gunmetal button.logo{border-radius:50%!important;box-shadow:0 0 0 3px #1a1b1d,0 0 0 4px #3a3d42}body.theme-aramid .preset.selected,body.theme-debut .preset.selected,body.theme-gunmetal .preset.selected{box-shadow:inset 0 0 0 1px #d9dde2,0 0 0 4px #121314,0 0 0 5px #3a3d42!important}body.theme-debut .card,body.theme-gunmetal .card{background:repeating-linear-gradient(45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px),repeating-linear-gradient(-45deg,rgba(255,255,255,.035) 0 2px,transparent 2px 6px),radial-gradient(circle at 50% -40%,#222428 0,#121315 60%)!important;border:1px solid #262626!important;border-radius:8px!important;box-shadow:inset 0 2px 0 #1b1b1b,inset 0 0 0 1px #1d1e20,0 6px 20px rgba(0,0,0,.5)}body.theme-debut .cardhead,body.theme-gunmetal .cardhead{background:linear-gradient(rgba(255,255,255,.03),rgba(0,0,0,.1)),url("/static/textures/black-ash.jpg") 0 0/333px auto repeat;margin:-16px -16px 12px!important;padding:12px 16px!important;border-radius:8px 8px 0 0;border-bottom:1px solid #222}body.theme-debut .card.collapsed,body.theme-gunmetal .card.collapsed{padding:0!important}body.theme-debut .card.collapsed .cardhead,body.theme-gunmetal .card.collapsed .cardhead{margin:0!important;border-radius:8px;border-bottom:0;padding-bottom:12px!important}
+@media(max-width:900px){body.theme-debut .card.collapsed .cardhead,body.theme-gunmetal .card.collapsed .cardhead{padding-bottom:10px!important}}body.theme-debut .knob,body.theme-debut .preset,body.theme-debut .filter,body.theme-gunmetal .knob,body.theme-gunmetal .preset,body.theme-gunmetal .filter{background:radial-gradient(circle at 50% 120%,#1c1e21,#101113 70%)!important;border-color:#2a2c2f!important;border-radius:10px!important}body.theme-debut .btn,body.theme-debut .write-pill,body.theme-debut .status,body.theme-debut .appearance-btn,body.theme-gunmetal .btn,body.theme-gunmetal .write-pill,body.theme-gunmetal .status,body.theme-gunmetal .appearance-btn{border-radius:6px!important;background:#151515!important;border-color:#2a2a2a!important}
+@media(max-width:900px){body.theme-debut .cardhead,body.theme-gunmetal .cardhead{margin:-12px -12px 10px!important;padding:10px 12px!important}}
+/* Gunmetal: powder-coated graphite frames with a faint silver sheen, black ash page, aramid interiors */
+body.theme-gunmetal header.top{background:linear-gradient(112deg,transparent 18%,rgba(220,228,238,.016) 30%,rgba(240,245,252,.04) 38%,rgba(220,228,238,.016) 46%,transparent 58%,transparent 72%,rgba(220,228,238,.018) 82%,transparent 90%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.2' numOctaves='1' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .93  0 0 0 0 .95  0 0 0 0 1  14 0 0 0 -10.92'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E"),linear-gradient(180deg,#4b4f56 0,#363a3f 40%,#2a2d31 100%)!important;background-blend-mode:screen,screen,soft-light,normal!important;border-bottom:1px solid #1a1b1d;box-shadow:inset 0 1px rgba(255,255,255,.15),0 2px 10px rgba(0,0,0,.6)}
+body.theme-gunmetal .card{border:1px solid #2b2d31!important}
+body.theme-gunmetal .cardhead{background:linear-gradient(112deg,transparent 18%,rgba(220,228,238,.016) 30%,rgba(240,245,252,.04) 38%,rgba(220,228,238,.016) 46%,transparent 58%,transparent 72%,rgba(220,228,238,.018) 82%,transparent 90%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.2' numOctaves='1' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .93  0 0 0 0 .95  0 0 0 0 1  14 0 0 0 -10.92'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E"),linear-gradient(180deg,#4b4f56 0,#363a3f 40%,#2a2d31 100%)!important;background-blend-mode:screen,screen,soft-light,normal!important;border-bottom:1px solid #18191b!important;box-shadow:inset 0 1px rgba(255,255,255,.16),inset 0 -1px rgba(0,0,0,.4)}
+body.theme-gunmetal .card h2{color:#f4f5f7;text-shadow:0 1px 0 rgba(0,0,0,.6)}
+body.theme-gunmetal .cardhead .subtle{color:#c9cdd3;text-shadow:0 1px 0 rgba(0,0,0,.7)}
+body.theme-gunmetal header.top .badge2 b,body.theme-gunmetal header.top .badge2 svg,body.theme-gunmetal header.top .brand h1{filter:drop-shadow(0 1px 1px rgba(0,0,0,.7))}
+body.theme-gunmetal .btn,body.theme-gunmetal .write-pill,body.theme-gunmetal .status,body.theme-gunmetal .appearance-btn,body.theme-gunmetal .stp{background:linear-gradient(112deg,transparent 18%,rgba(220,228,238,.016) 30%,rgba(240,245,252,.04) 38%,rgba(220,228,238,.016) 46%,transparent 58%,transparent 72%,rgba(220,228,238,.018) 82%,transparent 90%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2.2' numOctaves='1' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .93  0 0 0 0 .95  0 0 0 0 1  14 0 0 0 -10.92'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23s)'/%3E%3C/svg%3E"),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E"),linear-gradient(180deg,#4b4f56 0,#363a3f 40%,#2a2d31 100%)!important;background-blend-mode:screen,screen,soft-light,normal!important;border-color:#1c1d20!important;box-shadow:inset 0 1px rgba(255,255,255,.16)}
+body.theme-gunmetal .btn.primary,body.theme-gunmetal .write-pill.on{background:linear-gradient(180deg,#f1f3f6,#c9cdd3)!important;color:#0b0b0c!important}
+/* several subwoofers: list in the device sheet */
+.dev-pick{grid-column:1/-1;border-bottom:1px solid var(--line);padding-bottom:10px;margin-bottom:2px}
+.dev-pick-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;font-size:13px}
+.dev-find{background:none;border:0;color:var(--accent);font:inherit;font-size:12px;cursor:pointer;padding:4px 0}
+.dev-row{display:flex;align-items:center;gap:6px;margin-top:4px}
+.dev-go{flex:1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:1px;text-align:left;background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:7px 10px;color:var(--text);font:inherit;cursor:pointer}
+.dev-go b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.dev-go small{color:var(--muted);font-size:11px;font-variant-numeric:tabular-nums}
+.dev-row.current .dev-go{border-color:var(--accent);cursor:default}
+.dev-go:disabled{opacity:1}
+.dev-act{width:32px;height:32px;flex:0 0 auto;background:var(--panel2);border:1px solid var(--line);border-radius:8px;color:var(--muted);cursor:pointer;font:inherit}
+.dev-act:hover{color:var(--text)}
+body.theme-pixel .dev-go,body.theme-pixel .dev-act,body.theme-amp .dev-go,body.theme-amp .dev-act{border-radius:0}
+</style>
+</head><body><main class="app">
+<header class="top"><div class="brand"><button type="button" class="logo" id="deviceSheetBtn" aria-expanded="false" aria-controls="deviceSheet" data-i18n-title="dev_sheet" data-i18n-aria="dev_sheet"><img src="/static/sub3030-mini.png" alt="" width="34" height="34"></button><div><div class="eyebrow" data-i18n="eyebrow">Subwoofer control</div><h1><span id="brandName">SUB3030</span> <span style="color:var(--muted);font-weight:400" data-i18n="h1sub">/ Control</span></h1></div></div><div id="sthead"><span class="badge2" role="button" tabindex="0" data-goto="volumeEntry" data-i18n-title="volume"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></svg><b id="statusVol" data-dev>—</b></span><span class="badge2" role="button" tabindex="0" data-goto="@preset" data-i18n-title="preset"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg><b id="sidePreset" data-dev>—</b></span><span class="badge2" role="button" tabindex="0" data-goto="lpfEntry" data-i18n-title="low_pass"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h9c3 0 4 10 9 10"/><path d="M3 21h18" opacity=".4"/></svg><b id="statusLpf" data-dev>—</b><small class="u">Hz</small></span><span class="badge2" role="button" tabindex="0" data-goto="phaseEntry" data-i18n-title="phase"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12c2.5-6 5-6 7.5 0s5 6 7.5 0"/><path d="M8 12c2.5-6 5-6 7.5 0s5 6 7.5 0" opacity=".45"/></svg><b id="statusPhase" data-dev>—</b><small class="u">°</small></span><span class="badge2" role="button" tabindex="0" data-goto="delayEntry" data-i18n-title="delay"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M10 2h4"/></svg><b id="statusDelay" data-dev>—</b><small class="u">ms</small></span><span class="sep" aria-hidden="true"></span><span class="badge2" role="button" tabindex="0" data-goto="@aeq" data-i18n-title="st_aeq"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg><b id="statusAeq" data-dev>—</b></span><span class="badge2" role="button" tabindex="0" data-goto="autoOnThresholdEntry" data-i18n-title="autoon_aria"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v9"/><path d="M6.4 6.4a8 8 0 1 0 11.2 0"/></svg><b id="autoOnValue" data-dev>—</b><small class="u">mV</small></span></div><div class="hdr-tools"><button type="button" class="appearance-btn collapse-all-btn" id="collapseAllBtn"><span aria-hidden="true">▾</span><span class="appearance-label" id="collapseAllLabel" data-i18n="expand_all">Expand all</span></button><button type="button" class="appearance-btn" id="appearanceBtn" aria-expanded="false" aria-controls="layoutTools" data-i18n-aria="appearance"><span aria-hidden="true">⚙</span><span class="appearance-label" data-i18n="appearance">Appearance</span></button></div><div class="status" id="connStatus" role="button" tabindex="0"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7l10 10-5 4V3l5 4L7 17"/></svg><i class="dot"></i><span class="conn-spin" id="connSpin"></span><span class="statuslabel" id="connectionLabel">DISCONNECTED</span><span class="badge hidden" id="demoBadge" style="margin-left:4px">DEMO</span></div><button type="button" class="write-pill" id="writeModeBtn" aria-pressed="false" disabled><span class="write-pill-icon" aria-hidden="true"><svg class="gl-sm" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h12l3 3v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a1 1 0 0 1 1-1z"/><path d="M8 3v5h7V3"/><path d="M12.5 4.5v2"/><rect x="7" y="13" width="10" height="8" rx="1"/><g class="fl-slash"><path d="M3 21L21 3" stroke="var(--pillbg)" stroke-width="4.5"/><path d="M3 21L21 3" stroke="#e05252" stroke-width="1.8"/></g></svg><svg class="gl-px" viewBox="0 0 16 16" width="24" height="24" fill="currentColor" shape-rendering="crispEdges"><rect x="0" y="0" width="13" height="1"/><rect x="0" y="1" width="1" height="1"/><rect x="3" y="1" width="8" height="1"/><rect x="12" y="1" width="1" height="1"/><rect x="0" y="2" width="1" height="1"/><rect x="3" y="2" width="5" height="1"/><rect x="10" y="2" width="2" height="1"/><rect x="13" y="2" width="1" height="1"/><rect x="0" y="3" width="1" height="1"/><rect x="3" y="3" width="5" height="1"/><rect x="10" y="3" width="2" height="1"/><rect x="14" y="3" width="1" height="1"/><rect x="0" y="4" width="1" height="1"/><rect x="3" y="4" width="5" height="1"/><rect x="10" y="4" width="2" height="1"/><rect x="15" y="4" width="1" height="1"/><rect x="0" y="5" width="1" height="1"/><rect x="3" y="5" width="9" height="1"/><rect x="15" y="5" width="1" height="1"/><rect x="0" y="6" width="1" height="1"/><rect x="15" y="6" width="1" height="1"/><rect x="0" y="7" width="1" height="1"/><rect x="15" y="7" width="1" height="1"/><rect x="0" y="8" width="1" height="1"/><rect x="2" y="8" width="12" height="1"/><rect x="15" y="8" width="1" height="1"/><rect x="0" y="9" width="1" height="1"/><rect x="2" y="9" width="1" height="1"/><rect x="13" y="9" width="1" height="1"/><rect x="15" y="9" width="1" height="1"/><rect x="0" y="10" width="1" height="1"/><rect x="2" y="10" width="1" height="1"/><rect x="13" y="10" width="1" height="1"/><rect x="15" y="10" width="1" height="1"/><rect x="0" y="11" width="1" height="1"/><rect x="2" y="11" width="1" height="1"/><rect x="13" y="11" width="1" height="1"/><rect x="15" y="11" width="1" height="1"/><rect x="0" y="12" width="1" height="1"/><rect x="2" y="12" width="1" height="1"/><rect x="13" y="12" width="1" height="1"/><rect x="15" y="12" width="1" height="1"/><rect x="0" y="13" width="1" height="1"/><rect x="2" y="13" width="1" height="1"/><rect x="13" y="13" width="1" height="1"/><rect x="15" y="13" width="1" height="1"/><rect x="0" y="14" width="16" height="1"/><g class="fl-slash" fill="#ff4d4d"><rect x="14" y="0" width="2" height="1"/><rect x="13" y="1" width="3" height="1"/><rect x="12" y="2" width="3" height="1"/><rect x="11" y="3" width="3" height="1"/><rect x="10" y="4" width="3" height="1"/><rect x="9" y="5" width="3" height="1"/><rect x="8" y="6" width="3" height="1"/><rect x="7" y="7" width="3" height="1"/><rect x="6" y="8" width="3" height="1"/><rect x="5" y="9" width="3" height="1"/><rect x="4" y="10" width="3" height="1"/><rect x="3" y="11" width="3" height="1"/><rect x="2" y="12" width="3" height="1"/><rect x="1" y="13" width="3" height="1"/><rect x="0" y="14" width="3" height="1"/><rect x="0" y="15" width="2" height="1"/></g></svg></span><span id="writeModeLabel" class="sr-only" data-i18n="write_pill_off">WRITES: OFF</span></button><input type="checkbox" id="writeEnabledToggle" class="hidden" tabindex="-1" aria-hidden="true" disabled><div id="deviceSheet" class="hidden" role="dialog" data-i18n-aria="dev_sheet"><div class="dev-pick"><div class="dev-pick-head"><b data-i18n="subs">Subwoofers</b><button type="button" class="dev-find" id="devFind" data-i18n="dev_find">Find another…</button></div><div id="devList"></div></div><img src="/static/sub3030-icon.png" data-i18n-alt="img_alt" alt="ELAC SUB3030 subwoofer"><div class="rows"><div class="r"><span data-i18n="model"></span><strong id="modelValue" data-dev>—</strong></div><div class="r"><span data-i18n="firmware"></span><strong id="firmwareValue" data-dev>—</strong></div><div class="r"><span data-i18n="hardware"></span><strong>rev.A</strong></div><div class="r"><span>Bluetooth</span><strong id="deviceBluetooth">—</strong></div><div class="r"><span data-i18n="aeq_on_short"></span><strong id="autoeqValue" data-dev>—</strong></div><div class="r"><span data-i18n="calibration"></span><strong id="calibrationValue" data-dev>—</strong></div><div class="r"><span data-i18n="autoon_threshold"></span><strong id="autoOnSheetValue" data-dev>—</strong></div><div class="r"><span data-i18n="last_read"></span><strong id="quickBadge">—</strong></div></div></div></header>
+
+<div class="layout-tools" id="layoutTools"><label class="subtle" for="fontSizePicker" data-i18n="font">Font size</label><select id="fontSizePicker" class="font-picker"><option value="small" data-i18n="font_small">Small</option><option value="normal" data-i18n="font_normal" selected>Normal</option><option value="large" data-i18n="font_large">Large</option></select><label class="subtle" for="themePicker" data-i18n="theme">Theme</label><select id="themePicker" class="font-picker"><option value="dark" data-i18n="theme_dark">Dark</option><option value="light" data-i18n="theme_light">Light</option><option value="amp" data-i18n="theme_amp">Amp</option><option value="pixel" data-i18n="theme_pixel">Retro pixel</option><option value="ash" data-i18n="theme_ash">Black ash</option><option value="aramid" data-i18n="theme_aramid">Aramid</option><option value="debut" data-i18n="theme_debut">Debut (ash + aramid)</option><option value="gunmetal" data-i18n="theme_gunmetal">Gunmetal</option></select><label class="subtle" for="langPicker" data-i18n="language">Language</label><select id="langPicker" class="font-picker"><option value="en">English</option><option value="pl">Polski</option></select><label class="subtle" for="highlightOpacity" data-i18n="highlight">Highlight</label><input id="highlightOpacity" type="range" min="0" max="100" value="25" style="width:84px;accent-color:var(--accent)" data-i18n-title="highlight_title"><label class="subtle" for="accentPicker" data-i18n="accent">Accent</label><select id="accentPicker" class="font-picker"><option value="#FF4D06">Orange</option><option value="#E60000">Red</option><option value="#FF6900">Orange 021</option><option value="#F2AA00">Yellow</option><option value="#008C45">Green</option><option value="#00A3AD">Teal</option><option value="#0072CE">Blue</option><option value="#003DA5">Royal blue</option><option value="#5F259F">Purple</option><option value="#D62598">Magenta</option><option value="#F4C2C2">Pink</option><option value="#8A7356">Brown</option><option value="#6C7378">Gray</option><option value="#000000">Black</option><option value="#FFFFFF">White</option><option value="#A7C6ED">Light blue</option></select></div>
+
+<section id="page-control" class="layout gui-layout-1"><div class="stack">
+<div class="card" id="preset-card"><div class="cardhead"><h2 data-i18n="preset_title">Sound preset</h2><span class="subtle" id="presetName" data-dev>—</span></div><div class="presets"><button class="preset selected" data-preset="Flat"><span class="glyph"><svg class="gl-sm" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h18"/></svg><svg class="gl-px" viewBox="0 0 16 16" width="24" height="24" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="1" y="6" width="14" height="1"/><rect x="1" y="7" width="14" height="1"/></svg></span>Flat</button><button class="preset" data-preset="Cinema"><span class="glyph"><svg class="gl-sm" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="10" width="18" height="10" rx="1.5"/><path d="M3.3 10 2.6 7.3a1 1 0 0 1 .7-1.2l15.4-4.1a1 1 0 0 1 1.2.7l.7 2.7z"/><path d="M7.6 5.3l2.9 3.4M13.4 3.8l2.9 3.4"/></svg><svg class="gl-px" viewBox="0 0 16 16" width="24" height="24" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="1" y="2" width="14" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="4" y="3" width="2" height="1"/><rect x="8" y="3" width="2" height="1"/><rect x="12" y="3" width="2" height="1"/><rect x="15" y="3" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="3" y="4" width="2" height="1"/><rect x="7" y="4" width="2" height="1"/><rect x="11" y="4" width="2" height="1"/><rect x="15" y="4" width="1" height="1"/><rect x="1" y="5" width="14" height="1"/><rect x="1" y="6" width="2" height="1"/><rect x="1" y="7" width="14" height="1"/><rect x="1" y="8" width="14" height="1"/><rect x="1" y="9" width="14" height="1"/><rect x="1" y="10" width="2" height="1"/><rect x="13" y="10" width="2" height="1"/><rect x="1" y="11" width="14" height="1"/><rect x="1" y="12" width="14" height="1"/><rect x="1" y="13" width="14" height="1"/></svg></span>Cinema</button><button class="preset" data-preset="Music"><span class="glyph"><svg class="gl-sm" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg><svg class="gl-px" viewBox="0 0 16 16" width="24" height="24" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="6" y="1" width="9" height="1"/><rect x="6" y="2" width="9" height="1"/><rect x="6" y="3" width="2" height="1"/><rect x="13" y="3" width="2" height="1"/><rect x="6" y="4" width="2" height="1"/><rect x="13" y="4" width="2" height="1"/><rect x="6" y="5" width="2" height="1"/><rect x="13" y="5" width="2" height="1"/><rect x="6" y="6" width="2" height="1"/><rect x="13" y="6" width="2" height="1"/><rect x="6" y="7" width="2" height="1"/><rect x="13" y="7" width="2" height="1"/><rect x="6" y="8" width="2" height="1"/><rect x="13" y="8" width="2" height="1"/><rect x="3" y="9" width="4" height="1"/><rect x="10" y="9" width="5" height="1"/><rect x="2" y="10" width="5" height="1"/><rect x="9" y="10" width="6" height="1"/><rect x="2" y="11" width="5" height="1"/><rect x="9" y="11" width="6" height="1"/><rect x="3" y="12" width="3" height="1"/><rect x="10" y="12" width="4" height="1"/></svg></span>Music</button><button class="preset" data-preset="Night"><span class="glyph"><svg class="gl-sm" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg><svg class="gl-px" viewBox="0 0 16 16" width="24" height="24" fill="currentColor" shape-rendering="crispEdges" aria-hidden="true"><rect x="12" y="1" width="4" height="1"/><rect x="14" y="2" width="1" height="1"/><rect x="13" y="3" width="1" height="1"/><rect x="12" y="4" width="4" height="1"/><rect x="5" y="5" width="6" height="1"/><rect x="9" y="6" width="2" height="1"/><rect x="8" y="7" width="2" height="1"/><rect x="7" y="8" width="2" height="1"/><rect x="6" y="9" width="2" height="1"/><rect x="5" y="10" width="2" height="1"/><rect x="0" y="11" width="4" height="1"/><rect x="5" y="11" width="6" height="1"/><rect x="2" y="12" width="1" height="1"/><rect x="1" y="13" width="1" height="1"/><rect x="0" y="14" width="4" height="1"/></svg></span>Night</button></div></div>
+<div class="card" id="control-card"><div class="cardhead"><h2 data-i18n="controls">Controls</h2><span class="subtle" data-i18n="local_preview">LOCAL PREVIEW</span></div><div class="control-strip">
+<div class="knob"><div class="knobtop"><label data-i18n="volume">Volume</label><div class="range-entry"><button type="button" class="stp" data-step="-1" tabindex="-1" aria-hidden="true">−</button><input type="number" id="volumeEntry" data-i18n-aria="volume_entry" step="1"><button type="button" class="stp" data-step="1" tabindex="-1" aria-hidden="true">+</button><span class="subtle">/100</span></div></div><input class="range" id="volume" type="range" min="0" max="100" value="0" data-i18n-aria="volume"></div>
+<div class="knob"><div class="knobtop"><label>LPF</label><div class="range-entry"><button type="button" class="stp" data-step="-1" tabindex="-1" aria-hidden="true">−</button><input type="number" id="lpfEntry" data-i18n-aria="lpf_entry" step="1"><button type="button" class="stp" data-step="1" tabindex="-1" aria-hidden="true">+</button><span class="subtle">Hz</span></div></div><input id="lpf" class="range" type="range" min="40" max="150" value="80" aria-label="LPF"></div>
+<div class="knob"><div class="knobtop"><label data-i18n="phase">Phase</label><div class="range-entry"><button type="button" class="stp" data-step="-1" tabindex="-1" aria-hidden="true">−</button><input type="number" id="phaseEntry" data-i18n-aria="phase_entry" min="0" max="360" step="1"><button type="button" class="stp" data-step="1" tabindex="-1" aria-hidden="true">+</button><span class="subtle">°</span></div></div><input id="phase" class="range" type="range" min="0" max="360" step="1" value="10" data-i18n-aria="phase"></div>
+<div class="knob"><div class="knobtop"><label data-i18n="delay">Delay</label><div class="range-entry"><button type="button" class="stp" data-step="-1" tabindex="-1" aria-hidden="true">−</button><input type="number" id="delayEntry" min="0" max="20" data-i18n-aria="delay_entry" step="1"><button type="button" class="stp" data-step="1" tabindex="-1" aria-hidden="true">+</button><span class="subtle" data-i18n="u_raw">ms</span></div></div><input id="delay" class="range" type="range" min="0" max="20" step="1" value="0" data-i18n-aria="delay_aria"></div>
+<div class="knob" id="autoonKnob"><div class="knobtop"><label for="autoOnThreshold" data-i18n-title="autoon_hint">Auto-On</label><div class="range-entry"><button type="button" class="stp" data-step="-1" tabindex="-1" aria-hidden="true">−</button><input id="autoOnThresholdEntry" type="number" min="1" max="10" step="1" value="1" data-i18n-aria="autoon_aria"><button type="button" class="stp" data-step="1" tabindex="-1" aria-hidden="true">+</button><span class="subtle">mV</span></div></div><input id="autoOnThreshold" class="range" type="range" min="1" max="10" step="1" value="1" data-i18n-aria="autoon_aria"></div>
+</div></div>
+</div><aside class="stack">
+
+<div class="card" id="connection-card"><div class="cardhead"><h2 data-i18n="connection">Connection</h2><span class="subtle" id="modeLabel">WRITES OFF</span></div><div class="subtle" id="connectionMessage"></div><div class="addr-row"><span class="subtle" data-i18n="addr">Device address</span><strong id="bleAddress">—</strong><button type="button" class="btn mini" id="scanBtn" data-i18n="scan">Scan</button></div><div class="scan-results hidden" id="scanResults"></div><div class="actions"><button class="btn primary" id="connectRead">Connect &amp; read</button><button class="btn" id="refresh" data-i18n="btn_refresh">Read again</button><button class="btn" id="disconnect" data-i18n="btn_disconnect">Disconnect</button><button class="btn" id="exportSnapshot" data-i18n="export_snapshot" disabled>Export snapshot JSON</button></div><form method="post" action="/logout" class="logout-form hidden" id="logoutForm"><button class="btn mini" type="submit" data-i18n="btn_logout">Log out</button></form></div></aside></section>
+<section id="page-eq" class="card"><div class="cardhead"><h2 data-i18n="eq">Equalizer</h2><span class="subtle" data-i18n="eq_sub">8 PARAMETRIC FILTERS</span></div><div class="eqbox" id="eqBox"><svg id="eqMainChart" role="img" data-i18n-aria="eq_aria"></svg></div><div class="eqlegend"><i class="legendline"></i><span data-i18n="eq_legend">Sum of PEQ 1–8</span></div><div class="filterlist"><button class="filter active" type="button" data-filter-index="8"><b>PEQ 1</b><span data-dev>—</span></button><button class="filter" type="button" data-filter-index="9"><b>PEQ 2</b><span data-dev>—</span></button><button class="filter" type="button" data-filter-index="10"><b>PEQ 3</b><span data-dev>—</span></button><button class="filter" type="button" data-filter-index="11"><b>PEQ 4</b><span data-dev>—</span></button><button class="filter" type="button" data-filter-index="12"><b>PEQ 5</b><span data-dev>—</span></button><button class="filter" type="button" data-filter-index="13"><b>PEQ 6</b><span data-dev>—</span></button><button class="filter" type="button" data-filter-index="14"><b>PEQ 7</b><span data-dev>—</span></button><button class="filter" type="button" data-filter-index="15"><b>PEQ 8</b><span data-dev>—</span></button></div><div class="peq-edit"><div class="peq-head"><b id="selectedFilterName">PEQ 1</b><span class="peq-status" id="selectedFilterStatus">—</span></div><div class="peq-rows"><div class="peq-row"><label for="peqFreq" data-i18n="freq">Frequency</label><div class="range-entry"><button type="button" class="stp" data-step="-1" data-inc="1" tabindex="-1" aria-hidden="true">−</button><input id="peqFreq" type="number" min="20" max="200" step="1" value="50" class="peq-in"><button type="button" class="stp" data-step="1" data-inc="1" tabindex="-1" aria-hidden="true">+</button><span class="subtle">Hz</span></div></div><div class="peq-row"><label for="peqQ" data-i18n="q_short">Q</label><div class="range-entry"><button type="button" class="stp" data-step="-1" data-inc="0.1" tabindex="-1" aria-hidden="true">−</button><input id="peqQ" type="number" min="0.1" max="10" step="0.05" value="5" class="peq-in"><button type="button" class="stp" data-step="1" data-inc="0.1" tabindex="-1" aria-hidden="true">+</button><span class="subtle"></span></div></div><div class="peq-row"><label for="peqGain" data-i18n="gain">Gain</label><div class="range-entry"><button type="button" class="stp" data-step="-1" data-inc="0.5" tabindex="-1" aria-hidden="true">−</button><input id="peqGain" type="number" min="-12" max="12" step="0.1" value="0" class="peq-in"><button type="button" class="stp" data-step="1" data-inc="0.5" tabindex="-1" aria-hidden="true">+</button><span class="subtle">dB</span></div></div></div></div></section>
+<section id="page-autoeq" class="card"><div class="cardhead"><h2>AutoEQ</h2><span class="subtle" id="aeqMode">—</span></div>
+<div class="aeq-grid"><div class="aeq-side">
+<div class="metric"><span data-i18n="aeq_calibrated">Calibrated (0170)</span><strong id="aeqCalibrated" data-dev>—</strong></div>
+<div class="metric" id="aeqOnRow"><span data-i18n="aeq_enabled">AutoEQ on (0172)</span><label class="toggle-wrap"><input type="checkbox" id="aeqToggle" disabled><span class="toggle-ui"></span><strong id="aeqToggleLabel">—</strong></label></div>
+<div class="metric aeq-mic"><label for="aeqMic" data-i18n="aeq_mic">Microphone</label><select id="aeqMic" class="font-picker"><option value="" data-i18n="aeq_mic_default">Default microphone</option></select></div><div class="metric aeq-mic"><label for="aeqRuns" data-i18n="aeq_runs">Runs per step</label><select id="aeqRuns" class="font-picker"><option value="1">1</option><option value="3" selected>3</option><option value="5">5</option></select></div>
+<div class="aeq-level"><span class="subtle" data-i18n="aeq_level">Input level</span><div class="aeq-meter"><i id="aeqMeterBar"></i></div><span class="subtle" id="aeqLevelText">—</span></div>
+<label class="aeq-exp" id="aeqExpWrap"><input type="checkbox" id="aeqExp"><span data-i18n="aeq_exp_label">Allow AutoEQ device commands (experimental)</span></label><p class="subtle aeq-note" id="aeqNote"></p><p class="aeq-warn hidden" id="aeqInsecure" data-i18n="aeq_insecure">Microphone needs https or localhost.</p>
+<ol class="aeq-steps"><li id="aeqStepNear"><div><b data-i18n="aeq_near_title">Near field</b><span class="subtle" data-i18n="aeq_near_hint">Hold the microphone close to the woofer.</span></div><button type="button" class="btn" id="aeqNearBtn" data-i18n="aeq_measure">Measure</button></li>
+<li id="aeqStepFar"><div><b data-i18n="aeq_far_title">Listening position</b><span class="subtle" data-i18n="aeq_far_hint">Same microphone, at your seat.</span></div><button type="button" class="btn" id="aeqFarBtn" data-i18n="aeq_measure">Measure</button></li>
+<li id="aeqStepVerify"><div><b data-i18n="aeq_verify_title">3. Check the result</b><span class="subtle" data-i18n="aeq_verify_hint">Stay at your seat. AutoEQ is switched off for one measurement and back on for the second; nothing is calibrated.</span></div><button type="button" class="btn" id="aeqVerifyBtn" data-i18n="aeq_verify_btn">Compare</button></li></ol>
+<div class="aeq-con" id="aeqCon"><div class="aeq-now"><b id="aeqNowIcon" data-state="idle">·</b><span class="aeq-status" id="aeqStatus" role="status" aria-live="polite"></span><em id="aeqNowTime"></em></div><div class="aeq-prog" id="aeqSteps"><div data-stage="near" data-state="todo"><i></i><small data-i18n="stg_near">near</small></div><div data-stage="sent" data-state="todo"><i></i><small data-i18n="stg_sent">sent</small></div><div data-stage="seat" data-state="todo"><i></i><small data-i18n="stg_seat">seat</small></div><div data-stage="cal" data-state="todo"><i></i><small data-i18n="stg_cal">calibrated</small></div></div><div class="aeq-log" id="aeqLog"></div><div class="aeq-foot"><button type="button" id="aeqCopy" data-i18n="lg_copy">Copy log</button><span>·</span><button type="button" id="aeqClear" data-i18n="lg_clear">Clear</button><span id="aeqLogCount"></span></div></div>
+<div class="actions"><button type="button" class="btn" id="aeqTestBtn" data-i18n="aeq_test">Mic test (5 s)</button><button type="button" class="btn" id="aeqCancelBtn" data-i18n="aeq_cancel" disabled>Cancel</button></div>
+</div><div class="aeq-main"><div class="eqbox aeqbox" id="aeqBox"><svg id="aeqChart" role="img" data-i18n-aria="aeq_chart_aria"></svg></div><div class="aeq-legend" id="aeqLegend"></div>
+<div class="aeq-corr hidden" id="aeqCorrWrap"><div class="subtle" id="aeqCorrTitle" data-i18n="aeq_corr_title">Correction from the subwoofer (dB)</div><div class="aeq-corr-grid" id="aeqCorr"></div></div></div></div></section>
+
+<div id="writeBar" class="hidden" role="region" data-i18n-aria="wb_aria"><div class="wb-text"><b id="wbCount"></b><span id="wbList"></span></div><button type="button" class="btn wb-revert" id="wbRevert" data-i18n="wb_revert">Undo</button><button type="button" class="btn primary" id="wbWrite" data-i18n="wb_write">Write</button></div><div class="toast" id="toast"></div></main>
+<script>
+(()=>{
+'use strict';
+const $=id=>document.getElementById(id);
+const store={get(k,d=null){try{const v=localStorage.getItem(k);return v===null?d:v}catch(e){return d}},set(k,v){try{localStorage.setItem(k,String(v))}catch(e){}},del(k){try{localStorage.removeItem(k)}catch(e){}}};
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const num=v=>{if(v===null||v===undefined||v==='')return null;const n=Number(v);return Number.isFinite(n)?n:null};
+
+/* ---------- translations ---------- */
+const I18N={
+en:{eyebrow:'Subwoofer control',h1sub:'/ Control',st_connected:'CONNECTED',st_disconnected:'DISCONNECTED',layout:'LAYOUT',appearance:'Appearance',nav_aria:'Interface layout',
+ro_title:'Local preview',ro_text:'Changes stay local until you enable device writes and press a Write button.',
+font:'Font size',font_small:'Small',font_normal:'Normal',font_large:'Large',theme:'Theme',theme_dark:'Dark',theme_light:'Light',theme_amp:'Amp (classic player)',theme_pixel:'Retro pixel',theme_ash:'Black ash',theme_aramid:'Aramid',theme_debut:'Debut (ash + aramid)',theme_gunmetal:'Gunmetal',subs:'Subwoofers',dev_find:'Find another…',dev_none:'None chosen yet: use Find another… or Connection → Scan.',dev_current:'in use',dev_rename:'Rename',dev_forget:'Remove from the list',dev_rename_prompt:'Name for this subwoofer (e.g. Living room):',dev_forget_confirm:'Remove {n} from the list?',dev_switch:'Switching to {n}…',dev_auto:'Found one subwoofer ({n}): connecting.',language:'Language',highlight:'Highlight',highlight_title:'Opacity of selected buttons',accent:'Accent',accent_aria:'Accent colour',
+preset_title:'Sound preset',controls:'Controls',local_preview:'LOCAL PREVIEW',volume:'Volume',phase:'Phase',delay:'Delay',u_raw:'ms',unit_unconfirmed:'Device raw value = ms × 10',
+volume_entry:'Volume value',lpf_entry:'LPF value',phase_entry:'Phase value',delay_aria:'Delay in milliseconds',delay_entry:'Delay in milliseconds',
+autoon_threshold:'Trigger threshold',autoon_aria:'Auto-On threshold in mV',power_mode_raw:'Power mode (0022)',power_mode_fixed:'{m} · fixed on SUB3030',autoon_always:'ALWAYS ACTIVE',autoon_summary:'threshold {th} mV',autoon_note:'Auto-On cannot be switched off on the SUB3030; only the threshold (1–10 mV) is adjustable, as in the ELAC app.',autoon_on:'Enabled · local preview',autoon_off:'Disabled · local preview',enabled:'Enabled',
+dev_sheet:'Device details',st_aeq:'AutoEQ on/off',aeq_on_short:'AutoEQ',last_read:'Last read',off_short:'off',device:'Device',online:'Online',offline:'Offline',model:'Model',firmware:'Firmware',preset:'Preset',img_alt:'ELAC SUB3030 subwoofer',
+quick:'Quick status',low_pass:'Low-pass',delay_preview:'Delay preview',peq1_gain:'PEQ 1 gain',not_modified:'Not modified',read_at:'Read {time}',cached_at:'Saved {time}',no_data:'No data',unknown:'Unknown',
+connection:'Connection',mode_ro:'WRITES OFF',mode_local:'LOCAL PREVIEW',mode_edit:'LOCAL EDIT',mode_write:'WRITE ENABLED',enable_writes:'Enable device writes',write_warning:'Writes affect the physical subwoofer. Volume, preset, LPF, phase, delay, Auto-On threshold and PEQ are enabled with read-back verification. Power mode, AutoEQ and calibration remain read-only.',write_preset:'Write preset to device',wb_aria:'Changes not yet written',wb_one:'1 change',wb_many:'{n} changes',wb_write:'Write',wb_writing:'Writing…',wb_revert:'Undo',wb_need_writes:'Turn on WRITES in the header first',write_controls:'Write changes',autoon_hint:'Auto-On trigger threshold: the subwoofer wakes when the input signal exceeds it',write_delay:'Write delay',write_threshold:'Write Auto-On threshold',write_peq:'Write selected PEQ',write_enable_confirm:'Enable writing to the physical subwoofer? Each write will still ask for confirmation.',write_confirm:'Send these settings to the physical subwoofer? This cannot be automatically undone.',write_ok:'Write acknowledged and verified by read-back.',write_error:'Write failed: {e}',write_not_ready:'Connect and read a real device first; demo mode cannot write.',
+msg_idle:'Connect to the subwoofer to read its current settings.',msg_idle_cached:'Showing the last saved reading. Connect to refresh it.',msg_connecting:'Connecting and reading parameters…',
+msg_read_ok:'Read complete · {n} parameters · {f} filter records',msg_read_partial:'Partial read · {n} parameters · {f} filter records · failed: {ids}',
+msg_disconnected:'Disconnected. The phone app can connect now.',msg_dropped:'Connection closed (idle timeout or device unavailable). Values shown are from the last reading.',msg_server_down:'Cannot reach the local server.',
+btn_connect:'Connect & read',btn_connecting:'Working…',btn_refresh:'Read again',btn_disconnect:'Disconnect',export_snapshot:'Export snapshot JSON',write_pill_off:'WRITES: OFF',write_pill_on:'WRITES: ON',write_pill_need_read:'Connect and read the subwoofer first',write_pill_demo:'Demo mode cannot write to a device',write_pill_hint_off:'Allow sending settings to the subwoofer',write_pill_hint_on:'Writes are on: Save buttons send values to the subwoofer. Click to switch off.',expand_all:'Expand all',collapse_all:'Collapse all',toggle_section:'Show or hide this section',btn_logout:'Log out',err_login:'Login required',aeq_exp_label:'Allow AutoEQ device commands (experimental)',aeq_exp_confirm:'These commands (test signal start/stop and sending measurements) come from the older ELAC app and are not yet confirmed on the SUB3030. The subwoofer may play a loud test signal. Allow them? (Device writes must also be on.)',aeq_exp_locked:'Forced on by the ELAC_AUTOEQ_EXPERIMENTAL variable.',aeq_exp_on:'AutoEQ device commands allowed',aeq_exp_off:'AutoEQ device commands off',aeq_calibrated:'Calibrated (0170)',aeq_enabled:'AutoEQ on (0172)',aeq_mic:'Microphone',aeq_mic_default:'Default microphone',aeq_level:'Input level',aeq_level_val:'{rms} dBFS · peak {pk}',aeq_insecure:'The browser only allows the microphone on https or on localhost. Open this page as http://localhost:8765 on the computer the microphone is plugged into.',aeq_near_title:'1. Near field',aeq_near_hint:'Hold the microphone 1–2 cm from the centre of the woofer.',aeq_far_title:'2. Listening position',aeq_far_hint:'Same microphone and gain, at ear height on your seat. With several runs, move it 30–50 cm between them.',aeq_measure:'Measure',aeq_test:'Mic test (5 s, silent)',aeq_local_hint:'Recording only: the subwoofer stays silent. For the test signal, tick “Allow AutoEQ device commands” and turn WRITES on.',aeq_cancel:'Cancel',aeq_chart_aria:'AutoEQ measurements at 16 bands',aeq_chart_empty:'No measurement yet',aeq_corr_title:'Correction from the subwoofer (dB)',aeq_series_test:'Mic test',aeq_series_near:'Near field',aeq_series_far:'Listening position',aeq_series_corr:'Listening position + correction',aeq_mode_local:'LOCAL ONLY',aeq_mode_device:'DEVICE · EXPERIMENTAL',aeq_mode_demo:'DEMO',aeq_note_local:'Local only: the microphone is analysed exactly like the ELAC app does it (16 bands, 20–160 Hz), but nothing is sent to the subwoofer. Tick the box above (and turn on device writes) to let the subwoofer play its test signal.',aeq_note_device_off:'Device mode is available: turn on device writes to let the subwoofer play its test signal and receive the result. Until then measurements stay local.',aeq_note_device:'Experimental: the subwoofer plays its own test signal and receives the 16 band levels (commands from the older ELAC app). The subwoofer computes and applies the correction itself.',aeq_note_demo:'Demo: the subwoofer side is simulated; the microphone is real.',aeq_toggle_cal:'Available after a calibration (0170).',aeq_toggle_writes:'Turn on device writes to switch AutoEQ.',aeq_confirm_gen:'The subwoofer will play a test signal, which can be loud. Continue?',aeq_need_near:'Measure the near field first.',aeq_st_idle:'Ready.',aeq_st_mic:'Opening the microphone…',aeq_st_warm:'Filling the 1 s analysis buffer…',aeq_st_gen_wait:'Starting the subwoofer test signal…',aeq_st_playing:'Measuring while the test signal plays…',aeq_st_recording:'Recording ({i}/{n})… {s} s',aeq_st_upload:'Sending the measurement to the subwoofer…',aeq_st_near_done:'Near field done. Move the microphone to the listening position.',aeq_st_far_done:'Done. The subwoofer calculated its correction.',aeq_st_far_nocorr:'Listening position sent and acknowledged; the subwoofer did not report anything else.',aeq_st_far_done_cal:'Done. The subwoofer accepted both measurements and reported itself calibrated. It applies the correction internally (this model does not send the values back), and AutoEQ is on.',aeq_st_local_done:'Measurement done (local only).',aeq_st_test_done:'Mic test done · peak {pk} dBFS.',aeq_st_cancelled:'Cancelled.',aeq_st_timeout:'The subwoofer did not finish its test signal in time.',aeq_st_clip:'The input clipped: lower the microphone gain and measure again.',aeq_st_quiet:'Very low input (peak {pk} dBFS): check the microphone and its gain.',aeq_st_nomic:'No audio from the microphone.',aeq_st_nodata:'No measurement was captured while the test signal played.',aeq_err:'AutoEQ: {e}',aeq_runs:'Runs per step',aeq_verify_title:'3. Check the result',aeq_verify_hint:'Stay at your seat. AutoEQ is switched off for one measurement and back on for the second; nothing is calibrated.',aeq_verify_btn:'Compare',aeq_verify_need:'Available after a calibration, with AutoEQ device commands allowed and WRITES on.',aeq_verify_confirm:'The subwoofer will play its test signal {n} times. AutoEQ is switched off for the first half and back on for the second. Continue?',aeq_off_tag:'AutoEQ off',aeq_on_tag:'AutoEQ on',aeq_st_vrun:'{tag} · run {i} of {n}: test signal playing…',aeq_st_vswitch:'Switching AutoEQ…',aeq_st_v_same:'No measurable difference between AutoEQ off and on. The test signal probably bypasses the AutoEQ filter on this model, so this check cannot show its effect.',aeq_st_v_better:'AutoEQ makes the response flatter: spread ±{a} dB → ±{b} dB. The grid shows the measured change per band.',aeq_st_v_worse:'With AutoEQ on the response is not flatter (±{a} dB → ±{b} dB). Repeat the calibration with the microphone exactly at your seat.',aeq_st_v_done:'Comparison done.',aeq_series_off:'AutoEQ off',aeq_series_on:'AutoEQ on',aeq_effect_title:'Measured effect of AutoEQ, on minus off (dB)',lg_verify:'check · AutoEQ off vs on · runs: {n} each',lg_aeq_off:'AutoEQ switched off',lg_aeq_on:'AutoEQ switched on',lg_vrun:'{tag} · run {i}/{n} · test signal playing…',lg_back:'AutoEQ on again · measuring the same way · next run in {s} s',lg_v_same:'no measurable difference (under 0.8 dB in every band)',lg_v_diff:'largest change {db} dB at {f} Hz',lg_v_flat:'spread 20–{top} Hz: ±{a} dB off → ±{b} dB on ({pct}%)',lg_restore_fail:'could not switch AutoEQ back on: {e}',lg_near:'near field · runs: {n}',lg_far:'listening position · runs: {n}',lg_test:'mic test · 5 s, silent',lg_mode_local:'local only: the subwoofer stays silent (tick Allow AutoEQ device commands and turn WRITES on)',lg_mic:'microphone ready · {rate} kHz',lg_run:'run {i}/{n} · test signal playing…',lg_rec:'run {i}/{n} · recording {s} s…',lg_run_done:'run {i}/{n} done · peak {pk} dBFS',lg_move:'move the microphone 30–50 cm · next run in {s} s',lg_next:'keep the microphone still · next run in {s} s',lg_comb_same:'combined: median of {n} · largest spread {db} dB at {f} Hz',lg_comb_moved:'combined: average of {n}, {d} outlying band values dropped · largest spread {db} dB at {f} Hz',lg_sent_ok:'sent · subwoofer confirmed',lg_sent_noack:'sent · no confirmation from the subwoofer',lg_cal:'subwoofer calibrated (0170 = 1) · AutoEQ on',lg_corr:'correction received from the subwoofer (green line)',lg_nocorr:'nothing else reported by the subwoofer',lg_local_done:'done · local only, nothing sent',lg_not_sent:'not sent: the runs differed too much',lg_cancel:'cancelled',lg_test_done:'peak {pk} dBFS',lg_empty:'No measurements yet.',lg_copy:'Copy log',lg_clear:'Clear',lg_lines:'{n} lines',lg_copied:'Log copied',stg_near:'near',stg_sent:'sent',stg_seat:'seat',stg_cal:'calibrated',aeq_far_kept:'The listening-position measurement ran (pink line), but the subwoofer sent no correction back.',aeq_near_kept:'The near-field measurement ran, but it could not be sent.',aeq_st_near_noack:'Near field measured and sent, but the subwoofer did not confirm it. You can continue; if the next step gets no correction, the log will show why.',aeq_st_run:'Run {i} of {n}: measuring while the test signal plays…',aeq_st_next:'Run {i} of {n} in {s} s. Keep the microphone still.',aeq_st_move:'Move the microphone 30–50 cm around your seat. Run {i} of {n} in {s} s.',aeq_clip_run:'the microphone clipped in run {i}, nothing was sent. Move it a little further from the woofer (or lower the volume) and measure again.',aeq_spread_confirm:'The runs differ by up to {db} dB at {f} Hz (a noise during the measurement?).\n\nOK = send the combined result anyway\nCancel = send nothing and measure again',aeq_st_not_sent:'Not sent. Measure this step again.',aeq_st_spread:'Measurement done (local only). The runs differed by up to {db} dB at {f} Hz.',aeq_st_near_done_spread:'Near field done (runs differed by up to {db} dB at {f} Hz). Move the microphone to the listening position.',ro_text_write:'Each Write button sends the value shown to the subwoofer and verifies it by reading it back.',write_nothing:'Nothing changed since the last read.',write_changes:'Changes to send:',
+addr:'Device address',scan:'Scan',scanning:'Scanning…',scan_none:'No devices found.',scan_hint:'Tap a device to use it:',addr_set:'Device address set: {a}',addr_locked:'The address is fixed by the ELAC_ADDRESS environment variable.',
+eq:'Equalizer',eq_sub:'8 PARAMETRIC FILTERS',eq_aria:'Equalizer response curve',eq_legend:'Sum of PEQ 1–8 as peaking filters (approximation, 48 kHz model) · 20–200 Hz, ±12 dB',
+sel_filter:'Selected filter',freq:'Frequency',q_factor:'Q factor (unitless)',q_short:'Q',aeq_hot:'Input peaked at {pk} dBFS, close to clipping. If you can, move the microphone a little further away and measure again.',gain:'Gain',filter_status:'Filter status',fs_none:'Not read yet',fs_local:'Not written',fs_read:'Read from device',fs_cached:'From saved reading',fs_missing:'Not read',eq_note:'Changes stay local until you enable device writes and press Write.',toast_peq:'Selected PEQ {n}',
+device_settings:'Device settings',hardware:'Hardware',calibration:'Calibration',yes:'Yes',no:'No',
+toast_read_done:'Read complete',toast_partial:'Partial read: {k} failed',toast_ble_err:'Error: {e}',toast_preset:'Preset preview: {p} · not sent to device',toast_disconnected:'Disconnected',err_read:'Could not read the device'},
+pl:{eyebrow:'Sterowanie subwooferem',h1sub:'/ Sterowanie',st_connected:'POŁĄCZONO',st_disconnected:'ROZŁĄCZONO',layout:'UKŁAD',appearance:'Wygląd',nav_aria:'Układ interfejsu',
+ro_title:'Podgląd lokalny',ro_text:'Zmiany pozostają lokalne, dopóki nie włączysz zapisu i nie użyjesz przycisku Zapisz.',
+font:'Czcionka',font_small:'Mała',font_normal:'Normalna',font_large:'Duża',theme:'Motyw',theme_dark:'Ciemny',theme_light:'Jasny',theme_amp:'Amp (klasyczny odtwarzacz)',theme_pixel:'Retro piksel',theme_ash:'Czarny jesion',theme_aramid:'Aramid',theme_debut:'Debut (jesion + aramid)',theme_gunmetal:'Gunmetal (grafit)',subs:'Subwoofery',dev_find:'Znajdź inny…',dev_none:'Jeszcze nie wybrano: użyj Znajdź inny… albo Połączenie → Szukaj.',dev_current:'w użyciu',dev_rename:'Zmień nazwę',dev_forget:'Usuń z listy',dev_rename_prompt:'Nazwa tego subwoofera (np. Salon):',dev_forget_confirm:'Usunąć {n} z listy?',dev_switch:'Przełączam na {n}…',dev_auto:'Znaleziono jeden subwoofer ({n}): łączę.',language:'Język',highlight:'Podświetlenie',highlight_title:'Przezroczystość zaznaczonych przycisków',accent:'Akcent',accent_aria:'Kolor akcentu',
+preset_title:'Preset dźwięku',controls:'Sterowanie',local_preview:'PODGLĄD LOKALNY',volume:'Głośność',phase:'Faza',delay:'Opóźnienie',u_raw:'ms',unit_unconfirmed:'Wartość surowa urządzenia = ms × 10',
+volume_entry:'Wartość głośności',lpf_entry:'Wartość LPF',phase_entry:'Wartość fazy',delay_aria:'Opóźnienie w milisekundach',delay_entry:'Opóźnienie w milisekundach',
+autoon_threshold:'Próg wyzwalania',autoon_aria:'Próg Auto-On w mV',power_mode_raw:'Tryb zasilania (0022)',power_mode_fixed:'{m} · stały w SUB3030',autoon_always:'ZAWSZE AKTYWNE',autoon_summary:'próg {th} mV',autoon_note:'W SUB3030 nie da się wyłączyć Auto-On; regulowany jest tylko próg (1–10 mV), tak jak w aplikacji ELAC.',autoon_on:'Włączone · podgląd lokalny',autoon_off:'Wyłączone · podgląd lokalny',enabled:'Włączone',
+dev_sheet:'Szczegóły urządzenia',st_aeq:'AutoEQ wł./wył.',aeq_on_short:'AutoEQ',last_read:'Ostatni odczyt',off_short:'wył.',device:'Urządzenie',online:'Online',offline:'Offline',model:'Model',firmware:'Oprogramowanie',preset:'Preset',img_alt:'Subwoofer ELAC SUB3030',
+quick:'Szybki status',low_pass:'Dolnoprzepustowy',delay_preview:'Opóźnienie (podgląd)',peq1_gain:'PEQ 1 wzmocnienie',not_modified:'Nie zmieniany',read_at:'Odczyt {time}',cached_at:'Zapisano {time}',no_data:'Brak danych',unknown:'Nieznany',
+connection:'Połączenie',mode_ro:'ZAPIS WYŁĄCZONY',mode_local:'PODGLĄD LOKALNY',mode_edit:'EDYCJA LOKALNA',mode_write:'ZAPIS WŁĄCZONY',enable_writes:'Włącz zapis do urządzenia',write_warning:'Zapisy zmieniają ustawienia fizycznego subwoofera. Głośność, preset, LPF, faza, opóźnienie, próg Auto-On i PEQ są zapisywane z weryfikacją odczytem. Tryb zasilania, AutoEQ i kalibracja pozostają tylko do odczytu.',write_preset:'Zapisz preset w urządzeniu',wb_aria:'Zmiany jeszcze niezapisane',wb_one:'1 zmiana',wb_many:'{n} zmiany',wb_write:'Zapisz',wb_writing:'Zapisuję…',wb_revert:'Cofnij',wb_need_writes:'Najpierw włącz ZAPIS w nagłówku',write_controls:'Zapisz zmiany',autoon_hint:'Próg Auto-On: subwoofer się wybudza, gdy sygnał wejściowy go przekroczy',write_delay:'Zapisz opóźnienie',write_threshold:'Zapisz próg Auto-On',write_peq:'Zapisz wybrany PEQ',write_enable_confirm:'Włączyć zapis do fizycznego subwoofera? Każdy zapis nadal będzie wymagał potwierdzenia.',write_confirm:'Wysłać te ustawienia do fizycznego subwoofera? Tej operacji nie można automatycznie cofnąć.',write_ok:'Zapis potwierdzony i zweryfikowany przez ponowny odczyt.',write_error:'Zapis nie powiódł się: {e}',write_not_ready:'Najpierw połącz i odczytaj prawdziwe urządzenie; tryb demo nie obsługuje zapisu.',
+msg_idle:'Połącz się z subwooferem, aby odczytać jego aktualne ustawienia.',msg_idle_cached:'Pokazuję ostatni zapisany odczyt. Połącz się, aby go odświeżyć.',msg_connecting:'Łączenie i odczyt parametrów…',
+msg_read_ok:'Odczyt zakończony · {n} parametrów · {f} rekordów filtrów',msg_read_partial:'Odczyt częściowy · {n} parametrów · {f} rekordów filtrów · błędy: {ids}',
+msg_disconnected:'Rozłączono. Aplikacja w telefonie może się teraz połączyć.',msg_dropped:'Połączenie zamknięte (bezczynność lub urządzenie niedostępne). Wyświetlane wartości pochodzą z ostatniego odczytu.',msg_server_down:'Brak połączenia z lokalnym serwerem.',
+btn_connect:'Połącz i odczytaj',btn_connecting:'Pracuję…',btn_refresh:'Odczytaj ponownie',btn_disconnect:'Rozłącz',export_snapshot:'Eksportuj snapshot JSON',write_pill_off:'ZAPIS: WYŁ',write_pill_on:'ZAPIS: WŁ',write_pill_need_read:'Najpierw połącz i odczytaj subwoofer',write_pill_demo:'Tryb demo nie zapisuje do urządzenia',write_pill_hint_off:'Pozwól wysyłać ustawienia do subwoofera',write_pill_hint_on:'Zapis włączony: przyciski Zapisz wysyłają wartości do subwoofera. Kliknij, aby wyłączyć.',expand_all:'Rozwiń wszystko',collapse_all:'Zwiń wszystko',toggle_section:'Pokaż lub ukryj tę sekcję',btn_logout:'Wyloguj',err_login:'Wymagane logowanie',aeq_exp_label:'Zezwól na komendy AutoEQ (eksperymentalne)',aeq_exp_confirm:'Te komendy (start/stop sygnału testowego i wysyłanie pomiarów) pochodzą ze starszej aplikacji ELAC i nie są jeszcze potwierdzone na SUB3030. Subwoofer może zagrać głośny sygnał testowy. Zezwolić? (Zapis do urządzenia też musi być włączony.)',aeq_exp_locked:'Wymuszone zmienną ELAC_AUTOEQ_EXPERIMENTAL.',aeq_exp_on:'Komendy AutoEQ dozwolone',aeq_exp_off:'Komendy AutoEQ wyłączone',aeq_calibrated:'Skalibrowano (0170)',aeq_enabled:'AutoEQ włączone (0172)',aeq_mic:'Mikrofon',aeq_mic_default:'Mikrofon domyślny',aeq_level:'Poziom wejścia',aeq_level_val:'{rms} dBFS · szczyt {pk}',aeq_insecure:'Przeglądarka pozwala na mikrofon tylko przez https albo localhost. Otwórz tę stronę jako http://localhost:8765 na komputerze, do którego podłączony jest mikrofon.',aeq_near_title:'1. Pole bliskie',aeq_near_hint:'Trzymaj mikrofon 1–2 cm od środka głośnika.',aeq_far_title:'2. Miejsce odsłuchu',aeq_far_hint:'Ten sam mikrofon i wzmocnienie, na wysokości uszu na Twoim miejscu. Przy kilku pomiarach przesuwaj go o 30–50 cm między nimi.',aeq_measure:'Zmierz',aeq_test:'Test mikrofonu (5 s, bez dźwięku)',aeq_local_hint:'Tylko nagrywanie: subwoofer nic nie gra. Żeby zagrał sygnał testowy, zaznacz „Zezwól na komendy AutoEQ” i włącz ZAPIS.',aeq_cancel:'Anuluj',aeq_chart_aria:'Pomiary AutoEQ w 16 pasmach',aeq_chart_empty:'Brak pomiaru',aeq_corr_title:'Korekcja od subwoofera (dB)',aeq_series_test:'Test mikrofonu',aeq_series_near:'Pole bliskie',aeq_series_far:'Miejsce odsłuchu',aeq_series_corr:'Miejsce odsłuchu + korekcja',aeq_mode_local:'TYLKO LOKALNIE',aeq_mode_device:'URZĄDZENIE · EKSPERYMENTALNE',aeq_mode_demo:'DEMO',aeq_note_local:'Tylko lokalnie: mikrofon jest analizowany dokładnie tak jak w aplikacji ELAC (16 pasm, 20–160 Hz), ale nic nie trafia do subwoofera. Zaznacz pole powyżej (i włącz zapis do urządzenia), aby subwoofer zagrał sygnał testowy.',aeq_note_device_off:'Tryb urządzenia jest dostępny: włącz zapis do urządzenia, aby subwoofer zagrał sygnał testowy i otrzymał wynik. Do tego czasu pomiary są lokalne.',aeq_note_device:'Eksperymentalnie: subwoofer gra własny sygnał testowy i otrzymuje 16 poziomów pasm (komendy ze starszej aplikacji ELAC). Korekcję liczy i stosuje sam subwoofer.',aeq_note_demo:'Demo: strona subwoofera jest symulowana, mikrofon jest prawdziwy.',aeq_toggle_cal:'Dostępne po kalibracji (0170).',aeq_toggle_writes:'Włącz zapis do urządzenia, aby przełączyć AutoEQ.',aeq_confirm_gen:'Subwoofer zagra sygnał testowy, który może być głośny. Kontynuować?',aeq_need_near:'Najpierw zmierz pole bliskie.',aeq_st_idle:'Gotowe.',aeq_st_mic:'Otwieranie mikrofonu…',aeq_st_warm:'Wypełnianie 1-sekundowego bufora analizy…',aeq_st_gen_wait:'Uruchamianie sygnału testowego subwoofera…',aeq_st_playing:'Pomiar w trakcie sygnału testowego…',aeq_st_recording:'Nagrywanie ({i}/{n})… {s} s',aeq_st_upload:'Wysyłanie pomiaru do subwoofera…',aeq_st_near_done:'Pole bliskie gotowe. Przenieś mikrofon na miejsce odsłuchu.',aeq_st_far_done:'Gotowe. Subwoofer obliczył korekcję.',aeq_st_far_nocorr:'Pomiar z miejsca odsłuchu wysłany i potwierdzony; subwoofer nic więcej nie zgłosił.',aeq_st_far_done_cal:'Gotowe. Subwoofer przyjął oba pomiary i zgłosił kalibrację. Korekcję stosuje wewnętrznie (ten model nie odsyła jej wartości), a AutoEQ jest włączony.',aeq_st_local_done:'Pomiar zakończony (lokalnie).',aeq_st_test_done:'Test mikrofonu zakończony · szczyt {pk} dBFS.',aeq_st_cancelled:'Anulowano.',aeq_st_timeout:'Subwoofer nie zakończył sygnału testowego w czasie.',aeq_st_clip:'Wejście się przesterowało: zmniejsz wzmocnienie mikrofonu i zmierz ponownie.',aeq_st_quiet:'Bardzo niski sygnał (szczyt {pk} dBFS): sprawdź mikrofon i jego wzmocnienie.',aeq_st_nomic:'Brak dźwięku z mikrofonu.',aeq_st_nodata:'Nie zarejestrowano pomiaru w trakcie sygnału testowego.',aeq_err:'AutoEQ: {e}',aeq_runs:'Pomiary na etap',aeq_verify_title:'3. Sprawdź efekt',aeq_verify_hint:'Zostań na swoim miejscu. AutoEQ zostanie wyłączony na jeden pomiar i włączony z powrotem na drugi; nic nie jest kalibrowane.',aeq_verify_btn:'Porównaj',aeq_verify_need:'Dostępne po kalibracji, przy zaznaczonych komendach AutoEQ i włączonym ZAPISIE.',aeq_verify_confirm:'Subwoofer zagra sygnał testowy {n} razy. W pierwszej połowie AutoEQ będzie wyłączony, w drugiej włączony z powrotem. Kontynuować?',aeq_off_tag:'AutoEQ wył.',aeq_on_tag:'AutoEQ wł.',aeq_st_vrun:'{tag} · pomiar {i} z {n}: gra sygnał testowy…',aeq_st_vswitch:'Przełączam AutoEQ…',aeq_st_v_same:'Brak mierzalnej różnicy między AutoEQ wył. i wł. Sygnał testowy prawdopodobnie omija filtr AutoEQ w tym modelu, więc ten test nie pokaże jego działania.',aeq_st_v_better:'AutoEQ wyrównuje charakterystykę: rozrzut ±{a} dB → ±{b} dB. Siatka pokazuje zmierzoną zmianę w każdym paśmie.',aeq_st_v_worse:'Z włączonym AutoEQ charakterystyka nie jest równiejsza (±{a} dB → ±{b} dB). Powtórz kalibrację z mikrofonem dokładnie na swoim miejscu.',aeq_st_v_done:'Porównanie gotowe.',aeq_series_off:'AutoEQ wył.',aeq_series_on:'AutoEQ wł.',aeq_effect_title:'Zmierzone działanie AutoEQ, wł. minus wył. (dB)',lg_verify:'sprawdzenie · AutoEQ wył. vs wł. · pomiary: po {n}',lg_aeq_off:'AutoEQ wyłączony',lg_aeq_on:'AutoEQ włączony',lg_vrun:'{tag} · pomiar {i}/{n} · gra sygnał testowy…',lg_back:'AutoEQ znów włączony · mierzę tak samo · następny pomiar za {s} s',lg_v_same:'brak mierzalnej różnicy (poniżej 0,8 dB w każdym paśmie)',lg_v_diff:'największa zmiana {db} dB przy {f} Hz',lg_v_flat:'rozrzut 20–{top} Hz: ±{a} dB wył. → ±{b} dB wł. ({pct}%)',lg_restore_fail:'nie udało się z powrotem włączyć AutoEQ: {e}',lg_near:'pole bliskie · pomiary: {n}',lg_far:'miejsce odsłuchu · pomiary: {n}',lg_test:'test mikrofonu · 5 s, bez dźwięku',lg_mode_local:'tylko lokalnie: subwoofer nic nie gra (zaznacz Zezwól na komendy AutoEQ i włącz ZAPIS)',lg_mic:'mikrofon gotowy · {rate} kHz',lg_run:'pomiar {i}/{n} · gra sygnał testowy…',lg_rec:'pomiar {i}/{n} · nagrywanie {s} s…',lg_run_done:'pomiar {i}/{n} gotowy · szczyt {pk} dBFS',lg_move:'przesuń mikrofon o 30–50 cm · następny pomiar za {s} s',lg_next:'nie ruszaj mikrofonu · następny pomiar za {s} s',lg_comb_same:'połączono: mediana z {n} · największy rozrzut {db} dB przy {f} Hz',lg_comb_moved:'połączono: średnia z {n}, odrzucone odstające wartości pasm: {d} · największy rozrzut {db} dB przy {f} Hz',lg_sent_ok:'wysłano · subwoofer potwierdził',lg_sent_noack:'wysłano · subwoofer nie potwierdził',lg_cal:'subwoofer skalibrowany (0170 = 1) · AutoEQ włączony',lg_corr:'subwoofer odesłał korekcję (zielona linia)',lg_nocorr:'subwoofer nic więcej nie zgłosił',lg_local_done:'gotowe · tylko lokalnie, nic nie wysłano',lg_not_sent:'nie wysłano: pomiary za bardzo się różniły',lg_cancel:'przerwano',lg_test_done:'szczyt {pk} dBFS',lg_empty:'Jeszcze nie było pomiaru.',lg_copy:'Kopiuj log',lg_clear:'Wyczyść',lg_lines:'linii: {n}',lg_copied:'Skopiowano log',stg_near:'przy subie',stg_sent:'wysłano',stg_seat:'miejsce',stg_cal:'kalibracja',aeq_far_kept:'Pomiar na miejscu odsłuchu się odbył (różowa linia), ale subwoofer nie odesłał korekcji.',aeq_near_kept:'Pomiar pola bliskiego się odbył, ale nie udało się go wysłać.',aeq_st_near_noack:'Pole bliskie zmierzone i wysłane, ale subwoofer tego nie potwierdził. Możesz kontynuować; jeśli następny etap nie dostanie korekcji, dziennik pokaże dlaczego.',aeq_st_run:'Pomiar {i} z {n}: trwa sygnał testowy…',aeq_st_next:'Pomiar {i} z {n} za {s} s. Nie ruszaj mikrofonu.',aeq_st_move:'Przesuń mikrofon o 30–50 cm wokół swojego miejsca. Pomiar {i} z {n} za {s} s.',aeq_clip_run:'mikrofon się przesterował w pomiarze {i}, nic nie wysłano. Odsuń go trochę od głośnika (albo ścisz) i zmierz ponownie.',aeq_spread_confirm:'Pomiary różnią się nawet o {db} dB przy {f} Hz (hałas w trakcie pomiaru?).\n\nOK = wyślij mimo to połączony wynik\nAnuluj = nic nie wysyłaj, zmierz ponownie',aeq_st_not_sent:'Nie wysłano. Zmierz ten etap ponownie.',aeq_st_spread:'Pomiar zakończony (lokalnie). Pomiary różniły się nawet o {db} dB przy {f} Hz.',aeq_st_near_done_spread:'Pole bliskie gotowe (pomiary różniły się nawet o {db} dB przy {f} Hz). Przenieś mikrofon na miejsce odsłuchu.',ro_text_write:'Każdy przycisk zapisu wysyła widoczną wartość do subwoofera i weryfikuje ją ponownym odczytem.',write_nothing:'Nic się nie zmieniło od ostatniego odczytu.',write_changes:'Zmiany do wysłania:',
+addr:'Adres urządzenia',scan:'Skanuj',scanning:'Skanowanie…',scan_none:'Nie znaleziono urządzeń.',scan_hint:'Dotknij urządzenia, aby go użyć:',addr_set:'Ustawiono adres urządzenia: {a}',addr_locked:'Adres jest ustawiony przez zmienną środowiskową ELAC_ADDRESS.',
+eq:'Korektor',eq_sub:'8 FILTRÓW PARAMETRYCZNYCH',eq_aria:'Krzywa odpowiedzi korektora',eq_legend:'Suma PEQ 1–8 jako filtry peaking (przybliżenie, model 48 kHz) · 20–200 Hz, ±12 dB',
+sel_filter:'Wybrany filtr',freq:'Częstotliwość',q_factor:'Dobroć Q (bez jednostki)',q_short:'Q',aeq_hot:'Wejście doszło do {pk} dBFS, blisko przesterowania. Jeśli możesz, odsuń trochę mikrofon i zmierz ponownie.',gain:'Wzmocnienie',filter_status:'Status filtra',fs_none:'Jeszcze nie odczytano',fs_local:'Niezapisane',fs_read:'Odczytano z urządzenia',fs_cached:'Z zapisanego odczytu',fs_missing:'Nie odczytano',eq_note:'Zmiany pozostają lokalne, dopóki nie włączysz zapisu i nie użyjesz przycisku Zapisz.',toast_peq:'Wybrano PEQ {n}',
+device_settings:'Ustawienia urządzenia',hardware:'Sprzęt',calibration:'Kalibracja',yes:'Tak',no:'Nie',
+toast_read_done:'Odczyt zakończony',toast_partial:'Odczyt częściowy: błędów {k}',toast_ble_err:'Błąd: {e}',toast_preset:'Podgląd presetu: {p} · nie wysłano do urządzenia',toast_disconnected:'Rozłączono',err_read:'Nie udało się odczytać urządzenia'}};
+const COLORS={en:['Orange','Red','Orange 021','Yellow','Green','Teal','Blue','Royal blue','Purple','Magenta','Pink','Brown','Gray','Black','White','Light blue'],
+pl:['Pomarańczowy','Czerwony','Pomarańczowy 021','Żółty','Zielony','Turkusowy','Niebieski','Granatowy','Fioletowy','Magenta','Różowy','Brązowy','Szary','Czarny','Biały','Jasnoniebieski']};
+let lang=store.get('elac_gui_lang')||((navigator.language||'en').toLowerCase().startsWith('pl')?'pl':'en');
+if(!I18N[lang])lang='en';
+const t=(k,v)=>{let s=I18N[lang][k]??I18N.en[k]??k;if(v)for(const x in v)s=s.split('{'+x+'}').join(v[x]);return s};
+
+/* ---------- state ---------- */
+const CACHE_KEY='elac_last_snapshot_v1';
+const S={snap:null,live:false,readAt:null,connected:false,busy:false,scanning:false,demo:false,locked:false,address:null,msg:{k:'msg_idle'},mode:'mode_ro',autoOnPreview:null,autoReadTried:false};
+let localPeq={},selectedFilterIndex=8;
+const setMsg=(k,v)=>{S.msg={k,v}};
+const setMsgRaw=raw=>{S.msg={raw}};
+const PRESETS=['Flat','Cinema','Music','Night'];
+
+function toast(msg){const el=$('toast');el.textContent=msg;el.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('show'),2600)}
+function fmtTime(ms){const d=new Date(ms);return d.toDateString()===new Date().toDateString()?d.toLocaleTimeString(lang):d.toLocaleString(lang,{dateStyle:'short',timeStyle:'short'})}
+const fmtBool=v=>v===undefined||v===null?'—':t(v?'yes':'no');
+const signed=(n,d=1)=>(n>0?'+':'')+Number(n).toFixed(d);
+
+/* ---------- static translation ---------- */
+function applyStatic(){
+ document.documentElement.lang=lang;
+ document.querySelectorAll('[data-i18n]').forEach(e=>{e.textContent=t(e.dataset.i18n)});
+ document.querySelectorAll('[data-i18n-aria]').forEach(e=>e.setAttribute('aria-label',t(e.dataset.i18nAria)));
+ document.querySelectorAll('[data-i18n-title]').forEach(e=>e.title=t(e.dataset.i18nTitle));
+ document.querySelectorAll('[data-i18n-alt]').forEach(e=>e.alt=t(e.dataset.i18nAlt));
+ const opts=$('accentPicker').options;[...opts].forEach((o,i)=>{o.textContent=COLORS[lang][i]||o.textContent});
+ document.querySelectorAll('.accent-swatches button').forEach((b,i)=>{b.title=b.ariaLabel=COLORS[lang][i]||''});
+ const sw=document.querySelector('.accent-swatches');if(sw)sw.setAttribute('aria-label',t('accent_aria'));
+ $('langPicker').value=lang;
+}
+
+/* ---------- rendering ---------- */
+function renderStatus(){
+ const on=S.connected;
+ if((!S.connected||!S.live||S.demo)&&$('writeEnabledToggle')?.checked){$('writeEnabledToggle').checked=false;S.mode='mode_ro'}
+ $('connectionLabel').textContent=t(on?'st_connected':'st_disconnected');
+ const dot=document.querySelector('.status .dot');dot.style.background=on?'var(--accent)':'#e07a7a';dot.style.boxShadow=on?'0 0 12px color-mix(in srgb,var(--accent) 55%,transparent)':'none';
+ $('connStatus').title=t(on?'st_connected':'st_disconnected')+' · '+t('btn_connect');$('connStatus').setAttribute('aria-label',$('connStatus').title);$('connStatus').classList.toggle('busy',!!S.busy);if(S.busy){if(!$('connSpin').firstChild)$('connSpin').innerHTML=busySpin(14)}else $('connSpin').textContent='';
+ $('connectionMessage').textContent=S.msg.raw!==undefined?S.msg.raw:t(S.msg.k,S.msg.v);
+ $('modeLabel').textContent=t($('writeEnabledToggle')?.checked?'mode_write':S.mode);
+ document.body.classList.toggle('write-mode',!!$('writeEnabledToggle')?.checked);{const wm=!!$('writeEnabledToggle')?.checked,pill=$('writeModeBtn'),lab=$('writeModeLabel');pill.classList.toggle('on',wm);pill.setAttribute('aria-pressed',String(wm));lab.dataset.i18n=wm?'write_pill_on':'write_pill_off';lab.textContent=t(lab.dataset.i18n);pill.setAttribute('aria-label',lab.textContent)}
+ const writeReady=!!$('writeEnabledToggle')?.checked&&S.connected&&S.live&&!S.demo&&!S.busy;
+ if(typeof renderWriteBar==='function')renderWriteBar();
+ $('writeEnabledToggle').disabled=!S.connected||!S.live||S.demo||S.busy;
+ {const pill=$('writeModeBtn'),wm=!!$('writeEnabledToggle').checked;pill.disabled=$('writeEnabledToggle').disabled&&!wm;pill.title=t(S.demo?'write_pill_demo':(!S.connected||!S.live)?'write_pill_need_read':(wm?'write_pill_hint_on':'write_pill_hint_off'))}
+ $('demoBadge').classList.toggle('hidden',!S.demo);
+ const q=$('quickBadge');q.textContent=S.readAt?(S.live?fmtTime(S.readAt):t('cached_at',{time:fmtTime(S.readAt)})):t('no_data');
+ const stale=!!S.snap&&!S.live;q.classList.toggle('stale',stale);document.body.classList.toggle('is-stale',stale);
+ $('connectRead').textContent=t(S.busy?'btn_connecting':'btn_connect');
+ $('connectRead').disabled=S.busy;$('refresh').disabled=S.busy;$('disconnect').disabled=S.busy||!S.connected;$('exportSnapshot').disabled=!S.snap;
+ $('scanBtn').textContent=t(S.scanning?'scanning':'scan');$('scanBtn').disabled=S.busy||S.scanning||S.locked;
+ $('scanBtn').title=S.locked?t('addr_locked'):'';
+ $('bleAddress').textContent=S.address||'—';$('deviceBluetooth').textContent=S.address||'—';
+ if(typeof renderAeq==='function')renderAeq();
+ renderDevices();
+}
+function renderDelay(){$('statusDelay').textContent=$('delay').value}
+function renderAutoOn(){
+ const sc=S.snap?.scalars||{},th=num(sc['0023']?.threshold_mv??sc['0023']?.value);
+ $('autoOnThresholdEntry').value=$('autoOnThreshold').value;
+ $('autoOnValue').textContent=th===null?'—':th;$('autoOnSheetValue').textContent=th===null?'—':th+' mV';
+}
+function syncEntries(){[['volume','volumeEntry'],['lpf','lpfEntry'],['phase','phaseEntry'],['delay','delayEntry']].forEach(([a,b])=>{$(b).value=$(a).value})}
+function renderBools(){const sc=S.snap?.scalars||{},on=sc['0172']?.value;$('autoeqValue').textContent=fmtBool(on);$('calibrationValue').textContent=fmtBool(sc['0170']?.value);$('statusAeq').textContent=on===undefined||on===null?'—':(on?'✓':t('off_short'));$('statusAeq').parentElement.classList.toggle('off',!on)}
+function renderState(s,{live=true,at=Date.now()}={}){
+ S.snap=s;S.live=live;S.readAt=at;if(live){localPeq={};S.autoOnPreview=null}
+ const sc=s.scalars||{},fs=s.filters||{},val=id=>sc[id]?.value;
+ const vol=num(val('0040')),lpf=num(fs['0']?.frequency_hz),phase=num(fs['1']?.phase_degrees ?? fs['1']?.frequency_hz),delayMs=num(sc['004B']?.delay_ms ?? (val('004B')/10)),preset=num(val('004A'));
+ if(vol!==null)$('volume').value=vol;
+ if(lpf!==null)$('lpf').value=clamp(lpf,40,150);
+ if(phase!==null)$('phase').value=clamp(phase,0,360);
+ if(delayMs!==null)$('delay').value=clamp(delayMs,0,20);{const th=num(sc['0023']?.threshold_mv??val('0023'));if(th!==null)$('autoOnThreshold').value=clamp(th,1,10)}
+ 
+ syncEntries();
+ $('statusVol').textContent=vol??'—';
+ $('statusLpf').textContent=lpf??'—';
+ $('statusPhase').textContent=phase??'—';
+ renderDelay();
+ const pname=preset===null?null:PRESETS[preset];
+ $('presetName').textContent=preset===null?'—':(pname||t('unknown')).toUpperCase();$('sidePreset').textContent=preset===null?'—':(pname||String(preset));
+ if(pname)document.querySelectorAll('[data-preset]').forEach(b=>b.classList.toggle('selected',b.dataset.preset===pname));
+ $('modelValue').textContent=val('0005')||'ELAC SUB3030';
+ $('firmwareValue').textContent=val('0001')||'—';
+ renderBools();
+ renderAutoOn();
+ if(live){
+  const errs=Object.keys(s.errors||{}),n=Object.keys(sc).length,f=Object.keys(fs).length;
+  S.connected=true;S.mode=$('writeEnabledToggle')?.checked?'mode_write':'mode_ro';
+  errs.length?setMsg('msg_read_partial',{n,f,ids:errs.join(', ')}):setMsg('msg_read_ok',{n,f});
+ }
+ renderSelectedFilter();
+}
+
+/* ---------- equalizer ---------- */
+const filterRaw=i=>S.snap?.filters?.[String(i)];
+function filterValue(i=selectedFilterIndex){const r=filterRaw(i);return localPeq[i]||{frequency_hz:num(r?.frequency_hz)??50,q:num(r?.q)??5,gain_db:num(r?.gain_db)??0}}
+function peqDiffers(i){const r=filterRaw(i),f=localPeq[i];if(!f)return false;if(!r)return true;return num(r.frequency_hz)!==f.frequency_hz||Math.abs(num(r.q)-f.q)>=.005||Math.abs(num(r.gain_db)-f.gain_db)>=.05}
+function filterLabel(f){return `${f.frequency_hz} Hz\n${signed(f.gain_db)} dB`}
+function renderSelectedFilter(){
+ const f=filterValue();
+ $('selectedFilterName').textContent='PEQ '+(selectedFilterIndex-7);
+ $('peqFreq').value=f.frequency_hz;$('peqQ').value=f.q;$('peqGain').value=f.gain_db;
+ $('selectedFilterStatus').textContent=localPeq[selectedFilterIndex]?t('fs_local'):filterRaw(selectedFilterIndex)?t(S.live?'fs_read':'fs_cached'):t(S.snap?'fs_missing':'fs_none');$('selectedFilterStatus').classList.toggle('local',!!localPeq[selectedFilterIndex]);
+ document.querySelectorAll('#page-eq [data-filter-index]').forEach(b=>{
+  const i=Number(b.dataset.filterIndex),has=localPeq[i]||filterRaw(i);
+  b.classList.toggle('active',i===selectedFilterIndex);b.classList.toggle('edited',!!localPeq[i]&&peqDiffers(i));
+  if(has)b.querySelector('span').textContent=filterLabel(filterValue(i));
+ });
+ updateEqChart();
+}
+function peakDb(f,f0,q,gdb,fs=48000){ // RBJ peaking-EQ magnitude response in dB
+ if(!gdb)return 0;
+ const A=Math.pow(10,gdb/40),w0=2*Math.PI*f0/fs,al=Math.sin(w0)/(2*q),c=Math.cos(w0);
+ const b0=1+al*A,b1=-2*c,b2=1-al*A,a0=1+al/A,a1=-2*c,a2=1-al/A;
+ const w=2*Math.PI*f/fs,cw=Math.cos(w),sw=Math.sin(w),c2=Math.cos(2*w),s2=Math.sin(2*w);
+ const nr=b0+b1*cw+b2*c2,ni=-(b1*sw+b2*s2),dr=a0+a1*cw+a2*c2,di=-(a1*sw+a2*s2);
+ return 10*Math.log10((nr*nr+ni*ni)/(dr*dr+di*di));
+}
+function updateEqChart(){
+ const svg=$('eqMainChart'),box=$('eqBox');if(!svg||!box)return;
+ const W=Math.max(220,Math.round(box.clientWidth)),H=Math.max(140,Math.round(box.clientHeight));
+ const L=36,R=10,T=10,B=22,pw=W-L-R,ph=H-T-B,FMIN=20,FMAX=200;
+ const x=f=>L+Math.log(clamp(f,FMIN,FMAX)/FMIN)/Math.log(FMAX/FMIN)*pw;
+ const y=g=>T+(12-clamp(g,-12,12))/24*ph;
+ let grid='',lab='';
+ for(const g of [-12,-6,0,6,12]){grid+=`<line class="${g?'eq-grid':'eq-zero'}" x1="${L}" x2="${W-R}" y1="${y(g)}" y2="${y(g)}"/>`;lab+=`<text x="${L-6}" y="${y(g)+3}" text-anchor="end">${g>0?'+':''}${g}</text>`}
+ for(const f of [20,30,40,50,60,80,100,150,200]){const xx=x(f).toFixed(1);grid+=`<line class="eq-grid" x1="${xx}" x2="${xx}" y1="${T}" y2="${T+ph}"/>`;lab+=`<text x="${xx}" y="${H-7}" text-anchor="${f===200?'end':'middle'}">${f}</text>`}
+ const idx=[8,9,10,11,12,13,14,15],fl=idx.map(i=>filterValue(i)),N=Math.max(60,Math.floor(pw/2));let d='';
+ for(let k=0;k<=N;k++){const f=FMIN*Math.pow(FMAX/FMIN,k/N);let db=0;for(const p of fl)db+=peakDb(f,p.frequency_hz,Math.max(.1,p.q),p.gain_db);d+=(k?'L':'M')+x(f).toFixed(1)+' '+y(db).toFixed(1)+' '}
+ const area=d+`L${(L+pw).toFixed(1)} ${y(0).toFixed(1)} L${L} ${y(0).toFixed(1)} Z`;
+ const dots=idx.map((i,k)=>{const p=fl[k],cx=x(p.frequency_hz).toFixed(1),cy=y(p.gain_db).toFixed(1);return `<circle class="eq-dot${i===selectedFilterIndex?' sel':''}" cx="${cx}" cy="${cy}" r="${i===selectedFilterIndex?6:4}"/><circle class="eq-hit" data-i="${i}" cx="${cx}" cy="${cy}" r="13"/>`}).join('');
+ svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+ svg.innerHTML=grid+`<path class="eq-area" d="${area}"/><path class="eq-curve" d="${d}"/>`+lab+dots;
+}
+$('eqMainChart').addEventListener('click',e=>{const h=e.target.closest('[data-i]');if(h){selectedFilterIndex=Number(h.dataset.i);renderSelectedFilter()}});
+document.querySelectorAll('#page-eq [data-filter-index]').forEach(b=>b.addEventListener('click',()=>{selectedFilterIndex=Number(b.dataset.filterIndex);renderSelectedFilter();toast(t('toast_peq',{n:selectedFilterIndex-7}))}));
+['peqFreq','peqQ','peqGain'].forEach(id=>$(id).addEventListener('input',()=>{
+ const f={...filterValue()};
+ f.frequency_hz=clamp(Number($('peqFreq').value)||20,20,200);f.q=clamp(Number($('peqQ').value)||.1,.1,10);f.gain_db=clamp(Number($('peqGain').value)||0,-12,12);
+ localPeq[selectedFilterIndex]=f;S.mode='mode_edit';
+ $('selectedFilterStatus').textContent=t('fs_local');$('selectedFilterStatus').classList.add('local');
+ {const tile=document.querySelector(`#page-eq [data-filter-index="${selectedFilterIndex}"]`);tile.querySelector('span').textContent=filterLabel(f);tile.classList.toggle('edited',peqDiffers(selectedFilterIndex))}
+ renderStatus();updateEqChart();
+}));
+if('ResizeObserver' in window)new ResizeObserver(()=>updateEqChart()).observe($('eqBox'));
+
+/* ---------- local-preview controls ---------- */
+const markLocal=()=>{S.mode='mode_local';renderStatus()};
+$('volume').addEventListener('input',()=>{$('statusVol').textContent=$('volume').value;markLocal()});
+$('lpf').addEventListener('input',()=>{$('statusLpf').textContent=$('lpf').value;markLocal()});
+$('phase').addEventListener('input',()=>{$('statusPhase').textContent=$('phase').value;markLocal()});
+$('delay').addEventListener('input',()=>{renderDelay();markLocal()});
+[['volume',0,100,1],['lpf',40,150,1],['phase',0,360,1],['delay',0,20,1]].forEach(([id,min,max,step])=>{
+ const slider=$(id),entry=$(id+'Entry');entry.min=min;entry.max=max;entry.step=step;
+ slider.addEventListener('input',()=>{entry.value=slider.value});
+ entry.addEventListener('change',()=>{let v=Number(entry.value);if(!Number.isFinite(v))v=min;v=clamp(v,min,max);slider.value=v;entry.value=v;slider.dispatchEvent(new Event('input',{bubbles:true}))});
+});
+document.querySelectorAll('[data-preset]').forEach(b=>b.addEventListener('click',()=>{
+ document.querySelectorAll('[data-preset]').forEach(x=>x.classList.toggle('selected',x===b));
+ $('presetName').textContent=b.dataset.preset.toUpperCase();$('sidePreset').textContent=b.dataset.preset;
+ markLocal();toast(t('toast_preset',{p:b.dataset.preset}));
+}));
+
+/* ---------- server calls ---------- */
+async function api(path,body){
+ const opt={method:'POST'};if(body){opt.headers={'Content-Type':'application/json'};opt.body=JSON.stringify(body)}
+ const r=await fetch(path,opt);if(r.status===401){location.reload();throw new Error(t('err_login'))}let data={};try{data=await r.json()}catch(e){}
+ if(!r.ok){const e=new Error((lang==='en'?data.detail_en:data.detail)||data.detail||('HTTP '+r.status));e.code=data.code;throw e}
+ return data;
+}
+async function readState(){
+ if(S.busy)return;S.busy=true;setMsg('msg_connecting');renderStatus();
+ try{
+  const data=await api('/api/read');
+  if(data.address)S.address=data.address;
+  renderState(data,{live:true,at:data.read_at?data.read_at*1000:Date.now()});
+  store.set(CACHE_KEY,JSON.stringify({at:S.readAt,snapshot:data}));
+  const k=Object.keys(data.errors||{}).length;toast(k?t('toast_partial',{k}):t('toast_read_done'));
+ }catch(e){S.connected=false;S.live=false;setMsgRaw(e.message);toast(t('toast_ble_err',{e:e.message}))}
+ finally{S.busy=false;renderStatus();renderSelectedFilter()}
+}
+function exportSnapshot(){
+ if(!S.snap){toast(lang==='pl'?'Najpierw odczytaj urządzenie.':'Read the device first.');return}
+ const exportedAt=new Date().toISOString();
+ const payload={schema:'elac-sub3030-snapshot-v1',exported_at:exportedAt,source:'ELAC SUB3030 Controller GUI',live_reading:!!S.live,read_at:S.snap.read_at??(S.readAt?S.readAt/1000:null),note:S.live?'Snapshot from the latest live device read.':'Snapshot is cached/local; connect and read for a fresh device snapshot.',snapshot:S.snap};
+ const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json;charset=utf-8'});
+ const url=URL.createObjectURL(blob);const a=document.createElement('a');
+ a.href=url;a.download='elac_sub3030_snapshot_'+exportedAt.replace(/[:.]/g,'-')+'.json';
+ document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+ toast(lang==='pl'?'Snapshot JSON wyeksportowany':'Snapshot JSON exported');
+}
+async function doDisconnect(){
+ if(S.busy)return;S.busy=true;renderStatus();
+ try{await api('/api/disconnect');S.connected=false;S.live=false;setMsg('msg_disconnected');toast(t('toast_disconnected'))}
+ catch(e){setMsgRaw(e.message)}
+ finally{S.busy=false;renderStatus();renderSelectedFilter()}
+}
+async function doScan(opts={}){
+ if(S.scanning||S.busy||S.locked)return;S.scanning=true;renderStatus();
+ const box=$('scanResults');box.classList.remove('hidden');box.textContent='';
+ try{
+  const {devices}=await api('/api/scan');
+  const subs=devices.filter(d=>d.likely);
+  if(!S.address&&subs.length===1){box.classList.add('hidden');toast(t('dev_auto',{n:subs[0].name||subs[0].address}));S.scanning=false;await pickDevice(subs[0].address);return}
+  if(!devices.length){box.textContent=t('scan_none')}
+  else{
+   const hint=document.createElement('div');hint.className='subtle';hint.textContent=t('scan_hint');box.appendChild(hint);
+   devices.forEach(d=>{ // device names come from the air: always use textContent, never innerHTML
+    const b=document.createElement('button');b.type='button';b.className='scan-item'+(d.likely?' likely':'');
+    const l=document.createElement('span'),n=document.createElement('b'),a=document.createElement('small'),r=document.createElement('small');
+    n.textContent=(devName(d.address)?devName(d.address)+' · ':'')+(d.name||'—');a.textContent=d.address;r.textContent=d.rssi==null?'':d.rssi+' dBm';
+    l.append(n,a);b.append(l,r);b.addEventListener('click',()=>pickDevice(d.address));box.appendChild(b);
+   });
+  }
+ }catch(e){box.textContent=e.message}
+ finally{S.scanning=false;renderStatus()}
+}
+async function pickDevice(address){ // use this subwoofer from now on and read it straight away
+ let ok=false;
+ try{const r=await api('/api/address',{address});S.address=r.address;if(r.devices)S.devices=r.devices;S.connected=false;S.live=false;$('scanResults').classList.add('hidden');ok=true}
+ catch(e){toast(t('toast_ble_err',{e:e.message}))}
+ renderStatus();renderSelectedFilter();renderDevices();
+ if(ok)await readState();
+}
+/* ---------- several subwoofers: named list in the device sheet ---------- */
+const devName=a=>(S.devices||[]).find(d=>d.address===a)?.name||'';
+function renderDevices(){
+ const list=$('devList');if(!list)return;
+ $('brandName').textContent=devName(S.address)||'SUB3030';
+ list.textContent='';const devs=S.devices||[];
+ if(!devs.length){const e=document.createElement('div');e.className='subtle';e.textContent=t('dev_none');list.appendChild(e)}
+ devs.forEach(d=>{
+  const cur=d.address===S.address,row=document.createElement('div');row.className='dev-row'+(cur?' current':'');
+  const go=document.createElement('button');go.type='button';go.className='dev-go';go.disabled=cur||S.busy||S.locked;
+  const nm=document.createElement('b'),ad=document.createElement('small');nm.textContent=d.name||'SUB3030';ad.textContent=(cur?t('dev_current')+' · ':'')+d.address;
+  go.append(nm,ad);go.addEventListener('click',()=>{toast(t('dev_switch',{n:d.name||d.address}));pickDevice(d.address)});
+  const ren=document.createElement('button');ren.type='button';ren.className='dev-act';ren.textContent='✎';ren.title=t('dev_rename');ren.setAttribute('aria-label',t('dev_rename'));
+  ren.addEventListener('click',async()=>{const n=prompt(t('dev_rename_prompt'),d.name||'');if(n===null)return;
+   try{const r=await api('/api/devices/rename',{address:d.address,name:n});S.devices=r.devices;renderDevices()}catch(e){toast(e.message)}});
+  row.append(go,ren);
+  if(!cur){const del=document.createElement('button');del.type='button';del.className='dev-act';del.textContent='✕';del.title=t('dev_forget');del.setAttribute('aria-label',t('dev_forget'));
+   del.addEventListener('click',async()=>{if(!confirm(t('dev_forget_confirm',{n:d.name||d.address})))return;
+    try{const r=await api('/api/devices/forget',{address:d.address});S.devices=r.devices;renderDevices()}catch(e){toast(e.message)}});row.append(del)}
+  list.appendChild(row);
+ });
+ $('devFind').disabled=S.locked;
+}
+$('devFind').addEventListener('click',()=>{$('deviceSheetBtn').click();const c=$('connection-card');if(c.classList.contains('collapsed'))setCollapsed(c,false);c.scrollIntoView({behavior:'smooth',block:'start'});doScan()});
+async function pollStatus(){
+ if(document.hidden||S.busy)return;
+ try{
+  const r=await fetch('/api/status',{cache:'no-store'});if(r.status===401){location.reload();return}if(!r.ok)throw new Error('status');
+  const st=await r.json(),was=S.connected;S.statusSeen=true;
+  $('logoutForm').classList.toggle('hidden',!st.auth);S.demo=!!st.demo;S.aeqDevice=!!st.autoeq_device;S.aeqExp=!!st.autoeq_experimental;S.aeqExpLocked=!!st.autoeq_experimental_locked;S.locked=!!st.address_locked;S.address=st.address||S.address;S.devices=st.devices||S.devices||[];S.connected=!!st.connected;
+  if(was&&!S.connected){S.live=false;setMsg('msg_dropped')}
+  renderStatus();renderSelectedFilter();
+  if(S.connected&&!S.live&&!S.autoReadTried){S.autoReadTried=true;readState()} // server already holds a link: show live data
+  if(!S.address&&!S.locked&&!S.demo&&!S.autoScanTried){S.autoScanTried=true;doScan({auto:true})} // first start: look for the subwoofer
+  renderDevices();
+ }catch(e){
+  if(S.connected||S.live){S.connected=false;S.live=false;setMsg('msg_server_down')}
+  renderStatus();
+ }
+}
+$('connectRead').addEventListener('click',readState);
+{const cs=$('connStatus'),go=()=>{if(!S.busy)readState()};cs.addEventListener('click',go);cs.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})}$('refresh').addEventListener('click',readState);$('exportSnapshot').addEventListener('click',exportSnapshot);
+$('disconnect').addEventListener('click',doDisconnect);$('scanBtn').addEventListener('click',doScan);
+
+/* ---------- guarded device writes ---------- */
+$('writeModeBtn').addEventListener('click',()=>{const cb=$('writeEnabledToggle');if(cb.disabled&&!cb.checked)return;cb.checked=!cb.checked;cb.dispatchEvent(new Event('change'))});
+function writesReady(){
+ return !!$('writeEnabledToggle').checked&&S.connected&&S.live&&!S.demo&&!S.busy;
+}
+$('writeEnabledToggle').addEventListener('change',()=>{
+ if($('writeEnabledToggle').checked){
+  if(!S.connected||!S.live||S.demo||!confirm(t('write_enable_confirm'))){
+   $('writeEnabledToggle').checked=false;
+   if(S.demo)toast(t('write_not_ready'));
+  }else{S.mode='mode_write';}
+ }else{S.mode='mode_ro';}
+ renderStatus();
+});
+function curState(){
+ const sc=S.snap?.scalars||{},fs=S.snap?.filters||{};
+ return {volume:num(sc['0040']?.value),preset:num(sc['004A']?.value),delay:num(sc['004B']?.delay_ms??(sc['004B']?.value/10)),threshold:num(sc['0023']?.threshold_mv??sc['0023']?.value),
+  lpf:num(fs['0']?.frequency_hz),phase:num(fs['1']?.phase_degrees??fs['1']?.frequency_hz)};
+}
+const chg=(label,from,to,unit='')=>`• ${label}: ${from??'—'}${from==null?'':unit} → ${to}${unit}`;
+/* "busy" animation (saving, connecting, measuring): a woofer whose cone pumps while sound rings spread out */
+function busySpin(size){
+ return `<svg class="busyspin" viewBox="0 0 24 24" width="${size}" height="${size}" aria-hidden="true"><circle class="ripple" cx="12" cy="12" r="10"/><circle class="ripple r2" cx="12" cy="12" r="10"/><circle class="surround" cx="12" cy="12" r="7.5"/><circle class="cone" cx="12" cy="12" r="4.2"/></svg>`;
+}
+async function writeBatch(items,lines){
+ if(!writesReady()){toast(t('write_not_ready'));return}
+ if(!items.length){toast(t('write_nothing'));return}
+ if(!confirm(t('write_changes')+'\n'+lines.join('\n')+'\n\n'+t('write_confirm')))return;
+ S.busy=true;S.writing=true;renderStatus();let attempted=false,errorText=null;
+ try{
+  for(const item of items){attempted=true;await api('/api/write',{enabled:true,...item});}
+ }catch(e){errorText=e.message;setMsgRaw(e.message)}
+ finally{S.busy=false;renderStatus()}
+ try{if(attempted)await readState()}finally{S.writing=false;renderStatus()} // refresh even after a partial batch; earlier writes may already have succeeded
+ if(errorText)toast(t('write_error',{e:errorText}));else toast(t('write_ok'));
+}
+function pendingChanges(){ // everything in Sound preset and Controls that differs from the last read
+ const items=[],lines=[];if(!S.snap)return {items,lines};
+ const cur=curState(),b=document.querySelector('[data-preset].selected');
+ if(b&&cur.preset!==null){const value=PRESETS.indexOf(b.dataset.preset);if(value!==cur.preset){items.push({kind:'preset',value});lines.push(chg(t('preset'),PRESETS[cur.preset]??cur.preset,b.dataset.preset))}}
+ const vol=Number($('volume').value),lpf=Number($('lpf').value),ph=Number($('phase').value),dl=Number($('delay').value),th=Number($('autoOnThreshold').value);
+ if(cur.volume!==null&&vol!==cur.volume){items.push({kind:'volume',value:vol});lines.push(chg(t('volume'),cur.volume,vol))}
+ if(cur.lpf!==null&&lpf!==cur.lpf){items.push({kind:'lpf',frequency_hz:lpf});lines.push(chg('LPF',cur.lpf,lpf,' Hz'))}
+ if(cur.phase!==null&&ph!==cur.phase){items.push({kind:'phase',value:ph});lines.push(chg(t('phase'),cur.phase,ph,'°'))}
+ if(cur.delay!==null&&dl!==cur.delay){items.push({kind:'delay',value:dl});lines.push(chg(t('delay'),cur.delay,dl,' ms'))}
+ if(cur.threshold!==null&&th!==cur.threshold){items.push({kind:'autoon_threshold',value:th});lines.push(chg('Auto-On',cur.threshold,th,' mV'))}
+ const fmt=(f,q,g)=>`${f} Hz, Q ${q}, ${signed(g)} dB`;
+ Object.keys(localPeq).map(Number).sort((a,b)=>a-b).forEach(i=>{if(!peqDiffers(i))return;const f=localPeq[i],r=filterRaw(i);
+  items.push({kind:'peq',index:i,frequency_hz:f.frequency_hz,q:f.q,gain_db:f.gain_db});lines.push(chg('PEQ '+(i-7),r?fmt(num(r.frequency_hz),num(r.q),num(r.gain_db)):null,fmt(f.frequency_hz,f.q,f.gain_db)))});
+ return {items,lines};
+}
+function renderWriteBar(){
+ const bar=$('writeBar');if(!bar)return;const {items,lines}=pendingChanges(),wb=$('wbWrite'),ready=writesReady();
+ if(S.writing){if(!wb.querySelector('.busyspin'))wb.innerHTML=busySpin(18)+'<span>'+t('wb_writing')+'</span>';wb.disabled=true}
+ else{if(wb.querySelector('.busyspin')||wb.textContent!==t('wb_write'))wb.textContent=t('wb_write');wb.disabled=!ready}
+ wb.title=ready||S.writing?'':t('wb_need_writes');
+ const show=!!items.length||!!S.writing;
+ bar.classList.toggle('hidden',!show);document.body.classList.toggle('has-writebar',show);if(!items.length)return;
+ $('wbCount').textContent=t(items.length===1?'wb_one':'wb_many',{n:items.length});
+ $('wbList').textContent=' · '+lines.map(l=>l.replace(/^• /,'')).join(' · ');
+ bar.classList.toggle('locked',!ready&&!S.writing);
+}
+$('wbWrite').addEventListener('click',()=>{const {items,lines}=pendingChanges();writeBatch(items,lines)});
+$('wbRevert').addEventListener('click',()=>{ // back to the values from the last read
+ const cur=curState();
+ [['volume',cur.volume],['lpf',cur.lpf],['phase',cur.phase],['delay',cur.delay],['autoOnThreshold',cur.threshold]].forEach(([id,v])=>{if(v!==null){$(id).value=v;$(id).dispatchEvent(new Event('input',{bubbles:true}))}});
+ if(cur.preset!==null&&PRESETS[cur.preset]){document.querySelectorAll('[data-preset]').forEach(x=>x.classList.toggle('selected',x.dataset.preset===PRESETS[cur.preset]));$('presetName').textContent=PRESETS[cur.preset].toUpperCase();$('sidePreset').textContent=PRESETS[cur.preset]}
+ localPeq={};renderSelectedFilter();renderStatus();
+});
+/* − / + next to each number: one step per tap, repeats while held */
+document.querySelectorAll('.stp').forEach(btn=>{
+ const entry=btn.parentElement.querySelector('input[type=number]');let timer=null,delay=null;
+ const bump=()=>{const st=Number(btn.dataset.inc)||Number(entry.step)||1,min=Number(entry.min),max=Number(entry.max);entry.value=Math.round(clamp((Number(entry.value)||0)+st*Number(btn.dataset.step),min,max)*1000)/1000;entry.dispatchEvent(new Event('input'));entry.dispatchEvent(new Event('change'))};
+ const stop=()=>{clearTimeout(delay);clearInterval(timer);delay=timer=null};
+ btn.addEventListener('pointerdown',e=>{e.preventDefault();bump();delay=setTimeout(()=>{timer=setInterval(bump,70)},400)});
+ ['pointerup','pointerleave','pointercancel'].forEach(ev=>btn.addEventListener(ev,stop));
+ btn.addEventListener('click',e=>{if(e.detail===0)bump()}); // keyboard
+});
+$('autoOnThreshold').addEventListener('input',()=>{$('autoOnThresholdEntry').value=$('autoOnThreshold').value;markLocal()});
+$('autoOnThresholdEntry').addEventListener('change',()=>{const v=clamp(Math.round(Number($('autoOnThresholdEntry').value)||1),1,10);$('autoOnThreshold').value=v;$('autoOnThresholdEntry').value=v;markLocal()});
+
+/* ---------- layout presets, appearance, language ---------- */
+const root=$('page-control');
+function setFont(v){root.classList.remove('font-small','font-normal','font-large');root.classList.add('font-'+v);store.set('elac_gui_font_size',v)}
+$('fontSizePicker').addEventListener('change',e=>setFont(e.target.value));
+{const v=store.get('elac_gui_font_size','normal');$('fontSizePicker').value=v;setFont($('fontSizePicker').value)}
+try{localStorage.removeItem('elac_gui_selected_preset')}catch(e){}
+$('appearanceBtn').addEventListener('click',()=>{const open=$('layoutTools').classList.toggle('open');$('appearanceBtn').setAttribute('aria-expanded',String(open))});
+const THEMES=['dark','light','amp','pixel','ash','aramid','debut','gunmetal'];
+function applyTheme(v){if(!THEMES.includes(v))v='dark';THEMES.forEach(x=>document.body.classList.toggle('theme-'+x,x===v&&x!=='dark'));document.documentElement.dataset.theme=v;store.set('elac_gui_theme',v);if(accentReady)applyAccent($('accentPicker').value)}
+applyTheme(store.get('elac_gui_theme','dark'));$('themePicker').value=document.documentElement.dataset.theme;$('themePicker').addEventListener('change',e=>applyTheme(e.target.value));
+function inkFor(hex){ // dark or white text, whichever contrasts more with the accent (WCAG luminance)
+ const n=parseInt(hex.slice(1),16),ch=[n>>16&255,n>>8&255,n&255].map(c=>{c/=255;return c<=0.03928?c/12.92:Math.pow((c+0.055)/1.055,2.4)}),L=0.2126*ch[0]+0.7152*ch[1]+0.0722*ch[2];
+ return (L+0.05)/0.05>1.05/(L+0.05)?'#000000':'#ffffff';
+}
+function lum(hex){const n=parseInt(hex.slice(1),16);return [n>>16&255,n>>8&255,n&255].map(c=>{c/=255;return c<=0.03928?c/12.92:Math.pow((c+0.055)/1.055,2.4)}).reduce((a,c,i)=>a+c*[0.2126,0.7152,0.0722][i],0)}
+function contrast(a,b){const x=lum(a),y=lum(b);return (Math.max(x,y)+0.05)/(Math.min(x,y)+0.05)}
+function readableAccent(hex,light){ // mix toward black (light theme) or white (dark theme) until it reaches 3:1 against the page
+ const bg=light?'#f2f4f6':'#0d1014',to=light?0:255,n=parseInt(hex.slice(1),16),c0=[n>>16&255,n>>8&255,n&255];
+ for(let k=0;k<=1.0001;k+=0.05){const out='#'+c0.map(c=>Math.round(c+(to-c)*k).toString(16).padStart(2,'0')).join('').toUpperCase();if(contrast(out,bg)>=3)return out}
+ return light?'#000000':'#FFFFFF';
+}
+var accentReady=false;
+function applyAccent(v){const eff=readableAccent(v,document.body.classList.contains('theme-light')),r=document.documentElement.style;r.setProperty('--accent',eff);r.setProperty('--accent-ink',inkFor(eff));r.setProperty('--accent-soft',eff+'40');store.set('elac_gui_accent',v);accentReady=true;renderStatus()}
+{
+ const pick=$('accentPicker');pick.value=store.get('elac_gui_accent','#FF4D06');if(!pick.value)pick.value='#FF4D06';applyAccent(pick.value);pick.addEventListener('change',()=>applyAccent(pick.value));
+ const sw=document.createElement('div');sw.className='accent-swatches';sw.style.cssText='display:flex;gap:5px;align-items:center;flex-wrap:wrap;max-width:190px';
+ [...pick.options].forEach(o=>{const b=document.createElement('button');b.type='button';
+  b.style.cssText=`width:20px;height:20px;min-width:20px;padding:0;border-radius:4px;border:2px solid ${o.value.toLowerCase()===pick.value.toLowerCase()?'var(--text)':'var(--line)'};cursor:pointer`;b.style.setProperty('background',o.value,'important');
+  b.addEventListener('click',()=>{pick.value=o.value;applyAccent(o.value);sw.querySelectorAll('button').forEach(x=>x.style.borderColor='var(--line)');b.style.borderColor='var(--text)'});sw.appendChild(b)});
+ pick.insertAdjacentElement('afterend',sw);pick.style.display='none';
+}
+{
+ const op=$('highlightOpacity');op.value=store.get('elac_gui_highlight_opacity','25');
+ const apply=v=>{document.documentElement.style.setProperty('--accent-alpha',Number(v)+'%');store.set('elac_gui_highlight_opacity',v)};apply(op.value);op.addEventListener('input',()=>apply(op.value));
+}
+function setLang(l){lang=I18N[l]?l:'en';store.set('elac_gui_lang',lang);applyStatic();renderDelay();renderAutoOn();renderBools();renderStatus();renderSelectedFilter()}
+$('langPicker').addEventListener('change',e=>setLang(e.target.value));
+
+/* ---------- collapsible sections (state remembered per browser) ---------- */
+const COLLAPSE_KEY='elac_gui_collapsed_v1';
+{const btn=$('deviceSheetBtn'),sh=$('deviceSheet');
+ const setSheet=open=>{sh.classList.toggle('hidden',!open);btn.setAttribute('aria-expanded',String(open))};
+ btn.addEventListener('click',e=>{e.stopPropagation();setSheet(sh.classList.contains('hidden'))});
+ document.addEventListener('click',e=>{if(!sh.classList.contains('hidden')&&!sh.contains(e.target))setSheet(false)});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!sh.classList.contains('hidden')){setSheet(false);btn.focus()}});}
+const COLLAPSE_DEFAULT=['page-eq','page-autoeq'];
+let collapsed;
+try{collapsed=new Set(JSON.parse(store.get(COLLAPSE_KEY)||'null')||COLLAPSE_DEFAULT)}catch(e){collapsed=new Set(COLLAPSE_DEFAULT)}
+const sections=[...document.querySelectorAll('.card[id]')].filter(c=>c.querySelector('.cardhead > h2'));
+/* header badges jump to their setting: open its section, scroll it into view, flash it twice in the accent colour */
+function gotoSetting(key){
+ const el=key==='@preset'?$('preset-card').querySelector('.presets'):key==='@aeq'?$('aeqOnRow'):$(key)?.closest('.knob');
+ if(!el)return;const card=el.closest('.card[id]');
+ if(card&&card.classList.contains('collapsed'))setCollapsed(card,false);
+ requestAnimationFrame(()=>{
+  el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'center'});
+  el.classList.remove('goto-flash');void el.offsetWidth;el.classList.add('goto-flash');
+  setTimeout(()=>el.classList.remove('goto-flash'),1700);
+ });
+}
+document.querySelectorAll('#sthead [data-goto]').forEach(b=>{
+ const go=()=>gotoSetting(b.dataset.goto);b.addEventListener('click',go);
+ b.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}});
+});
+function setCollapsed(card,on,save=true){
+ card.classList.toggle('collapsed',on);
+ const b=card.querySelector('.collapse-toggle');if(b)b.setAttribute('aria-expanded',String(!on));
+ on?collapsed.add(card.id):collapsed.delete(card.id);
+ if(save)store.set(COLLAPSE_KEY,JSON.stringify([...collapsed]));
+ updateCollapseAll();
+}
+function updateCollapseAll(){
+ const any=sections.some(c=>c.classList.contains('collapsed')),l=$('collapseAllLabel');
+ l.dataset.i18n=any?'expand_all':'collapse_all';l.textContent=t(l.dataset.i18n);
+}
+sections.forEach(card=>{
+ const head=card.querySelector('.cardhead'),h2=head.querySelector('h2');
+ const btn=document.createElement('button');btn.type='button';btn.className='collapse-toggle';btn.setAttribute('aria-controls',card.id);
+ btn.dataset.i18nAria='toggle_section';
+ const chev=document.createElement('span');chev.className='chev';chev.setAttribute('aria-hidden','true');
+ const label=document.createElement('span');label.textContent=h2.textContent;
+ if(h2.dataset.i18n){label.dataset.i18n=h2.dataset.i18n;delete h2.dataset.i18n} // translation now targets the label, not the h2
+ btn.append(chev,label);h2.textContent='';h2.appendChild(btn);
+ head.classList.add('clickable');
+ head.addEventListener('click',e=>{
+  if(e.target.closest('a,input,select,label,textarea')||(e.target.closest('button')&&e.target.closest('button')!==btn))return;
+  setCollapsed(card,!card.classList.contains('collapsed'));
+ });
+ setCollapsed(card,collapsed.has(card.id),false);
+});
+$('collapseAllBtn').addEventListener('click',()=>{
+ const expand=sections.some(c=>c.classList.contains('collapsed'));
+ sections.forEach(c=>setCollapsed(c,!expand));
+});
+
+/* ---------- AutoEQ: same measurement chain as the ELAC app (see core/autoeq.py) ---------- */
+const AEQ_BANDS=[20,23,26,30,34,39,45,52,60,69,79,91,105,121,139,160];
+const AEQ_RATE=8000,AEQ_BUF=8000,AEQ_HOP=400,AEQ_N=1024,AEQ_FLOOR=-1000;
+const AEQ_WIN=new Float64Array(AEQ_N),AEQ_TWR=new Float64Array(AEQ_N/2),AEQ_TWI=new Float64Array(AEQ_N/2);
+for(let i=0;i<AEQ_N;i++)AEQ_WIN[i]=0.42-0.5*Math.cos(2*Math.PI*i/(AEQ_N-1))+0.08*Math.cos(4*Math.PI*i/(AEQ_N-1));
+for(let i=0;i<AEQ_N/2;i++){AEQ_TWR[i]=Math.cos(-2*Math.PI*i/AEQ_N);AEQ_TWI[i]=Math.sin(-2*Math.PI*i/AEQ_N)}
+function aeqFFT(re,im){
+ const n=re.length,bits=Math.round(Math.log2(n));let j=0;
+ for(let i=1;i<n-1;i++){let k=n>>1;while(j>=k){j-=k;k>>=1}j+=k;if(i<j){let x=re[i];re[i]=re[j];re[j]=x;x=im[i];im[i]=im[j];im[j]=x}}
+ let size=1;
+ for(let st=0;st<bits;st++){const step=size*2;let tw=0;
+  for(let m=0;m<size;m++){const c=AEQ_TWR[tw],s=AEQ_TWI[tw];tw+=1<<(bits-st-1);
+   for(let a=m;a<n;a+=step){const b=a+size,tr=re[b]*c-im[b]*s,ti=re[b]*s+im[b]*c;re[b]=re[a]-tr;im[b]=im[a]-ti;re[a]+=tr;im[a]+=ti}}
+  size=step}
+}
+function aeqFrame(buf){ // 1 s at 8 kHz -> dB per 1 Hz bin (0..511)
+ const ratio=AEQ_RATE/AEQ_N,re=new Float64Array(AEQ_N),im=new Float64Array(AEQ_N);
+ for(let k=0;k<AEQ_N;k++){const pos=ratio*k,i=Math.floor(pos),fr=pos-i;re[k]=(buf[i+1]*fr+buf[i]*(1-fr))*AEQ_WIN[k]}
+ aeqFFT(re,im);const half=AEQ_N/2,out=new Float64Array(half);
+ for(let k=0;k<half;k++){const m=Math.sqrt(re[k]*re[k]+im[k]*im[k])/half;out[k]=m>0?20*Math.log10(m):AEQ_FLOOR}
+ return out;
+}
+class AeqAnalyzer{
+ constructor(fs){
+  this.fs=fs;this.integer=fs%AEQ_RATE===0;this.ratio=fs/AEQ_RATE;this.acc=0;this.accN=0;
+  const w0=2*Math.PI*500/AEQ_RATE,alpha=Math.sin(w0)/(2/Math.SQRT2),c=Math.cos(w0),a0=1+alpha; // RBJ low-pass 500 Hz, Q 1/sqrt(2)
+  this.c=[(1-c)/2/a0,(1-c)/a0,(1-c)/2/a0,-2*c/a0,(1-alpha)/a0];this.x1=this.x2=this.y1=this.y2=0;
+  const L=Math.max(1,Math.round(this.ratio));this.ma=new Float64Array(L);this.maI=0;this.maSum=0;this.t=0;this.prev=0; // non-multiple rates
+  this.buf=new Float64Array(AEQ_BUF);this.w=0;this.filled=0;this.since=0;
+  this.holding=true;this.hold=new Float64Array(AEQ_N/2).fill(AEQ_FLOOR);this.frames=0;this.held=0;
+ }
+ push(x){
+  const [b0,b1,b2,a1,a2]=this.c,y=b0*x+b1*this.x1+b2*this.x2-a1*this.y1-a2*this.y2;
+  this.x2=this.x1;this.x1=x;this.y2=this.y1;this.y1=y;
+  this.buf[this.w]=y;this.w=(this.w+1)%AEQ_BUF;this.filled++;this.since++;
+  if(this.since>=AEQ_HOP){this.since=0;if(this.filled>AEQ_BUF)this.analyse()}
+ }
+ feed(data){
+  for(let i=0;i<data.length;i++){const s=data[i];
+   if(this.integer){this.acc+=s;if(++this.accN<this.ratio)continue;const x=this.acc/this.ratio;this.acc=0;this.accN=0;this.push(x)}
+   else{this.maSum+=s-this.ma[this.maI];this.ma[this.maI]=s;this.maI=(this.maI+1)%this.ma.length;const v=this.maSum/this.ma.length;
+    while(this.t<=1){this.push(this.prev+(v-this.prev)*this.t);this.t+=this.ratio}this.t-=1;this.prev=v}
+  }
+ }
+ analyse(){
+  const lin=new Float64Array(AEQ_BUF);for(let i=0;i<AEQ_BUF;i++)lin[i]=this.buf[(this.w+i)%AEQ_BUF];
+  const spec=aeqFrame(lin);this.frames++;
+  if(this.holding){this.held++;for(let k=0;k<spec.length;k++)if(spec[k]>this.hold[k])this.hold[k]=spec[k]}
+ }
+ bands(){return AEQ_BANDS.map(f=>this.hold[f])}
+}
+/* Repeated runs (not in the ELAC app; see combine_runs in core/autoeq.py, which this mirrors) */
+const AEQ_VALID=-200,AEQ_OUTLIER={same:6,moved:10},AEQ_SPREAD={same:3,moved:8};
+const aeqMedian=v=>{const a=[...v].sort((x,y)=>x-y),n=a.length;return n%2?a[n>>1]:(a[n/2-1]+a[n/2])/2};
+function aeqCombine(runs,mode){
+ const levels=[],spread=[],dropped=[],warn=[];
+ for(let b=0;b<runs[0].length;b++){
+  const vals=runs.map(r=>r[b]).filter(v=>v>AEQ_VALID);
+  if(!vals.length){levels.push(AEQ_FLOOR);spread.push(0);dropped.push(0);continue}
+  const med=aeqMedian(vals),kept=vals.length>=3?vals.filter(v=>Math.abs(v-med)<=AEQ_OUTLIER[mode]):vals;
+  const lvl=mode==='same'?aeqMedian(kept):10*Math.log10(kept.reduce((a,v)=>a+Math.pow(10,v/10),0)/kept.length);
+  const sp=Math.max(...kept)-Math.min(...kept);
+  levels.push(lvl);spread.push(sp);dropped.push(vals.length-kept.length);if(sp>AEQ_SPREAD[mode])warn.push(b);
+ }
+ return {levels,spread,dropped,warn};
+}
+window.__elacAeq={AeqAnalyzer,aeqFrame,AEQ_BANDS,aeqCombine}; // used by the automated tests
+
+var AQ={stream:null,ctx:null,src:null,node:null,an:null,busy:false,abort:false,near:null,far:null,corr:null,test:null,nearRuns:null,farRuns:null,log:[],stages:{near:'todo',sent:'todo',seat:'todo',cal:'todo'},runPeak:-Infinity,
+ status:{k:'aeq_st_idle'},clipped:false,peakMax:-Infinity,level:-Infinity,peak:-Infinity};
+const aeqSleep=ms=>new Promise(r=>setTimeout(r,ms));
+const aeqSet=(k,v)=>{AQ.status={k,v};renderAeq()};
+const aeqSetRaw=raw=>{AQ.status={raw};renderAeq()};
+function aeqDeviceMode(){return !!S.aeqDevice&&S.connected&&S.live&&(S.demo||writesReady())}
+async function aeqListMics(){
+ if(!navigator.mediaDevices?.enumerateDevices)return;
+ const sel=$('aeqMic'),keep=sel.value,devs=(await navigator.mediaDevices.enumerateDevices()).filter(d=>d.kind==='audioinput');
+ sel.textContent='';const def=document.createElement('option');def.value='';def.dataset.i18n='aeq_mic_default';def.textContent=t('aeq_mic_default');sel.appendChild(def);
+ devs.forEach((d,i)=>{if(d.deviceId==='default'||!d.deviceId)return;const o=document.createElement('option');o.value=d.deviceId;o.textContent=d.label||(t('aeq_mic')+' '+(i+1));sel.appendChild(o)});
+ if([...sel.options].some(o=>o.value===keep))sel.value=keep;
+}
+async function aeqOpenMic(){
+ if(AQ.stream)return;
+ if(!window.isSecureContext||!navigator.mediaDevices?.getUserMedia)throw new Error(t('aeq_insecure'));
+ const audio={echoCancellation:false,noiseSuppression:false,autoGainControl:false,channelCount:1}; // like the app's VOICE_RECOGNITION source: no processing
+ if($('aeqMic').value)audio.deviceId={exact:$('aeqMic').value};
+ AQ.stream=await navigator.mediaDevices.getUserMedia({audio});
+ let ctx,src;
+ try{ctx=new AudioContext({sampleRate:48000});src=ctx.createMediaStreamSource(AQ.stream)}
+ catch(e){try{ctx&&ctx.close()}catch(_){}ctx=new AudioContext();src=ctx.createMediaStreamSource(AQ.stream)}
+ const node=ctx.createScriptProcessor(4096,1,1);
+ node.onaudioprocess=e=>{
+  const d=e.inputBuffer.getChannelData(0);let pk=0,sq=0;
+  for(let i=0;i<d.length;i++){const a=Math.abs(d[i]);if(a>pk)pk=a;sq+=d[i]*d[i]}
+  AQ.level=20*Math.log10(Math.sqrt(sq/d.length)||1e-9);AQ.peak=20*Math.log10(pk||1e-9);
+  if(AQ.an){if(AQ.peak>AQ.peakMax)AQ.peakMax=AQ.peak;if(AQ.peak>AQ.runPeak)AQ.runPeak=AQ.peak;if(pk>=0.99)AQ.clipped=true;AQ.an.feed(d)}
+  aeqMeter();
+ };
+ src.connect(node);node.connect(ctx.destination); // output stays silent; the connection keeps the node running
+ Object.assign(AQ,{ctx,src,node});
+ await ctx.resume();
+ aeqListMics().catch(()=>{});
+}
+function aeqCloseMic(){
+ try{AQ.node&&(AQ.node.onaudioprocess=null,AQ.node.disconnect());AQ.src&&AQ.src.disconnect();AQ.ctx&&AQ.ctx.close();AQ.stream&&AQ.stream.getTracks().forEach(x=>x.stop())}catch(e){}
+ Object.assign(AQ,{stream:null,ctx:null,src:null,node:null,level:-Infinity,peak:-Infinity});aeqMeter();
+}
+function aeqMeter(){
+ const bar=$('aeqMeterBar'),txt=$('aeqLevelText');if(!bar)return;
+ const on=Number.isFinite(AQ.peak);bar.style.width=on?Math.max(0,Math.min(100,(AQ.level+80)/80*100))+'%':'0';
+ bar.parentElement.classList.toggle('clip',on&&AQ.peak>-0.1);bar.parentElement.classList.toggle('hot',on&&AQ.peak>-6&&AQ.peak<=-0.1);
+ txt.textContent=on?t('aeq_level_val',{rms:AQ.level.toFixed(0),pk:AQ.peak.toFixed(0)}):'—';
+}
+async function aeqWait(cond,ms){const t0=Date.now();while(!cond()){if(AQ.abort)throw new Error('cancel');if(Date.now()-t0>ms)throw new Error(t('aeq_st_nomic'));await aeqSleep(50)}}
+/* AutoEQ console: a log of what happened, a 4-step progress strip and the current result on top */
+const AQS=['near','sent','seat','cal'];
+function aeqLog(k,key,v,raw){AQ.log.push({at:Date.now(),k,key,v,raw});if(AQ.log.length>300)AQ.log.shift();renderAeqCon()}
+function aeqStage(name,st){AQ.stages[name]=st;renderAeqCon()}
+function aeqResetStages(from){const i=AQS.indexOf(from);AQS.slice(i).forEach(s=>AQ.stages[s]='todo')}
+function renderAeqCon(){
+ const body=$('aeqLog');if(!body)return;
+ const atEnd=body.scrollHeight-body.scrollTop-body.clientHeight<24;
+ body.textContent='';
+ if(!AQ.log.length){const e=document.createElement('div');e.className='l empty';e.textContent=t('lg_empty');body.appendChild(e)}
+ for(const l of AQ.log){
+  const d=document.createElement('div');d.className='l '+l.k;
+  const tm=document.createElement('span');tm.className='t';tm.textContent=new Date(l.at).toLocaleTimeString(lang,{hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  const x=document.createElement('span');x.className='x';x.textContent={ok:'✓',warn:'!',err:'✗',cmd:'>',info:' '}[l.k]||' ';
+  const tx=document.createElement('span');tx.className='m';tx.textContent=l.raw!==undefined?l.raw:t(l.key,l.v);
+  d.append(tm,x,tx);body.appendChild(d);
+ }
+ if(atEnd)body.scrollTop=body.scrollHeight;
+ AQS.forEach(s=>{const e=document.querySelector(`#aeqSteps [data-stage="${s}"]`);if(e)e.dataset.state=AQ.stages[s]});
+ const last=[...AQ.log].reverse().find(l=>l.k!=='info'&&l.k!=='cmd');
+ const ic=$('aeqNowIcon');ic.dataset.state=AQ.busy?'busy':(last?last.k:'idle');
+ if(AQ.busy){if(!ic.querySelector('.busyspin'))ic.innerHTML=busySpin(18)}else ic.textContent=({ok:'✓',warn:'!',err:'✗'}[last?.k]||'·');
+ $('aeqNowTime').textContent=last?new Date(last.at).toLocaleTimeString(lang,{hour:'2-digit',minute:'2-digit'}):'';
+ $('aeqLogCount').textContent=t('lg_lines',{n:AQ.log.length});
+}
+async function aeqMeasure(kind){ // 'near' | 'far' | 'test'
+ if(AQ.busy)return;
+ const device=kind!=='test'&&aeqDeviceMode(),step=kind==='far'?1:0;
+ if(device&&kind==='far'&&!AQ.near){toast(t('aeq_need_near'));return}
+ if(device&&!S.demo&&!confirm(t('aeq_confirm_gen')))return;
+ const n=kind==='test'?1:(Number($('aeqRuns').value)||3);
+ AQ.busy=true;AQ.abort=false;AQ.clipped=false;AQ.peakMax=-Infinity;let genOn=false;
+ const stage=kind==='near'?'near':(kind==='far'?'seat':null),upStage=kind==='near'?'sent':'cal';
+ if(kind==='near')aeqResetStages('near');else if(kind==='far')aeqResetStages('seat');
+ if(stage)AQ.stages[stage]='busy';
+ aeqLog('cmd',kind==='test'?'lg_test':(kind==='near'?'lg_near':'lg_far'),{n});
+ if(!device&&kind!=='test')aeqLog('warn','lg_mode_local');
+ renderAeq();
+ try{
+  aeqSet('aeq_st_mic');await aeqOpenMic();
+  aeqLog('info','lg_mic',{rate:(AQ.ctx.sampleRate/1000).toFixed(1).replace(/\.0$/,'')});
+  const runs=[];
+  for(let i=1;i<=n;i++){
+   if(i>1){const wait=kind==='far'?8:3;aeqLog(kind==='far'?'warn':'info',kind==='far'?'lg_move':'lg_next',{s:wait});
+    for(let sec=wait;sec>0;sec--){if(AQ.abort)throw new Error('cancel');aeqSet(kind==='far'?'aeq_st_move':'aeq_st_next',{s:sec,i,n});await aeqSleep(1000)}}
+   AQ.an=new AeqAnalyzer(AQ.ctx.sampleRate);AQ.an.holding=false;
+   aeqSet('aeq_st_warm');await aeqWait(()=>AQ.an.frames>0,5000); // the app also waits for one full second of audio
+   AQ.clipped=false;AQ.runPeak=-Infinity;
+   if(device){
+    aeqSet('aeq_st_gen_wait');await api('/api/autoeq/start',{enabled:true,step});genOn=true;
+    const t0=Date.now();let seen=false;
+    while(true){
+     if(AQ.abort)throw new Error('cancel');
+     if(Date.now()-t0>90000)throw new Error(t('aeq_st_timeout'));
+     const st=(await api('/api/autoeq/state',{step})).state;
+     if(st===1){if(!seen)aeqLog('info','lg_run',{i,n});seen=true;AQ.an.holding=true;aeqSet(n>1?'aeq_st_run':'aeq_st_playing',{i,n})}
+     if(st===2||(st===0&&seen))break; // done (or stopped after playing)
+     await aeqSleep(300);
+    }
+    AQ.an.holding=false;
+    await api('/api/autoeq/stop',{});genOn=false; // the app sends 0175 before uploading
+    if(!AQ.an.held)throw new Error(t('aeq_st_nodata'));
+   }else{
+    const secs=kind==='test'?5:8,t0=Date.now();AQ.an.holding=true;aeqLog('info','lg_rec',{i,n,s:secs});
+    while(Date.now()-t0<secs*1000){if(AQ.abort)throw new Error('cancel');aeqSet('aeq_st_recording',{s:Math.ceil(secs-(Date.now()-t0)/1000),i,n});await aeqSleep(250)}
+    AQ.an.holding=false;
+   }
+   const pk=Number.isFinite(AQ.runPeak)?AQ.runPeak.toFixed(1):'—';
+   if(AQ.clipped&&kind!=='test')throw new Error(t('aeq_clip_run',{i}));
+   if(kind!=='test')aeqLog(AQ.runPeak>-3?'warn':'ok','lg_run_done',{i,n,pk});
+   runs.push(AQ.an.bands());
+  }
+  if(kind==='test'){
+   AQ.test=runs[0];const pk=Number.isFinite(AQ.peakMax)?AQ.peakMax.toFixed(0):'—';
+   aeqSet(AQ.clipped?'aeq_st_clip':(AQ.peakMax<-60?'aeq_st_quiet':'aeq_st_test_done'),{pk});
+   aeqLog(AQ.clipped?'err':(AQ.peakMax<-60||AQ.peakMax>-3?'warn':'ok'),AQ.clipped?'aeq_st_clip':(AQ.peakMax<-60?'aeq_st_quiet':'lg_test_done'),{pk});return}
+  if(AQ.peakMax>-3)aeqLog('warn','aeq_hot',{pk:AQ.peakMax.toFixed(1)});
+  const c=aeqCombine(runs,kind==='far'?'moved':'same'),levels=c.levels;
+  let worst=null;c.warn.forEach(b=>{if(worst===null||c.spread[b]>c.spread[worst])worst=b});
+  const spreadInfo=worst===null?null:{db:c.spread[worst].toFixed(1),f:AEQ_BANDS[worst]};
+  if(n>1){let big=0;c.spread.forEach((s,b)=>{if(s>c.spread[big])big=b});
+   aeqLog(spreadInfo?'warn':'info',kind==='far'?'lg_comb_moved':'lg_comb_same',{n,d:c.dropped.reduce((a,x)=>a+x,0),db:c.spread[big].toFixed(1),f:AEQ_BANDS[big]})}
+  if(kind==='near'){AQ.nearRuns=n>1?runs:null;AQ.farRuns=null}else AQ.farRuns=n>1?runs:null;
+  aeqStage(stage,'ok');
+  if(device){
+   if(spreadInfo&&!confirm(t('aeq_spread_confirm',spreadInfo))){if(kind==='near')AQ.nearRuns=null;else AQ.farRuns=null;aeqStage(upStage,'fail');aeqSet('aeq_st_not_sent');aeqLog('warn','lg_not_sent');return}
+   aeqSet('aeq_st_upload');aeqStage(upStage,'busy');
+   let r;
+   try{r=await api('/api/autoeq/upload',{enabled:true,step,levels})}
+   catch(e){ // keep the measurement on the chart so it is clear the step ran; only the upload failed
+    if(kind==='near'){AQ.near=levels;AQ.far=null}else AQ.far=levels;AQ.corr=null;aeqStage(upStage,'fail');
+    aeqSetRaw(t('aeq_err',{e:e.message})+' '+t(kind==='far'?'aeq_far_kept':'aeq_near_kept'));aeqLog('err',null,null,e.message);return}
+   if(kind==='near'){
+    AQ.near=levels;AQ.far=null;AQ.corr=null;aeqStage('sent',r.ack===false?'warn':'ok');
+    aeqSet(r.ack===false?'aeq_st_near_noack':(spreadInfo?'aeq_st_near_done_spread':'aeq_st_near_done'),spreadInfo||{});
+    aeqLog(r.ack===false?'warn':'ok',r.ack===false?'lg_sent_noack':'lg_sent_ok');
+   }else{
+    AQ.far=levels;AQ.corr=r.correction_db||null;
+    aeqLog('ok','lg_sent_ok');
+    if(AQ.corr){aeqStage('cal','ok');aeqLog('ok','lg_corr')}else if(r.calibrated){aeqStage('cal','ok');aeqLog('ok','lg_cal')}else{aeqStage('cal','warn');aeqLog('warn','lg_nocorr')}
+    aeqSet(AQ.corr?'aeq_st_far_done':(r.calibrated?'aeq_st_far_done_cal':'aeq_st_far_nocorr'));await readState();
+   }
+  }else{
+   if(kind==='near'){AQ.near=levels;AQ.far=null}else AQ.far=levels;AQ.corr=null;aeqStage(upStage,'skip');
+   aeqSet(spreadInfo?'aeq_st_spread':'aeq_st_local_done',spreadInfo||{});aeqLog('ok','lg_local_done');
+  }
+ }catch(e){
+  if(genOn){try{await api('/api/autoeq/stop',{})}catch(_){}}
+  if(stage&&AQ.stages[stage]==='busy')AQ.stages[stage]='fail';
+  if(e.message==='cancel'){aeqSet('aeq_st_cancelled');aeqLog('warn','lg_cancel')}
+  else{aeqSetRaw(t('aeq_err',{e:e.message}));aeqLog('err',null,null,e.message)}
+ }finally{AQ.an=null;AQ.busy=false;aeqCloseMic();renderAeq()}
+}
+/* Check the result: the listening position measured with AutoEQ off, then on (no upload, nothing is calibrated).
+   Whether the sub's test signal passes through the AutoEQ filter is not known; a flat difference says so. */
+async function aeqGenRuns(step,n,moved,tag){
+ const runs=[];
+ for(let i=1;i<=n;i++){
+  if(i>1){const wait=moved?8:3;aeqLog(moved?'warn':'info',moved?'lg_move':'lg_next',{s:wait});
+   for(let sec=wait;sec>0;sec--){if(AQ.abort)throw new Error('cancel');aeqSet(moved?'aeq_st_move':'aeq_st_next',{s:sec,i,n});await aeqSleep(1000)}}
+  AQ.an=new AeqAnalyzer(AQ.ctx.sampleRate);AQ.an.holding=false;
+  aeqSet('aeq_st_warm');await aeqWait(()=>AQ.an.frames>0,5000);
+  AQ.clipped=false;AQ.runPeak=-Infinity;
+  aeqSet('aeq_st_gen_wait');await api('/api/autoeq/start',{enabled:true,step});AQ.genOn=true;
+  const t0=Date.now();let seen=false;
+  while(true){
+   if(AQ.abort)throw new Error('cancel');
+   if(Date.now()-t0>90000)throw new Error(t('aeq_st_timeout'));
+   const st=(await api('/api/autoeq/state',{step})).state;
+   if(st===1){if(!seen)aeqLog('info','lg_vrun',{i,n,tag:t(tag)});seen=true;AQ.an.holding=true;aeqSet('aeq_st_vrun',{i,n,tag:t(tag)})}
+   if(st===2||(st===0&&seen))break;
+   await aeqSleep(300);
+  }
+  AQ.an.holding=false;await api('/api/autoeq/stop',{});AQ.genOn=false;
+  if(!AQ.an.held)throw new Error(t('aeq_st_nodata'));
+  if(AQ.clipped)throw new Error(t('aeq_clip_run',{i}));
+  aeqLog(AQ.runPeak>-3?'warn':'ok','lg_run_done',{i,n,pk:Number.isFinite(AQ.runPeak)?AQ.runPeak.toFixed(1):'—'});
+  runs.push(AQ.an.bands());
+ }
+ return aeqCombine(runs,moved?'moved':'same').levels;
+}
+async function aeqSetAutoEq(on){
+ await api('/api/write',{enabled:true,kind:'autoeq_enabled',value:on?1:0});
+ aeqLog('info',on?'lg_aeq_on':'lg_aeq_off');
+}
+function aeqFlatness(levels){ // spread (standard deviation, dB) of the bands the subwoofer plays: 20 Hz up to its low-pass
+ const lpf=num(S.snap?.filters?.['0']?.frequency_hz)||120,v=AEQ_BANDS.map((f,i)=>[f,levels[i]]).filter(([f,x])=>f<=lpf&&x>-200).map(([,x])=>x);
+ if(v.length<3)return null;const m=v.reduce((a,x)=>a+x,0)/v.length;
+ return {sd:Math.sqrt(v.reduce((a,x)=>a+(x-m)*(x-m),0)/v.length),top:AEQ_BANDS.filter(f=>f<=lpf).pop()};
+}
+async function aeqVerify(){
+ if(AQ.busy)return;
+ if(!aeqDeviceMode()||S.snap?.scalars?.['0170']?.value!==true){toast(t('aeq_verify_need'));return}
+ const n=Number($('aeqRuns').value)||3;
+ if(!S.demo&&!confirm(t('aeq_verify_confirm',{n:2*n})))return;
+ AQ.busy=true;AQ.abort=false;AQ.peakMax=-Infinity;AQ.genOn=false;AQ.vOff=AQ.vOn=null;renderAeq();
+ const wasOn=S.snap?.scalars?.['0172']?.value===true;let switchedOff=false;
+ aeqLog('cmd','lg_verify',{n});
+ try{
+  aeqSet('aeq_st_mic');await aeqOpenMic();
+  aeqSet('aeq_st_vswitch');await aeqSetAutoEq(false);switchedOff=true;
+  AQ.vOff=await aeqGenRuns(1,n,true,'aeq_off_tag');renderAeq();
+  aeqSet('aeq_st_vswitch');await aeqSetAutoEq(true);switchedOff=false;
+  aeqLog('warn','lg_back',{s:8});for(let sec=8;sec>0;sec--){if(AQ.abort)throw new Error('cancel');aeqSet('aeq_st_move',{s:sec,i:1,n});await aeqSleep(1000)}
+  AQ.vOn=await aeqGenRuns(1,n,true,'aeq_on_tag');
+  const diff=AQ.vOn.map((v,i)=>v>-200&&AQ.vOff[i]>-200?v-AQ.vOff[i]:0),big=diff.reduce((b,x,i)=>Math.abs(x)>Math.abs(diff[b])?i:b,0);
+  const a=aeqFlatness(AQ.vOff),b=aeqFlatness(AQ.vOn);
+  if(Math.max(...diff.map(Math.abs))<0.8){aeqLog('warn','lg_v_same');aeqSet('aeq_st_v_same')}
+  else{
+   aeqLog('ok','lg_v_diff',{db:signed(Number(diff[big].toFixed(1))),f:AEQ_BANDS[big]});
+   if(a&&b){const pct=Math.round((1-b.sd/a.sd)*100);aeqLog(pct>0?'ok':'warn','lg_v_flat',{top:a.top,a:a.sd.toFixed(1),b:b.sd.toFixed(1),pct:(pct>0?'−':'+')+Math.abs(pct)});
+    aeqSet(pct>0?'aeq_st_v_better':'aeq_st_v_worse',{a:a.sd.toFixed(1),b:b.sd.toFixed(1)})}
+   else aeqSet('aeq_st_v_done');
+  }
+ }catch(e){
+  if(AQ.genOn){try{await api('/api/autoeq/stop',{})}catch(_){}}AQ.genOn=false;
+  if(e.message==='cancel'){aeqSet('aeq_st_cancelled');aeqLog('warn','lg_cancel')}
+  else{aeqSetRaw(t('aeq_err',{e:e.message}));aeqLog('err',null,null,e.message)}
+ }finally{
+  if(switchedOff&&wasOn){try{await aeqSetAutoEq(true)}catch(e){aeqLog('err','lg_restore_fail',{e:e.message})}} // never leave AutoEQ off by accident
+  AQ.an=null;AQ.busy=false;aeqCloseMic();try{await readState()}catch(_){}renderAeq();
+ }
+}
+function aeqChart(){
+ const svg=$('aeqChart'),box=$('aeqBox');if(!svg||!box)return;
+ const W=Math.max(260,Math.round(box.clientWidth)),H=Math.max(160,Math.round(box.clientHeight)),L=40,R=12,T=12,B=22,pw=W-L-R,ph=H-T-B,F0=18,F1=180;
+ const x=f=>L+Math.log(f/F0)/Math.log(F1/F0)*pw;
+ const series=[];
+ if(AQ.test)series.push(['test','var(--muted)',AQ.test]);
+ if(AQ.near)series.push(['near','#33b5e5',AQ.near]);
+ if(AQ.far)series.push(['far','#E91E63',AQ.far]);
+ if(AQ.far&&AQ.corr)series.push(['corr','#4CAF50',AQ.far.map((v,i)=>v+(AQ.corr[i]||0))]);
+ if(AQ.vOff)series.push(['off','#9aa6b2',AQ.vOff]);
+ if(AQ.vOn)series.push(['on','#4CAF50',AQ.vOn]);
+ const runSeries=[...(AQ.near&&AQ.nearRuns?AQ.nearRuns.map(r=>['#33b5e5',r]):[]),...(AQ.far&&AQ.farRuns?AQ.farRuns.map(r=>['#E91E63',r]):[])];
+ const vals=[...series.flatMap(sr=>sr[2]),...runSeries.flatMap(r=>r[1])].filter(v=>v>-200);
+ let lo=-60,hi=0;if(vals.length){lo=Math.floor((Math.min(...vals)-3)/6)*6;hi=Math.ceil((Math.max(...vals)+3)/6)*6}
+ if(hi-lo<24){const m=(hi+lo)/2;lo=Math.floor((m-12)/6)*6;hi=lo+24}
+ const stepDb=(hi-lo)>60?12:6,y=v=>T+(hi-Math.max(lo,Math.min(hi,v)))/(hi-lo)*ph;
+ let g='';
+ for(let v=lo;v<=hi;v+=stepDb)g+=`<line class="eq-grid" x1="${L}" x2="${W-R}" y1="${y(v)}" y2="${y(v)}"/><text x="${L-6}" y="${y(v)+3}" text-anchor="end">${v}</text>`;
+ for(const f of [20,30,40,50,60,80,100,160]){const xx=x(f).toFixed(1);g+=`<line class="eq-grid" x1="${xx}" x2="${xx}" y1="${T}" y2="${T+ph}"/><text x="${xx}" y="${H-7}" text-anchor="middle">${f}</text>`}
+ for(const [col,v] of runSeries){const pts=AEQ_BANDS.map((f,i)=>v[i]>-200?`${x(f).toFixed(1)},${y(v[i]).toFixed(1)}`:null).filter(Boolean);g+=`<polyline class="aeq-run" style="stroke:${col}" points="${pts.join(' ')}"/>`}
+ for(const [,col,v] of series){
+  const pts=AEQ_BANDS.map((f,i)=>v[i]>-200?`${x(f).toFixed(1)},${y(v[i]).toFixed(1)}`:null).filter(Boolean);
+  g+=`<polyline class="aeq-line" style="stroke:${col}" points="${pts.join(' ')}"/>`;
+  g+=AEQ_BANDS.map((f,i)=>v[i]>-200?`<circle cx="${x(f).toFixed(1)}" cy="${y(v[i]).toFixed(1)}" r="2.8" style="fill:${col}"/>`:'').join('');
+ }
+ if(!series.length)g+=`<text class="aeq-empty" x="${L+pw/2}" y="${T+ph/2}" text-anchor="middle">${t('aeq_chart_empty')}</text>`;
+ svg.setAttribute('viewBox',`0 0 ${W} ${H}`);svg.innerHTML=g;
+ const leg=$('aeqLegend');leg.textContent='';
+ for(const [k,col] of series){const sp=document.createElement('span'),i=document.createElement('i');i.style.background=col;sp.append(i,document.createTextNode(t('aeq_series_'+k)));leg.appendChild(sp)}
+}
+function renderAeq(){
+ if(!$('aeqToggle')||!AQ)return; // AQ is set further down the script
+ const sc=S.snap?.scalars||{},cal=sc['0170']?.value,on=sc['0172']?.value,dev=aeqDeviceMode(),demoDev=S.demo&&S.aeqDevice;
+ $('aeqCalibrated').textContent=fmtBool(cal);
+ const tg=$('aeqToggle');tg.checked=!!on;tg.disabled=AQ.busy||cal!==true||!writesReady();
+ $('aeqToggleLabel').textContent=on===undefined?'—':(on?'ON':'OFF');
+ tg.parentElement.title=cal!==true?t('aeq_toggle_cal'):(!writesReady()?t('aeq_toggle_writes'):'');
+ $('aeqMode').textContent=t(demoDev?'aeq_mode_demo':(dev?'aeq_mode_device':'aeq_mode_local'));
+ $('aeqNote').textContent=t(demoDev?'aeq_note_demo':(dev?'aeq_note_device':(S.aeqDevice?'aeq_note_device_off':'aeq_note_local')));
+ $('aeqInsecure').classList.toggle('hidden',!!window.isSecureContext);
+ {const w=$('aeqExpWrap'),cb=$('aeqExp');w.classList.toggle('hidden',!!S.demo);cb.checked=!!S.aeqExp;cb.disabled=AQ.busy||!!S.aeqExpLocked||!S.statusSeen;
+  w.classList.toggle('on',!!S.aeqExp);w.classList.toggle('locked',!!S.aeqExpLocked);w.title=S.aeqExpLocked?t('aeq_exp_locked'):''}
+ $('aeqNearBtn').disabled=AQ.busy;$('aeqRuns').disabled=AQ.busy;$('aeqFarBtn').disabled=AQ.busy||(dev&&!AQ.near);$('aeqTestBtn').disabled=AQ.busy;$('aeqCancelBtn').disabled=!AQ.busy;$('aeqMic').disabled=AQ.busy;
+ $('aeqStepNear').classList.toggle('done',!!AQ.near);$('aeqStepFar').classList.toggle('done',!!AQ.far);
+ $('aeqStatus').textContent=AQ.status.raw!==undefined?AQ.status.raw:t(AQ.status.k,AQ.status.v);
+ $('aeqVerifyBtn').disabled=AQ.busy||!dev||S.snap?.scalars?.['0170']?.value!==true;$('aeqStepVerify').classList.toggle('done',!!(AQ.vOff&&AQ.vOn));
+ const eff=AQ.vOff&&AQ.vOn?AQ.vOn.map((v,i)=>v>-200&&AQ.vOff[i]>-200?Math.round((v-AQ.vOff[i])*10)/10:null):null,vals=eff||AQ.corr;
+ const cw=$('aeqCorrWrap'),cg=$('aeqCorr');cw.classList.toggle('hidden',!vals);cg.textContent='';
+ {const ti=$('aeqCorrTitle');ti.dataset.i18n=eff?'aeq_effect_title':'aeq_corr_title';ti.textContent=t(ti.dataset.i18n)}
+ if(vals)AEQ_BANDS.forEach((f,i)=>{const d=document.createElement('div'),sm=document.createElement('small'),b=document.createElement('b');sm.textContent=f+' Hz';b.textContent=vals[i]===null?'—':signed(vals[i]);if(vals[i]!==null&&Math.abs(vals[i])>=1)d.classList.add(vals[i]<0?'cut':'boost');d.append(sm,b);cg.appendChild(d)});
+ aeqChart();aeqMeter();renderAeqCon();
+}
+{const r=$('aeqRuns'),v=store.get('elac_gui_aeq_runs','3');if([...r.options].some(o=>o.value===v))r.value=v;r.addEventListener('change',()=>store.set('elac_gui_aeq_runs',r.value))}
+$('aeqNearBtn').addEventListener('click',()=>aeqMeasure('near'));
+$('aeqFarBtn').addEventListener('click',()=>aeqMeasure('far'));
+$('aeqVerifyBtn').addEventListener('click',aeqVerify);
+$('aeqTestBtn').addEventListener('click',()=>aeqMeasure('test'));
+$('aeqCancelBtn').addEventListener('click',()=>{AQ.abort=true});
+$('aeqClear').addEventListener('click',()=>{if(AQ.busy)return;AQ.log=[];renderAeqCon()});
+$('aeqCopy').addEventListener('click',async()=>{
+ const text=AQ.log.map(l=>new Date(l.at).toLocaleTimeString(lang)+' '+({ok:'✓',warn:'!',err:'✗',cmd:'>',info:' '}[l.k]||' ')+' '+(l.raw!==undefined?l.raw:t(l.key,l.v))).join('\n');
+ try{await navigator.clipboard.writeText(text)}catch(e){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(_){}ta.remove()}
+ toast(t('lg_copied'));
+});
+$('aeqMic').addEventListener('change',()=>{if(!AQ.busy)aeqCloseMic()});
+$('aeqExp').addEventListener('change',async()=>{
+ const cb=$('aeqExp'),want=cb.checked;
+ if(want&&!confirm(t('aeq_exp_confirm'))){cb.checked=false;return}
+ cb.disabled=true;
+ try{const r=await api('/api/autoeq/experimental',{enabled:want});S.aeqExp=!!r.autoeq_experimental;S.aeqDevice=!!r.autoeq_device;toast(t(want?'aeq_exp_on':'aeq_exp_off'))}
+ catch(e){toast(t('aeq_err',{e:e.message}))}
+ finally{renderAeq()}
+});
+$('aeqToggle').addEventListener('change',async()=>{
+ const v=$('aeqToggle').checked?1:0,cur=S.snap?.scalars?.['0172']?.value;
+ await writeBatch([{kind:'autoeq_enabled',value:v}],[chg('AutoEQ',cur?'ON':'OFF',v?'ON':'OFF')]);
+ renderAeq();
+});
+if('ResizeObserver' in window)new ResizeObserver(()=>aeqChart()).observe($('aeqBox'));
+if(navigator.mediaDevices?.addEventListener)navigator.mediaDevices.addEventListener('devicechange',()=>aeqListMics().catch(()=>{}));
+aeqListMics().catch(()=>{});
+
+/* ---------- start ---------- */
+syncEntries();
+try{ // show the last saved reading (greyed out) until a live one arrives
+ const c=JSON.parse(store.get(CACHE_KEY)||'null');
+ if(c&&c.snapshot&&c.snapshot.scalars){renderState(c.snapshot,{live:false,at:c.at});setMsg('msg_idle_cached')}
+}catch(e){store.del(CACHE_KEY)}
+applyStatic();renderDelay();renderAutoOn();renderStatus();renderSelectedFilter();
+pollStatus();setInterval(pollStatus,5000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)pollStatus()});
+})();
+</script></body></html>

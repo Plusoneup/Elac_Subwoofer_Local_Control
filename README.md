@@ -1,5 +1,7 @@
 # Elac Subwoofer Local Control
 
+[![tests](https://github.com/Plusoneup/Elac_Subwoofer_Local_Control/actions/workflows/tests.yml/badge.svg)](https://github.com/Plusoneup/Elac_Subwoofer_Local_Control/actions/workflows/tests.yml)
+
 A local web panel for the ELAC SUB3030 subwoofer over Bluetooth LE: volume, preset, LPF, phase,
 delay, Auto-On, PEQ and AutoEQ, without the phone app and without any cloud service.
 

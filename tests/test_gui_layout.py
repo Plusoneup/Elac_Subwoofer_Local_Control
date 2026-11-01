@@ -221,6 +221,27 @@ class GuiLayoutTests(unittest.TestCase):
                     page.close()
             browser.close()
 
+    def test_text_stays_readable_in_every_theme(self):
+        # The main button and the control labels once rendered nearly invisible (black on black, pale grey on white).
+        ratio = """(sel)=>{const rgb=c=>c.match(/[\\d.]+/g).slice(0,3).map(Number);
+          const lum=a=>a.map(c=>{c/=255;return c<=0.03928?c/12.92:Math.pow((c+0.055)/1.055,2.4)}).reduce((s,c,i)=>s+c*[0.2126,0.7152,0.0722][i],0);
+          let e=document.querySelector(sel),bg=null;const fg=rgb(getComputedStyle(e).color);
+          for(let n=e;n&&!bg;n=n.parentElement){const s=getComputedStyle(n);
+            for(const c of [s.backgroundColor,(s.backgroundImage.match(/rgba?\\([^)]*\\)/)||[''])[0]]){
+              const v=(c.match(/[\\d.]+/g)||[]);if(!bg&&v.length>=3&&(v.length<4||+v[3]>0.5))bg=v.slice(0,3).map(Number)}}
+          const a=lum(fg),b=lum(bg||[0,0,0]);return (Math.max(a,b)+0.05)/(Math.min(a,b)+0.05)}"""
+        with sync_playwright() as p:
+            browser = _launch(self, p)
+            for theme in ["dark", "light", "amp", "pixel", "ash", "aramid", "debut", "gunmetal"]:
+                page = browser.new_page(viewport={"width": 1280, "height": 900})
+                page.add_init_script(f"try{{localStorage.setItem('elac_gui_theme','{theme}');localStorage.setItem('elac_gui_collapsed_v1','[]')}}catch(e){{}}")
+                page.goto(PAGE.as_uri())
+                page.wait_for_timeout(200)
+                for sel, need in (("#connectRead", 4.5), ("#control-card .knob label", 4.5)):
+                    self.assertGreaterEqual(page.evaluate(ratio, sel), need, f"{theme}: {sel}")
+                page.close()
+            browser.close()
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -242,6 +242,23 @@ class GuiLayoutTests(unittest.TestCase):
                 page.close()
             browser.close()
 
+    def test_cards_are_evenly_spaced_in_every_theme(self):
+        gaps_js = """()=>{const r=[...document.querySelectorAll('.card')].map(c=>c.getBoundingClientRect()).sort((a,b)=>a.top-b.top||a.left-b.left);
+          const g=[];for(let i=1;i<r.length;i++){for(let j=i-1;j>=0;j--){if(r[j].left<r[i].right-1&&r[i].left<r[j].right-1){g.push(Math.round(r[i].top-r[j].bottom));break}}}return g}"""
+        with sync_playwright() as p:
+            browser = _launch(self, p)
+            for theme in ["dark", "light", "amp", "pixel", "ash", "aramid", "debut", "gunmetal"]:
+                for width, height in ((412, 915), (1280, 900)):
+                    for state in STATES:
+                        page = browser.new_page(viewport={"width": width, "height": height})
+                        page.add_init_script(f"try{{localStorage.setItem('elac_gui_theme','{theme}');localStorage.setItem('elac_gui_collapsed_v1','{STATES[state]}')}}catch(e){{}}")
+                        page.goto(PAGE.as_uri())
+                        page.wait_for_timeout(150)
+                        gaps = page.evaluate(gaps_js)
+                        self.assertEqual(len(set(gaps)), 1, f"{theme} {width}px {state}: {gaps}")
+                        page.close()
+            browser.close()
+
 
 if __name__ == "__main__":
     unittest.main()
